@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply bg-slate-800 text-white;
+    @apply bg-slate-800 text-slate-100 overflow-x-hidden;
   }
 
   section {
@@ -24,25 +24,14 @@
   }
 
   .cta:hover {
-    @apply brightness-110;
+    @apply brightness-75;
   }
 
   .cta:active {
-    @apply brightness-90;
+    @apply brightness-50 translate-y-1;
   }
 }
 
-.cta:hover {
-  transform: translateY(-2px);
-  border-bottom-width: 3px;
-}
-
-.cta:active {
-  transform: translateY(2px);
-  border-bottom-width: 2px;
-  box-shadow: inset 1px 3px 4px #504a99;
-}
-
 @media(prefers-reduced-motion) {
-  * { transition: none!important;}
+  * { transition: none!important; }
 }

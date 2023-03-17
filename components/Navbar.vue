@@ -18,45 +18,45 @@
     </a>
     <ul class="list-none flex items-center justify-between w-full px-40 text-xl font-bold">
       <li class="cursor-pointer transition hover:underline hover:text-slate-500 flex gap-x-3 justify-center items-center">
-        <a href="/">Home.</a>
+        <a href="/">Home</a>
         <font-awesome-icon icon="fa-solid fa-house" class="nav-fadein" />
       </li>
       <li class="cursor-pointer transition hover:underline hover:text-slate-500 flex gap-x-3 justify-center items-center">
-        <a href="/">Blog.</a>
+        <a href="/">Blog</a>
         <font-awesome-icon icon="fa-solid fa-pen-nib" class="nav-fadein" />
       </li>
       <li class="cursor-pointer transition hover:underline hover:text-slate-500 flex gap-x-3 justify-center items-center">
-        <a href="/">CV.</a>
+        <a href="/">CV</a>
         <font-awesome-icon icon="fa-solid fa-book" class="nav-fadein" />
       </li>
       <li class="cursor-pointer transition hover:underline hover:text-slate-500 flex gap-x-3 justify-center items-center">
-        <a href="/">Portfolio.</a>
+        <a href="/">Portfolio</a>
         <font-awesome-icon icon="fa-solid fa-briefcase" class="nav-fadein" />
       </li>
       <li class="cursor-pointer transition hover:underline hover:text-slate-500 flex gap-x-3 justify-center items-center">
-        <a href="/">Contact.</a>
+        <a href="/">Contact</a>
         <font-awesome-icon icon="fa-solid fa-envelope" class="nav-fadein" />
       </li>
     </ul>
     <div class="w-1 h-12 bg-white"></div>
-    <ul id="social-icons" class="list-none flex items-center justify-between gap-x-4 px-10 text-white text-3xl">
+    <ul id="social-icons" class="list-none flex items-center justify-between gap-x-4 px-10 text-3xl">
       <li>
-        <a class="cursor-pointer transition hover:text-black" href="#">
+        <a class="cursor-pointer transition hover:text-slate-600" href="#">
           <font-awesome-icon icon="fa-brands fa-github" />
         </a>
       </li>
       <li>
-        <a class="cursor-pointer transition hover:text-[#0072b1]" href="#">
+        <a class="cursor-pointer transition hover:text-slate-600" href="#">
           <font-awesome-icon icon="fa-brands fa-linkedin" />
         </a>
       </li>
       <li>
-        <a class="cursor-pointer transition hover:text-red-600" href="mailto:glenniumhs@gmail.com">
+        <a class="cursor-pointer transition hover:text-slate-600" href="mailto:glenniumhs@gmail.com">
           <font-awesome-icon icon="fa-solid fa-envelope" />
         </a>
       </li>
       <li>
-        <a class="cursor-pointer transition hover:text-green-600" onclick="alert('My telephone number is +44 75735446zero. Due to an excess of spam calls I do not answer unknown numbers but I do return calls provided a voicemail is left. Thank you for your understanding')">
+        <a class="cursor-pointer transition hover:text-slate-600" onclick="alert('My telephone number is +44 75735446zero. Due to an excess of spam calls I do not answer unknown numbers but I do return calls provided a voicemail is left. Thank you for your understanding')">
           <font-awesome-icon icon="fa-solid fa-phone" />
         </a>
       </li>
