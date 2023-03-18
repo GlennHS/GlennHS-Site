@@ -4,9 +4,9 @@
   const { path } = useRoute()
   const { data: recentBlogPosts } = await useAsyncData(`content-${path}`, () => {
     return queryContent()
-      .sort({ 'updated': -1 })
+      .only(['title', 'excerpt', 'created', 'updated', 'slug', 'tags'])
       .limit(5)
-      .only(['title', 'excerpt', 'updated', 'slug', '_id'])
+      .sort({ 'updated': -1 })
       .find()
   })
 
@@ -82,11 +82,21 @@
         </section>
       </div>
       <div id="recent-blog-posts" class="w-full">
+        <div>
+          <div class="flex flex-col bg-slate-500 rounded-l-xl py-4 px-12 my-4">
+            <div class="flex justify-between">
+              <h3 class="col-span-2 font-bold text-xl">Blog Posts</h3>
+            </div>
+          </div>
+        </div>
+        {{ recentBlogPosts }}
         <nuxt-link v-for="post in recentBlogPosts" :to="`blog/${post.slug}`">
           <BlogPostShort class="blog-post-short"
             :title="post.title"
+            :createdDate="post.created"
             :updatedDate="post.updated"
-            :excerpt="post.excerpt" />
+            :excerpt="post.excerpt"
+            :tags="post.tags" />
         </nuxt-link>
       </div>
     </div>

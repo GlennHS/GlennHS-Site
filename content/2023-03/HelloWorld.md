@@ -1,7 +1,7 @@
 ---
 title: 'Hello World!'
 slug: 'hello-world'
-tags: nuxt/vue,tailwind,coding,learning
+tags: [ 'nuxt/vue', 'tailwind', 'coding', 'learning' ]
 excerpt: "this is an excerpt that I'll write later as currently I want to do more fun stuff"
 created: '2023-03-16'
 updated: '2023-03-16'
