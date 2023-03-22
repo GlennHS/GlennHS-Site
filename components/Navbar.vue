@@ -22,7 +22,7 @@
         <font-awesome-icon icon="fa-solid fa-house" class="nav-fadein" />
       </li>
       <li class="cursor-pointer transition hover:underline hover:text-slate-500 flex gap-x-3 justify-center items-center">
-        <a href="/">Blog</a>
+        <a href="/blog">Blog</a>
         <font-awesome-icon icon="fa-solid fa-pen-nib" class="nav-fadein" />
       </li>
       <li class="cursor-pointer transition hover:underline hover:text-slate-500 flex gap-x-3 justify-center items-center">

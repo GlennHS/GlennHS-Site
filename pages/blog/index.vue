@@ -6,7 +6,6 @@
   const filterTypeOR = ref(true)
 
   const getAllTags = async () => {
-    tagsFilteringBy.value = []
     const allPostTags = await queryContent()
       .only(['tags'])
       .sort({ 'tags': 1 })
@@ -27,6 +26,10 @@
     blogPosts.value = await queryContent().where({ 'tags': { $contains: tags } }).find()
   }
 
+  const setPostsALL = async (tags) => {
+    blogPosts.value = await queryContent().find()
+  }
+
   const getTagArrFromQueryParamString = (str) => {
     tagsFilteringBy.value = decodeURIComponent(str).split(/,\s?/g)
   }
@@ -38,7 +41,8 @@
   }
 
   const filterPosts = () => {
-    if(filterTypeOR.value) setPostsByTag(tagsFilteringBy.value)
+    if(tagsFilteringBy.value.length === 0) setPostsALL()
+    else if(filterTypeOR.value) setPostsByTag(tagsFilteringBy.value)
     else setPostsByTagAND(tagsFilteringBy.value)
   }
 
@@ -62,12 +66,11 @@
     }
     queryParams.value = o
 
-    getTagArrFromQueryParamString(queryParams.value.tags)
-
-    // If there are query parameters, grab filtered posts based on those parameters
-    if(tagsFilteringBy.value.length > 0) {
-      setPostsByTag(tagsFilteringBy.value)
+    if(queryParams.value.tags) {
+      getTagArrFromQueryParamString(queryParams.value.tags)
     }
+
+    filterPosts()
   })
 </script>
 
@@ -94,8 +97,7 @@
     </div>
 
     <div class="px-24 mt-12">
-      <div v-if="blogPosts.length > 0">
-        {{ blogPosts }}
+      <div v-if="blogPosts.length > 0" class="grid grid-cols-3 gap-10">
         <BlogPostCard v-for="post in blogPosts" :blog-post="post"/>
       </div>
       <div v-else>

@@ -2,17 +2,24 @@
   const props = defineProps({
     blogPost: Object
   })
+
+  const cardSource = `https://placekitten.com/${400+Math.floor(Math.random() * 8)}/200`
 </script>
 
 <template>
-  <div class="flex flex-col gap-x-4">
-    <h1 class="text-2xl">{{ props.blogPost.title }}</h1>
-    <div class="flex gap-y-4 items-center">
-      <TagPill v-for="tag in props.blogPost.tags" :post-tag="tag" />
+  <NuxtLink :to="`blog/${blogPost.slug}`">
+    <div class="flex flex-col border-2 border-white rounded-lg h-full">
+      <img :src='cardSource' alt='' />
+      <div class="flex flex-col gap-y-4 p-6">
+        <h1 class="text-4xl">{{ props.blogPost.title }}</h1>
+        <div class="flex gap-x-4 items-center">
+          <TagPill v-for="tag in props.blogPost.tags" :post-tag="tag" />
+        </div>
+        <p>{{ props.blogPost.excerpt }}</p>
+        <span class="text-sm italic">Read More >></span>
+      </div>
     </div>
-    <p>{{ props.blogPost.excerpt }}</p>
-    <span class="text-sm italic">Read More >></span>
-  </div>
+  </NuxtLink>
 </template>
 
 <style scoped>
