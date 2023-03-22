@@ -4,7 +4,7 @@
   const { path } = useRoute()
   const { data: recentBlogPosts } = await useAsyncData(`content-${path}`, () => {
     return queryContent()
-      .only(['title', 'excerpt', 'created', 'updated', 'slug', 'tags'])
+      .only(['title', 'excerpt', 'created', 'updated', 'slug', 'tags', '_id'])
       .limit(5)
       .sort({ 'updated': -1 })
       .find()
@@ -17,10 +17,12 @@
     var parallax = document.querySelector(".parallax");
     window.onscroll = function() {
       document.getElementById('scroll-hint').classList.add('suppress')
-      var windowYOffset = window.pageYOffset,
-        elBackgrounPos = "50% " + (windowYOffset * -1.95 - 580) + "px";
-
-      parallax.style.backgroundPosition = elBackgrounPos;
+      if(screen.width > 998) {
+        var windowYOffset = window.pageYOffset,
+          elBackgrounPos = "50% " + Math.max(windowYOffset * -1.95 - 580, -1650) + "px";
+  
+        parallax.style.backgroundPosition = elBackgrounPos;
+      }
     };
 
     const observer = new IntersectionObserver((entries) => {
@@ -90,7 +92,7 @@
           </div>
         </div>
         {{ recentBlogPosts }}
-        <nuxt-link v-for="post in recentBlogPosts" :to="`blog/${post.slug}`">
+        <nuxt-link v-for="post in recentBlogPosts" :key="post._id" :to="`blog/${post.slug}`">
           <BlogPostShort class="blog-post-short"
             :title="post.title"
             :createdDate="post.created"
