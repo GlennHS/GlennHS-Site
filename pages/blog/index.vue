@@ -18,8 +18,19 @@
     tags.forEach((tag) => {
       allPosts.push(queryContent().where({ 'tags': { $contains: tag } }).find())
     })
-    const posts = await Promise.all(allPosts);
-    blogPosts.value = [...new Set(posts.flat())];
+    let posts = await Promise.all(allPosts);
+    posts = [...new Set(posts.flat())]
+
+    let IDs = []
+    let uniquePosts = []
+    posts.forEach(p => {
+      if(!IDs.includes(p._id)) {
+        IDs.push(p._id)
+        uniquePosts.push(p)
+      }
+    })
+
+    blogPosts.value = uniquePosts;
   }
 
   const setPostsByTagAND = async (tags) => {

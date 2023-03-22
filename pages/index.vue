@@ -92,14 +92,16 @@
           </div>
         </div>
         {{ recentBlogPosts }}
-        <nuxt-link v-for="post in recentBlogPosts" :key="post._id" :to="`blog/${post.slug}`">
-          <BlogPostShort class="blog-post-short"
-            :title="post.title"
-            :createdDate="post.created"
-            :updatedDate="post.updated"
-            :excerpt="post.excerpt"
-            :tags="post.tags" />
-        </nuxt-link>
+        <div v-for="post in recentBlogPosts" :key="post._id">
+          <NuxtLink :to="`blog/${post.slug}`">
+            <BlogPostShort class="blog-post-short"
+              :title="post.title"
+              :createdDate="post.created"
+              :updatedDate="post.updated"
+              :excerpt="post.excerpt"
+              :tags="post.tags" />
+          </NuxtLink>
+        </div>
       </div>
     </div>
   </div>
