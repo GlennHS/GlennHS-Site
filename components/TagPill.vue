@@ -4,7 +4,7 @@
     postTag: String
   })
 
-  const bgColor = () => tagColorMap[props.postTag] || 'slate'
+  const bgColor = () => tagColorMap[props.postTag] || 'bg-slate-300'
 </script>
 
 <template>

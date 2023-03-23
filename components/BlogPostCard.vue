@@ -9,7 +9,7 @@
 <template>
   <div>
     <NuxtLink :to="`blog/${blogPost.slug}`">
-      <div class="flex flex-col border-2 border-white rounded-lg h-full">
+      <div class="flex flex-col border-4 border-white rounded-lg h-full transition hover:shadow-white hover:shadow-lg">
         <img :src='cardSource' alt='' />
         <div class="flex flex-col gap-y-4 p-6">
           <h1 class="text-4xl">{{ props.blogPost.title }}</h1>
@@ -17,7 +17,10 @@
             <TagPill v-for="tag in props.blogPost.tags" :post-tag="tag" />
           </div>
           <p>{{ props.blogPost.excerpt }}</p>
-          <span class="text-sm italic">Read More >></span>
+          <div class="flex justify-between">
+            <span class="text-sm italic">Read More >></span>
+            <span class="text-sm">{{ props.blogPost.created }}</span>
+          </div>
         </div>
       </div>
     </NuxtLink>

@@ -6,6 +6,7 @@ const tagColorMap = {
   'learning': 'bg-yellow-300',
   'tailwind': 'bg-cyan-300',
   'coding': 'bg-slate-300',
+  'favourites': 'bg-pink-300',
 }
 
 export default tagColorMap

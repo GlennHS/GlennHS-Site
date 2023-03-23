@@ -5,12 +5,19 @@
   const tagsFilteringBy = ref([])
   const filterTypeOR = ref(true)
 
+  const orderPostArrayByCreated = (pArr) => {
+    return pArr.sort((a,b) => {
+      if(new Date(a.created) < new Date(b.created)) return 1
+      else return -1
+    });
+  }
+
   const getAllTags = async () => {
     const allPostTags = await queryContent()
       .only(['tags'])
       .sort({ 'tags': 1 })
       .find()
-      allTags.value = [...new Set(allPostTags.map(o=>o.tags).flat())]
+      allTags.value = [...new Set(allPostTags.map(o=>o.tags).flat().sort((a,b)=>a[0]<b[0]?-1:1))]
   }
 
   const setPostsByTag = async (tags) => {
@@ -30,15 +37,17 @@
       }
     })
 
-    blogPosts.value = uniquePosts;
+    blogPosts.value = orderPostArrayByCreated(uniquePosts)
   }
 
   const setPostsByTagAND = async (tags) => {
-    blogPosts.value = await queryContent().where({ 'tags': { $contains: tags } }).find()
+    const posts = await queryContent().where({ 'tags': { $contains: tags } }).find()
+    blogPosts.value = orderPostArrayByCreated(posts)
   }
 
-  const setPostsALL = async (tags) => {
-    blogPosts.value = await queryContent().find()
+  const setPostsALL = async () => {
+    const posts = await queryContent().find()
+    blogPosts.value = orderPostArrayByCreated(posts)
   }
 
   const getTagArrFromQueryParamString = (str) => {
@@ -59,6 +68,11 @@
 
   const toggleFilterMode = () => {
     filterTypeOR.value = !filterTypeOR.value
+    filterPosts()
+  }
+
+  const setMyFavourites = () => {
+    tagsFilteringBy.value = [ 'favourites' ]
     filterPosts()
   }
 
@@ -92,6 +106,7 @@
         <div ref="heroContent" class="hero-content w-full px-20 py-10 flex flex-col justify-center items-baseline gap-y-6 max-w-3xl">
           <h1 class="text-4xl font-bold">Welcome to my blog.</h1>
           <p class="text-xl italic">Grab a drink and stay a while...</p>
+          <button class="cta" @click="setMyFavourites()">My favourites</button>
         </div>
       </div>
     </header>

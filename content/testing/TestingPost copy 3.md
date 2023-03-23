@@ -2,7 +2,7 @@
 title: 'Test 1'
 slug: 'test-1'
 tags: [ 'testing' ]
-excerpt: "lorem ipsum dolor sit amet consectetur adipiscing elit non nobis domine pandemonium regnat satani vitae"
+excerpt: "This is a post being used for testing purposes. It will be removed in live"
 created: '2023-03-08'
 updated: '2023-03-12'
 ---
