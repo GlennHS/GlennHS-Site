@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [ 'components/**/*.vue', 'app.vue', 'pages/**/*.vue', 'src/tagColorMap.js'],
+  content: [ 'components/**/*.vue', 'app.vue', 'pages/**/*.vue', 'src/tagColorMap.js', 'content/**/*.md'],
   theme: {
     extend: {
       colors: {
