@@ -20,7 +20,7 @@
   }
 
   .cta {
-    @apply px-8 py-2 bg-navy-500 border-2 border-slate-500 rounded-full cursor-pointer transition;
+    @apply px-8 py-2 bg-navy-500 border-2 border-slate-500 rounded-full cursor-pointer transition flex justify-center items-center;
   }
 
   .cta:hover {

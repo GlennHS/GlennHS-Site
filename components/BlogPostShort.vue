@@ -15,7 +15,7 @@
       <span v-if="createdDate === updatedDate" class="text-sm italic">{{ createdDate }}</span>
       <span v-else class="text-sm italic">{{ createdDate }} (u. {{ updatedDate }})</span>
     </div>
-    <div class="flex items-center gap-x-4">
+    <div class="hidden md:flex items-center gap-x-4">
       <NuxtLink v-for="tag in props.tags"
         :to="`blog?tags=${encodeURIComponent(tag)}`"
         class="cursor-pointer hover:brightness-125 active:brightness-75 transition">

@@ -9,7 +9,7 @@
 <template>
   <div>
     <NuxtLink :to="`blog/${blogPost.slug}`">
-      <div class="flex flex-col border-4 border-white rounded-lg h-full transition hover:shadow-white hover:shadow-lg">
+      <div class="flex flex-col border-4 border-white rounded-lg h-full transition hover:shadow-slate-300 hover:shadow-lg">
         <img :src='cardSource' alt='' />
         <div class="flex flex-col gap-y-4 p-6">
           <h1 class="text-4xl">{{ props.blogPost.title }}</h1>

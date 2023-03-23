@@ -14,10 +14,10 @@
     const elHC = heroContent.value
     elHC.classList.add("active")
 
-    var parallax = document.querySelector(".parallax");
+    const parallax = document.querySelector(".parallax");
     window.onscroll = function() {
       document.getElementById('scroll-hint').classList.add('suppress')
-      if(screen.width > 998) {
+      if(screen.width > 1439) {
         var windowYOffset = window.pageYOffset,
           elBackgrounPos = "50% " + Math.max(windowYOffset * -1.95 - 580, -1650) + "px";
   
@@ -47,7 +47,7 @@
         <div ref="heroContent" class="hero-content w-full px-20 py-10 flex flex-col justify-center items-baseline gap-y-6 max-w-3xl">
           <h1 class="text-4xl font-bold">Passionate. Curious. Dedicated.</h1>
           <p>Dedicated, curious and passionate team player proficient in various Front End Web Development technologies as well as Agile, Git, and CI/CD. Fast learner with a passion for learning and self-improvement both within my professional and personal settings. Graduated with honours in Computer Science at University of Portsmouth. Entered the National Cipher Challenge twice, was awarded Resident Assistant of the Year 2017-18 and was Chair of the Staff Student Council Committee. Have self-taught Laravel, Nuxt and Vue and have a deep passion for both learning all things web development and helping others succeed.</p>
-          <div class="flex gap-x-20">
+          <div class="flex flex-col w-full md:w-auto md:flex-row gap-y-4 md:gap-y-0 md:gap-x-20">
             <a class="cta" href="/">View my work</a>
             <a class="cta" href="/">More about me</a>
           </div>
@@ -87,11 +87,10 @@
         <div>
           <div class="flex flex-col bg-slate-500 rounded-l-xl py-4 px-12 my-4">
             <div class="flex justify-between">
-              <h3 class="col-span-2 font-bold text-xl">Blog Posts</h3>
+              <h3 class="col-span-2 font-bold text-xl">Recent Blog Posts</h3>
             </div>
           </div>
         </div>
-        {{ recentBlogPosts }}
         <div v-for="post in recentBlogPosts" :key="post._id">
           <NuxtLink :to="`blog/${post.slug}`">
             <BlogPostShort class="blog-post-short"
@@ -132,7 +131,7 @@
 
   #scroll-hint.suppress { opacity: 0; }
 
-  /* #region Hero Side Animation */
+  /* #region Hero Slide Animation */
   .hero-content h1, .hero-content p, section, .blog-post-short {
     opacity: 0;
     filter: blur(5px);
@@ -155,4 +154,12 @@
     transform: translateX(0);
   }
   /* #endregion */
+  @media (max-width: 1439px) {
+    .parallax {
+      height: 100%;
+      background-attachment: scroll;
+      background-position: 0;
+      transition: none;
+    }
+  }
 </style>
