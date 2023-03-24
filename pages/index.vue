@@ -55,7 +55,7 @@
       </div>
     </header>
 
-    <div id="scroll-hint" class="z-50 w-full bg-navy-300 bg-opacity-80 fixed bottom-36 text-center font-bold text-base text-white py-2 flex items-center justify-center gap-x-4">
+    <div style='display:none' id="scroll-hint" class="z-50 w-full bg-navy-300 bg-opacity-80 fixed bottom-36 text-center font-bold text-base text-white py-2 flex items-center justify-center gap-x-4">
       Scroll to see more...
     </div>
 
@@ -136,7 +136,7 @@
     opacity: 0;
     filter: blur(5px);
     transform: translateX(-100%);
-    transition-property: filter transform;
+    transition-property: filter, transform;
     transition-duration: 1.5s;
   }
 

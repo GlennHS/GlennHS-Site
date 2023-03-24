@@ -13,7 +13,7 @@
         <img :src='cardSource' alt='' />
         <div class="flex flex-col gap-y-4 p-6">
           <h1 class="text-4xl">{{ props.blogPost.title }}</h1>
-          <div class="flex gap-x-4 items-center">
+          <div class="flex gap-x-4 gap-y-2 flex-wrap items-center">
             <TagPill v-for="tag in props.blogPost.tags" :post-tag="tag" />
           </div>
           <p>{{ props.blogPost.excerpt }}</p>

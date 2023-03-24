@@ -12,55 +12,58 @@
 </script>
 
 <template>
-  <div class="flex justify-between items-center h-24 bg-slate-800 px-4">
-    <a href="/" class="h-full hidden lg:flex justify-center items-center p-2 transition hover:brightness-75">
-      <img src='/images/bannerLogo.png' alt='Logo' class="w-full" />
-    </a>
-    <ul class="list-none flex items-center justify-between w-full px-2 md:px-12 lg:px-20 xl:px-40 font-bold">
-      <li class="text-sm md:text-base xl:text-lg cursor-pointer transition hover:underline hover:text-slate-500 flex gap-x-3 justify-center items-center">
-        <a href="/">Home</a>
-        <font-awesome-icon icon="fa-solid fa-house" class="nav-fadein hidden lg:inline" />
-      </li>
-      <li class="text-sm md:text-base xl:text-lg cursor-pointer transition hover:underline hover:text-slate-500 flex gap-x-3 justify-center items-center">
-        <a href="/blog">Blog</a>
-        <font-awesome-icon icon="fa-solid fa-pen-nib" class="nav-fadein hidden lg:inline" />
-      </li>
-      <li class="text-sm md:text-base xl:text-lg cursor-pointer transition hover:underline hover:text-slate-500 flex gap-x-3 justify-center items-center">
-        <a href="/">CV</a>
-        <font-awesome-icon icon="fa-solid fa-book" class="nav-fadein hidden lg:inline" />
-      </li>
-      <li class="text-sm md:text-base xl:text-lg cursor-pointer transition hover:underline hover:text-slate-500 flex gap-x-3 justify-center items-center">
-        <a href="/">Portfolio</a>
-        <font-awesome-icon icon="fa-solid fa-briefcase" class="nav-fadein hidden lg:inline" />
-      </li>
-      <li class="text-sm md:text-base xl:text-lg cursor-pointer transition hover:underline hover:text-slate-500 flex gap-x-3 justify-center items-center">
-        <a href="/">Contact</a>
-        <font-awesome-icon icon="fa-solid fa-envelope" class="nav-fadein hidden lg:inline" />
-      </li>
-    </ul>
-    <div class="w-1 h-12 bg-white hidden md:inline"></div>
-    <ul id="social-icons" class="list-none hidden md:flex items-center justify-between gap-x-4 px-10 text-2xl xl:text-3xl">
-      <li>
-        <a class="cursor-pointer transition hover:text-slate-600" href="https://github.com/glennhs" target="_blank">
-          <font-awesome-icon icon="fa-brands fa-github" />
-        </a>
-      </li>
-      <li>
-        <a class="cursor-pointer transition hover:text-slate-600" href="https://www.linkedin.com/in/glennhs/" target="_blank">
-          <font-awesome-icon icon="fa-brands fa-linkedin" />
-        </a>
-      </li>
-      <li>
-        <a class="cursor-pointer transition hover:text-slate-600" href="mailto:glenniumhs@gmail.com">
-          <font-awesome-icon icon="fa-solid fa-envelope" />
-        </a>
-      </li>
-      <li>
-        <a class="cursor-pointer transition hover:text-slate-600" href="tel:0757354460">
-          <font-awesome-icon icon="fa-solid fa-phone" />
-        </a>
-      </li>
-    </ul>
+  <div class="h-24">
+    <div class="flex justify-between lg:fixed top-0 left-0 z-50 w-full items-center h-24 bg-slate-800 px-4">
+      <a href="/" class="h-full hidden lg:flex justify-center items-center p-2 transition hover:brightness-75">
+        <img src='/images/bannerLogo.png' alt='Logo' class="w-full" />
+      </a>
+      <ul class="list-none flex items-center justify-between w-full px-2 md:px-12 lg:px-20 xl:px-40 font-bold">
+        <li class="text-sm md:text-base xl:text-lg cursor-pointer transition hover:underline hover:text-slate-500 flex gap-x-3 justify-center items-center">
+          <a href="/">Home</a>
+          <font-awesome-icon icon="fa-solid fa-house" class="nav-fadein hidden lg:inline" />
+        </li>
+        <li class="text-sm md:text-base xl:text-lg cursor-pointer transition hover:underline hover:text-slate-500 flex gap-x-3 justify-center items-center">
+          <a href="/blog">Blog</a>
+          <font-awesome-icon icon="fa-solid fa-pen-nib" class="nav-fadein hidden lg:inline" />
+        </li>
+        <li class="text-sm md:text-base xl:text-lg cursor-pointer transition hover:underline hover:text-slate-500 flex gap-x-3 justify-center items-center">
+          <a href="/cv">CV</a>
+          <font-awesome-icon icon="fa-solid fa-book" class="nav-fadein hidden lg:inline" />
+        </li>
+        <li class="text-sm md:text-base xl:text-lg cursor-pointer transition hover:underline hover:text-slate-500 flex gap-x-3 justify-center items-center">
+          <a href="/portfolio">Portfolio</a>
+          <font-awesome-icon icon="fa-solid fa-briefcase" class="nav-fadein hidden lg:inline" />
+        </li>
+        <li class="text-sm md:text-base xl:text-lg cursor-pointer transition hover:underline hover:text-slate-500 flex gap-x-3 justify-center items-center">
+          <a href="/contact">Contact</a>
+          <font-awesome-icon icon="fa-solid fa-envelope" class="nav-fadein hidden lg:inline" />
+        </li>
+      </ul>
+      <div class="w-1 h-12 bg-white hidden md:inline"></div>
+      <ul id="social-icons" class="list-none hidden md:flex items-center justify-between gap-x-4 px-10 text-2xl xl:text-3xl">
+        <li>
+          <a class="cursor-pointer transition hover:text-slate-600" href="https://github.com/glennhs" target="_blank">
+            <font-awesome-icon icon="fa-brands fa-github" />
+          </a>
+        </li>
+        <li>
+          <a class="cursor-pointer transition hover:text-slate-600" href="https://www.linkedin.com/in/glennhs/" target="_blank">
+            <font-awesome-icon icon="fa-brands fa-linkedin" />
+          </a>
+        </li>
+        <li>
+          <a class="cursor-pointer transition hover:text-slate-600" href="mailto:glenniumhs@gmail.com">
+            <font-awesome-icon icon="fa-solid fa-envelope" />
+          </a>
+        </li>
+        <li>
+          <a class="cursor-pointer transition hover:text-slate-600" href="tel:0757354460">
+            <font-awesome-icon icon="fa-solid fa-phone" />
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="lg:hidden absolute top-0 left-0 w-full h-24"></div>
   </div>
 </template>
 
