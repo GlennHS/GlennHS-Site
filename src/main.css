@@ -15,7 +15,7 @@
     @apply text-2xl font-bold mb-4;
   }
   
-  section h3 {
+  section h3.preline {
     @apply font-bold uppercase text-navy-100;
   }
 
@@ -30,6 +30,34 @@
   .cta:active {
     @apply brightness-50 translate-y-1;
   }
+
+  a.sky {
+    @apply underline italic text-sky hover:brightness-75 active:brightness-50 transition;
+  }
+
+  .blog-post-content p {
+    @apply my-4;
+  }
+
+  .blog-post-content h1, .blog-post-content h2, .blog-post-content h3 {
+    @apply font-bold pt-4;
+  }
+
+  .blog-post-content h1 {
+    @apply text-4xl my-4;
+  }
+
+  .blog-post-content h2 {
+    @apply text-3xl my-2;
+  }
+
+  .blog-post-content h3 {
+    @apply text-2xl my-2;
+  }
+}
+
+.last-right {
+  text-align-last: end;
 }
 
 @media(prefers-reduced-motion) {

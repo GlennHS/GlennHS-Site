@@ -3,7 +3,7 @@
     blogPost: Object
   })
 
-  const cardSource = `https://placekitten.com/${400+Math.floor(Math.random() * 8)}/200`
+  const cardSource = props.blogPost.image || `https://placekitten.com/${400+Math.floor(Math.random() * 8)}/200`
 </script>
 
 <template>
