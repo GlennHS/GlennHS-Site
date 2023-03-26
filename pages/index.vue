@@ -28,6 +28,9 @@
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if(entry.isIntersecting) {
+          if(entry.target.classList.contains('intersect-container')) {
+            entry.target.firstChild.classList.add('active')
+          }
           entry.target.classList.add('active')
         } else {
           // entry.target.classList.remove('active')
@@ -35,7 +38,7 @@
       })
     })
 
-    const hiddenElements = document.querySelectorAll('#main-content section, .blog-post-short');
+    const hiddenElements = document.querySelectorAll('.intersect-container, .blog-post-short');
     hiddenElements.forEach((el) => observer.observe(el));
   })
 </script>
@@ -61,27 +64,33 @@
 
     <div id="main-content" class="grid grid-cols-1 lg:grid-cols-2 gap-8">
       <div id="about-sections">
-        <section>
-          <h3 class="preline">Currently at...</h3>
-          <h2>Clevertouch Marketing.</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam exercitationem, similique dolores natus esse, aliquam blanditiis architecto saepe sunt magni deserunt fuga voluptas minus tempore nihil iusto laborum, ex cumque voluptates. Suscipit a modi, fuga labore dicta dolorem voluptates nemo. Numquam eos distinctio alias assumenda repudiandae sunt reprehenderit officia, praesentium aut earum, eaque odit harum culpa vero explicabo ad dolorem. Dolores eligendi placeat velit magni veritatis mollitia maiores quibusdam ratione repellat nostrum quam iste rerum, incidunt officiis voluptatibus, reprehenderit adipisci, pariatur esse optio dolorem quos soluta cum illo! Obcaecati eius officiis voluptatum atque rerum exercitationem sapiente dolor autem, ad excepturi.
-          </p>
-        </section>
-        <section>
-          <h3 class="preline">Currently working on...</h3>
-          <h2>This Site.</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam exercitationem, similique dolores natus esse, aliquam blanditiis architecto saepe sunt magni deserunt fuga voluptas minus tempore nihil iusto laborum, ex cumque voluptates. Suscipit a modi, fuga labore dicta dolorem voluptates nemo. Numquam eos distinctio alias assumenda repudiandae sunt reprehenderit officia, praesentium aut earum, eaque odit harum culpa vero explicabo ad dolorem. Dolores eligendi placeat velit magni veritatis mollitia maiores quibusdam ratione repellat nostrum quam iste rerum, incidunt officiis voluptatibus, reprehenderit adipisci, pariatur esse optio dolorem quos soluta cum illo! Obcaecati eius officiis voluptatum atque rerum exercitationem sapiente dolor autem, ad excepturi.
-          </p>
-        </section>
-        <section>
-          <h3 class="preline">My Dream Role...</h3>
-          <h2>Full Stack Nuxt Developer.</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam exercitationem, similique dolores natus esse, aliquam blanditiis architecto saepe sunt magni deserunt fuga voluptas minus tempore nihil iusto laborum, ex cumque voluptates. Suscipit a modi, fuga labore dicta dolorem voluptates nemo. Numquam eos distinctio alias assumenda repudiandae sunt reprehenderit officia, praesentium aut earum, eaque odit harum culpa vero explicabo ad dolorem. Dolores eligendi placeat velit magni veritatis mollitia maiores quibusdam ratione repellat nostrum quam iste rerum, incidunt officiis voluptatibus, reprehenderit adipisci, pariatur esse optio dolorem quos soluta cum illo! Obcaecati eius officiis voluptatum atque rerum exercitationem sapiente dolor autem, ad excepturi.
-          </p>
-        </section>
+        <div class="intersect-container">
+          <section>
+            <h3 class="preline">Currently at...</h3>
+            <h2>Clevertouch Marketing.</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam exercitationem, similique dolores natus esse, aliquam blanditiis architecto saepe sunt magni deserunt fuga voluptas minus tempore nihil iusto laborum, ex cumque voluptates. Suscipit a modi, fuga labore dicta dolorem voluptates nemo. Numquam eos distinctio alias assumenda repudiandae sunt reprehenderit officia, praesentium aut earum, eaque odit harum culpa vero explicabo ad dolorem. Dolores eligendi placeat velit magni veritatis mollitia maiores quibusdam ratione repellat nostrum quam iste rerum, incidunt officiis voluptatibus, reprehenderit adipisci, pariatur esse optio dolorem quos soluta cum illo! Obcaecati eius officiis voluptatum atque rerum exercitationem sapiente dolor autem, ad excepturi.
+            </p>
+          </section>
+        </div>
+        <div class="intersect-container">
+          <section>
+            <h3 class="preline">Currently working on...</h3>
+            <h2>This Site.</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam exercitationem, similique dolores natus esse, aliquam blanditiis architecto saepe sunt magni deserunt fuga voluptas minus tempore nihil iusto laborum, ex cumque voluptates. Suscipit a modi, fuga labore dicta dolorem voluptates nemo. Numquam eos distinctio alias assumenda repudiandae sunt reprehenderit officia, praesentium aut earum, eaque odit harum culpa vero explicabo ad dolorem. Dolores eligendi placeat velit magni veritatis mollitia maiores quibusdam ratione repellat nostrum quam iste rerum, incidunt officiis voluptatibus, reprehenderit adipisci, pariatur esse optio dolorem quos soluta cum illo! Obcaecati eius officiis voluptatum atque rerum exercitationem sapiente dolor autem, ad excepturi.
+            </p>
+          </section>
+        </div>
+        <div class="intersect-container">
+          <section>
+            <h3 class="preline">My Dream Role...</h3>
+            <h2>Full Stack Nuxt Developer.</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam exercitationem, similique dolores natus esse, aliquam blanditiis architecto saepe sunt magni deserunt fuga voluptas minus tempore nihil iusto laborum, ex cumque voluptates. Suscipit a modi, fuga labore dicta dolorem voluptates nemo. Numquam eos distinctio alias assumenda repudiandae sunt reprehenderit officia, praesentium aut earum, eaque odit harum culpa vero explicabo ad dolorem. Dolores eligendi placeat velit magni veritatis mollitia maiores quibusdam ratione repellat nostrum quam iste rerum, incidunt officiis voluptatibus, reprehenderit adipisci, pariatur esse optio dolorem quos soluta cum illo! Obcaecati eius officiis voluptatum atque rerum exercitationem sapiente dolor autem, ad excepturi.
+            </p>
+          </section>
+        </div>
       </div>
 
       <div id="recent-blog-posts" class="w-full">
@@ -136,9 +145,10 @@
   .hero-content h1, .hero-content p, section, .blog-post-short {
     opacity: 0;
     filter: blur(5px);
-    transform: translateX(-100%);
+    transform: translateX(-120%);
     transition-property: filter, transform;
-    transition-duration: 1.5s;
+    transition-duration: 1.25s;
+    transition-timing-function: ease;
   }
 
   .blog-post-short {

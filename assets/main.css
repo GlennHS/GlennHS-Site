@@ -1180,6 +1180,22 @@ a.sky:active {
   transition-duration: 150ms;
 }
 
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+h1, h2 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+h3, h4, h5, h6 {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.cta {
+  font-family: 'Fira Sans', sans-serif;
+}
+
 .last-right {
   -moz-text-align-last: end;
        text-align-last: end;
