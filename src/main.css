@@ -10,14 +10,14 @@
   }
 
   section {
-    @apply px-20 py-12 my-4 bg-slate-900;
+    @apply px-4 md:px-6 lg:px-12 xl:px-40 py-12 my-4 bg-slate-900;
   }
 
   section h2 {
     @apply text-2xl font-bold mb-4;
   }
   
-  section h3.preline {
+  .preline {
     @apply font-bold uppercase text-navy-100;
   }
 

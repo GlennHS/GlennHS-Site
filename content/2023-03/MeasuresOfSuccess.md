@@ -5,6 +5,7 @@ tags: [ 'personal', 'work-culture', 'favourites' ]
 excerpt: "People measure success in many ways. I only use 2, Work Output & Coworker Impact. In this post I discuss what I mean by that and why raising others up is so important to me."
 created: '2023-03-25'
 updated: '2023-03-25'
+image: '/images/blog/ct-escape-room.png'
 ---
 <h2>Success.</h2>
 <p>It's a word that conjures up a different image for each person. Some people hear it and immediately think of fast cars, living in the lap of luxury or, perhaps more bluntly, being rich. To others, it's being high up in the corporate hierarchy. It's having your name plastered everywhere and shouted from the rooftops. And to some people, it's being able to sail through on a comfortable wage with a mediocre job, being able to exist comfortably and have plenty of time for personal pursuits without ever having to worry about the corporate rat-race at all.</p>

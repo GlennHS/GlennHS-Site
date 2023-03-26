@@ -111,7 +111,7 @@
       </div>
     </header>
 
-    <div class="w-full h-24 mt-24 bg-slate-500 flex gap-4 items-center px-12 flex-wrap">
+    <div class="w-full mt-24 bg-slate-500 flex gap-4 items-center px-12 py-4 flex-wrap">
       <div class="flex flex-col">
         <h2 class="text-2xl font-bold">Filter by tag: </h2>
         <h3 class="text-base cursor-pointer" @click="toggleFilterMode()">Filter Type: <strong class="font-bold">{{ filterTypeOR ? 'OR' : 'AND' }}</strong></h3>
@@ -123,7 +123,7 @@
     </div>
 
     <div class="px-24 mt-12">
-      <div v-if="blogPosts.length > 0" class="grid grid-cols-3 gap-10">
+      <div v-if="blogPosts.length > 0" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
         <BlogPostCard v-for="post in blogPosts" :blog-post="post"/>
       </div>
       <div v-else>
