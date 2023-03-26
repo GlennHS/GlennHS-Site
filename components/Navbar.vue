@@ -63,7 +63,7 @@
         </li>
       </ul>
     </div>
-    <div class="lg:hidden absolute top-0 left-0 w-full h-24"></div>
+    <div class="lg:hidden -z-10 absolute top-0 left-0 w-full h-24"></div>
   </div>
 </template>
 

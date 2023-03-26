@@ -14,7 +14,7 @@
         hasHover.value = false
         setTimeout(() => document.querySelector('.click-hint').style.opacity = 0, 3000)
     }
-    
+
     let hoverTimer;
     const elImage = document.getElementById('post-image')
     elImage.addEventListener('mouseenter', () => {
@@ -42,7 +42,7 @@
       <p class="italic">{{ blogPost.excerpt }}</p>
       <span class="text-sm">Posted: {{ blogPost.created }}</span>
       <em class="text-sm italic" v-if="blogPost.updated != blogPost.created">(Post updated: {{ blogPost.updated }})</em>
-      <hr />
+      <hr class="w-full" />
       <div class="blog-post-content">
         <ContentRenderer :value="blogPost" />
       </div>
