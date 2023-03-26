@@ -10,7 +10,7 @@
 <template>
   <div>
     <div class="text-center rounded-full py-0.5 px-4 text-sm text-slate-900 font-bold" :class="bgColor()">
-      {{ props.postTag }}
+      <span class="text-sm md:text-base">{{ props.postTag }}</span>
     </div>
   </div>
 </template>
