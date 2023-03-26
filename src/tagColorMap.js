@@ -1,5 +1,6 @@
 const tagColorMap = {
-  'test': 'bg-pink-300',
+  'work-culture': 'bg-fuchsia-300',
+  'personal': 'bg-indigo-300',
   'testing': 'bg-orange-300',
   'nuxt/vue': 'bg-emerald-300',
   'ai': 'bg-teal-300',
