@@ -1087,6 +1087,10 @@ a.sky:active {
   --tw-bg-opacity: 0.25;
 }
 
+.bg-opacity-40 {
+  --tw-bg-opacity: 0.4;
+}
+
 .bg-cover {
   background-size: cover;
 }
