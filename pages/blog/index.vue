@@ -4,6 +4,7 @@
   const allTags = ref([])
   const tagsFilteringBy = ref([])
   const filterTypeOR = ref(true)
+  const loadingPosts = ref(true)
 
   const orderPostArrayByCreated = (pArr) => {
     return pArr.sort((a,b) => {
@@ -61,9 +62,11 @@
   }
 
   const filterPosts = () => {
+    loadingPosts.value = true
     if(tagsFilteringBy.value.length === 0) setPostsALL()
     else if(filterTypeOR.value) setPostsByTag(tagsFilteringBy.value)
     else setPostsByTagAND(tagsFilteringBy.value)
+    loadingPosts.value = false
   }
 
   const toggleFilterMode = () => {
@@ -123,7 +126,11 @@
     </div>
 
     <div class="px-4 md:px-12 lg:px-24 mt-12">
-      <div v-if="blogPosts.length > 0" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+      <div v-if="loadingPosts" class="flex flex-col items-center">
+        <img src='/images/bannerLogo.png' alt='Logo' class="h-12 md:h-24" />
+        <span class="fade-repeat mt-4">Posts loading. Please wait...</span>
+      </div>
+      <div v-else-if="blogPosts.length > 0" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
         <BlogPostCard v-for="post in blogPosts" :blog-post="post"/>
       </div>
       <div v-else>
@@ -146,5 +153,15 @@
     background-position: 80% center;
     background-repeat: no-repeat;
     background-size: cover;
+  }
+
+  .fade-repeat {
+    animation: fade-repeat 1s infinite;
+  }
+
+  @keyframes fade-repeat {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
   }
 </style>

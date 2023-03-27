@@ -781,6 +781,10 @@ a.sky:active {
   height: 100vh;
 }
 
+.h-48 {
+  height: 12rem;
+}
+
 .max-h-52 {
   max-height: 13rem;
 }
@@ -1383,6 +1387,10 @@ h3, h4, h5, h6 {
 
   .md\:hidden {
     display: none;
+  }
+
+  .md\:h-24 {
+    height: 6rem;
   }
 
   .md\:w-96 {
