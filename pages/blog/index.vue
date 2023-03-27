@@ -6,7 +6,7 @@
   const filterTypeOR = ref(true)
   const loadingPosts = ref(true)
   
-  const contentBasePath = 'live'
+  const contentBasePath = ''
 
   const orderPostArrayByCreated = (pArr) => {
     return pArr.sort((a,b) => {
