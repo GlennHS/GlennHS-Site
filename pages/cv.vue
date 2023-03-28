@@ -1,4 +1,6 @@
 <script setup>
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+
   onMounted(() => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
@@ -17,9 +19,9 @@
 
 <template>
   <div>
-    <header class="relative w-full h-full flex items-center justify-center parallax-1">
+    <header id="parallax-1" class="relative w-full h-full flex items-center justify-center parallax">
       <div class="absolute top-0 left-0 w-full h-full bg-slate-600 bg-opacity-60 flex flex-col items-baseline justify-center">
-        <div ref="heroContent" class="slide-in-left backdrop-blur-sm bg-gray-900 bg-opacity-70 rounded-r-lg w-full px-4 lg:px-20 py-4 lg:py-10 flex flex-col justify-center items-baseline gap-y-6 max-w-lg lg:max-w-xl xl:max-w-3xl mt-32 md:mt-0">
+        <div ref="heroContent" class="slide-in-left backdrop-blur-md bg-gray-900 bg-opacity-50 rounded-r-lg w-full px-4 lg:px-20 py-4 lg:py-10 flex flex-col justify-center items-baseline gap-y-6 max-w-lg lg:max-w-xl xl:max-w-3xl mt-32 md:mt-0">
           <h1 class="text-lg md:text-xl lg:text-2xl xl:text-4xl font-bold">Digital CV.</h1>
           <span class="text-base lg:text-lg italic font-semibold">In a hurry? Need a different format? 
             <a href="/files/cv.pdf" class="sky">Download a .pdf copy of my CV here.</a>
@@ -46,52 +48,57 @@
     </section>
 
     <section class="flex flex-col p-0 pb-12">
-      <div class="parallax-2 w-full"></div>
-      <div class="flex flex-col items-center">
+      <div id="parallax-2" class="parallax w-full"></div>
+      <div class="flex flex-col items-center py-8 px-4 md:px-6 lg:px-12 xl:px-40">
         <h2 class="text-lg md:text-xl xl:text-4xl font-bold pt-4 mb-0">Qualifications</h2>
         <h3 class="text-base md:text-lg xl:text-2xl font-semibold">University of Portsmouth 2017-2021</h3>
         <span class="text-base md:text-lg xl:text-2xl">BSc Hons. Computer Science</span>
-        <h4 class="text-base md:text-lg xl:text-xl pt-4">Notable Achievements</h4>
-        <ul>
-          <li class="border-l-8 border-slate-500 bg-slate-400 bg-opacity-25 px-4 py-2 pr-8 my-2 transition-all hover:border-l-[20px]">Acted as Scrum Master within my Intermediate Software Engineering group, ensuring incremental development and continuous delivery within a given deadline using Agile methodologies and Scrum/Kanban.</li>
-          <li class="border-l-8 border-slate-500 bg-slate-400 bg-opacity-25 px-4 py-2 pr-8 my-2 transition-all hover:border-l-[20px]">Learned new programming languages (Python, Haskell, Java) in a matter of weeks.</li>
-          <li class="border-l-8 border-slate-500 bg-slate-400 bg-opacity-25 px-4 py-2 pr-8 my-2 transition-all hover:border-l-[20px]">Setup GitHub CI/CD within Heroku and integrated GitHub to Slack to ensure transparency amongst team members and that everyone is kept informed.</li>
-          <li class="border-l-8 border-slate-500 bg-slate-400 bg-opacity-25 px-4 py-2 pr-8 my-2 transition-all hover:border-l-[20px]">Acted as Chair of the Staff Student Council Committee and Student Representative. Student Representative requires good communication skills and an ability to engage with students.</li>
-        </ul>
+        <h4 class="text-base md:text-lg xl:text-xl py-4">Notable Achievements</h4>
+        <div class="grid grid-cols-2 md:grid-cols-4 items-stretch justify-around gap-x-12">
+          <div class="uni-card">
+            <img class="uni-card-bg" src="/images/ResLife.png">
+            <font-awesome-icon :icon="['fas', 'graduation-cap']" class="text-6xl z-10" />
+            <span class="z-10">As Chair of the Staff Student Council Committee and Student Representative, demonstrated strong communication skills and the ability to engage with diverse groups of individuals, resulting in successful initiatives that positively impacted the student body.</span>
+          </div>
+          <div class="uni-card">
+            <img class="uni-card-bg" src="/images/agile.png">
+            <font-awesome-icon :icon="['fas', 'person-chalkboard']" class="text-6xl z-10" />
+            <span class="z-10">Led an Intermediate Software Engineering group as Scrum Master, championing Agile methodologies and Scrum/Kanban frameworks to ensure timely delivery of high-quality products.</span>
+          </div>
+          <div class="uni-card">
+            <img class="uni-card-bg" src="/images/ResLife.png">
+            <font-awesome-icon :icon="['fas', 'book']" class="text-6xl z-10" />
+            <span class="z-10">Rapidly acquired proficiency in new programming languages, libraries, and frameworks, including Python and Java, demonstrating a strong ability to learn and adapt quickly.</span>
+          </div>
+          <div class="uni-card" id="reslife">
+            <img class="uni-card-bg" src="/images/ResLife.png">
+            <font-awesome-icon :icon="['fas', 'trophy']" class="text-6xl z-10" />
+            <span class="z-10">Awarded Resident Assistant of the Year 2017/18 for commitment to peer support, mental health first aid knowledge, and going above and beyond to care for those around me.</span>
+          </div>
+        </div>
       </div>
     </section>
   </div>
 </template>
 
 <style scoped>
-  .parallax-1 {
-    /* The image used */
-    background: url('/images/me-square/2.png');
-    
-    /* Set a specific height */
-    min-height: 400px;
-    
-    /* Create the parallax scrolling effect */
+  .parallax {
     background-attachment: fixed;
-    background-position: 50% min(-560px, -32vw);
     background-repeat: no-repeat;
     background-size: cover;
-
     transition: background 0.33s ease-out;
   }
 
-  .parallax-2 {
-    /* The image used */
+  #parallax-1 {
+    background-image: url('/images/me-square/2.png');
+    min-height: 400px;
+    background-position: 50% min(-560px, -32vw);
+  }
+
+  #parallax-2 {
     background-image: url('/images/UoP.jpg');
-    
-    /* Set a specific height */
     min-height: 300px;
-    
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
     background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
   }
 
   #details {
@@ -121,14 +128,27 @@
     transform: translateX(0);
   }
 
+  .uni-card img {
+    transition: opacity 1s ease-out;
+    opacity: 0;
+  }
+
+  .uni-card:hover img {
+    opacity: 1;
+  }
+
+  #reslife img {
+    object-position: 25% 50%;
+  }
+
   @media (max-width:1900px) {
-    .parallax-1 {
+    #parallax-1 {
       background-position: 50% min(-200px, -25vw);
     }
   }
 
   @media (max-width:1400px) {
-    .parallax-1 {
+    #parallax-1 {
       background-position: 50% min(-150px, -20vw);
     }
   }
@@ -152,8 +172,9 @@
       grid-area: top;
     }
 
-    .parallax-1 {
-      background-position: 50% min(-150px, -10vw);
+    .parallax {
+      background-attachment: scroll;
+      background-size: cover;
     }
   }
 </style>

@@ -51,7 +51,7 @@
           <h1 class="text-4xl font-bold">Passionate. Curious. Dedicated.</h1>
           <p class="text-base lg:text-lg">Passionate about web development with expertise in Vue and Nuxt, and experience with Laravel. I have a track record of quickly learning new technologies and applying them to projects. Dedicated to constantly improving my skills, both professionally and personally.</p>
           <div class="flex flex-col w-full md:w-auto md:flex-row gap-y-4 md:gap-y-0 md:gap-x-20">
-            <a class="cta" href="/">View my work</a>
+            <a class="cta" href="/portfolio">View my work</a>
             <a class="cta" href="#main-content">More about me</a>
           </div>
         </div>
