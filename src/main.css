@@ -57,7 +57,7 @@
     @apply text-2xl my-2;
   }
 
-  .uni-card {
+  .cv-card {
     @apply flex flex-col items-center justify-around border-8 border-slate-300 bg-slate-600 p-6 aspect-square relative;
   }
 

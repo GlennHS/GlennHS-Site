@@ -9,5 +9,15 @@ export default defineNuxtConfig({
   css: [
     '@/assets/main.css',
     '@fortawesome/fontawesome-svg-core/styles.css'
-  ]
+  ],
+  // https://stackoverflow.com/a/74999711/18073437
+  build: {
+    transpile: [
+      '@fortawesome/fontawesome-svg-core',
+      '@fortawesome/free-solid-svg-icons',
+      '@fortawesome/free-regular-svg-icons',
+      '@fortawesome/free-brands-svg-icons',
+      '@fortawesome/vue-fontawesome'
+    ]
+  }
 })

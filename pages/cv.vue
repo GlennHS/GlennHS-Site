@@ -48,6 +48,35 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
     </section>
 
     <section class="flex flex-col p-0 pb-12">
+      <div id="parallax-3" class="parallax w-full"></div>
+      <div class="flex flex-col items-center py-8 px-4 md:px-6 lg:px-12 xl:px-40">
+        <h2 class="text-lg md:text-xl xl:text-4xl font-bold pt-4 mb-0">Employment</h2>
+        <h3 class="text-base md:text-lg xl:text-2xl font-semibold">Clevertouch Marketing ~ 2021 to Present</h3>
+        <h4 class="text-base md:text-lg xl:text-xl py-4">Notable Achievements</h4>
+        <div class="grid grid-cols-2 md:grid-cols-4 items-stretch justify-around gap-x-12">
+          <div class="cv-card">
+            <font-awesome-icon :icon="['fas', 'gear']" class="text-6xl"/>
+            <span class="z-10">LGIM EPC</span>
+          </div>
+          <div class="cv-card">
+            <font-awesome-icon :icon="['fab', 'wordpress']" class="text-6xl" />
+            <span class="z-10">SEG WordPress Site</span>
+          </div>
+          <div class="cv-card">
+            <font-awesome-icon :icon="['fas', 'fa-chart-pie']" class="text-6xl" />
+            <span class="z-10">Wonderwall</span>
+          </div>
+          <div class="cv-card" id="reslife">
+            <font-awesome-icon :icon="['fas', 'language']" class="text-6xl" />
+            <span class="z-10">Dynamic Translations</span>
+          </div>
+        </div>
+        <h4 class="text-base md:text-lg xl:text-xl py-4">Company Description</h4>
+        <h4 class="text-base md:text-lg xl:text-xl py-4">Role Description</h4>
+      </div>
+    </section>
+
+    <section class="flex flex-col p-0 pb-12">
       <div id="parallax-2" class="parallax w-full"></div>
       <div class="flex flex-col items-center py-8 px-4 md:px-6 lg:px-12 xl:px-40">
         <h2 class="text-lg md:text-xl xl:text-4xl font-bold pt-4 mb-0">Qualifications</h2>
@@ -55,26 +84,51 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
         <span class="text-base md:text-lg xl:text-2xl">BSc Hons. Computer Science</span>
         <h4 class="text-base md:text-lg xl:text-xl py-4">Notable Achievements</h4>
         <div class="grid grid-cols-2 md:grid-cols-4 items-stretch justify-around gap-x-12">
-          <div class="uni-card">
+          <div class="cv-card uni-card">
             <img class="uni-card-bg" src="/images/ResLife.png">
             <font-awesome-icon :icon="['fas', 'graduation-cap']" class="text-6xl z-10" />
             <span class="z-10">As Chair of the Staff Student Council Committee and Student Representative, demonstrated strong communication skills and the ability to engage with diverse groups of individuals, resulting in successful initiatives that positively impacted the student body.</span>
           </div>
-          <div class="uni-card">
-            <img class="uni-card-bg" src="/images/agile.png">
+          <div class="cv-card uni-card">
+            <img class="uni-card-bg" src="/images/agile.png" />
             <font-awesome-icon :icon="['fas', 'person-chalkboard']" class="text-6xl z-10" />
             <span class="z-10">Led an Intermediate Software Engineering group as Scrum Master, championing Agile methodologies and Scrum/Kanban frameworks to ensure timely delivery of high-quality products.</span>
           </div>
-          <div class="uni-card">
+          <div class="cv-card uni-card">
             <img class="uni-card-bg" src="/images/ResLife.png">
             <font-awesome-icon :icon="['fas', 'book']" class="text-6xl z-10" />
             <span class="z-10">Rapidly acquired proficiency in new programming languages, libraries, and frameworks, including Python and Java, demonstrating a strong ability to learn and adapt quickly.</span>
           </div>
-          <div class="uni-card" id="reslife">
+          <div class="cv-card uni-card" id="reslife">
             <img class="uni-card-bg" src="/images/ResLife.png">
             <font-awesome-icon :icon="['fas', 'trophy']" class="text-6xl z-10" />
             <span class="z-10">Awarded Resident Assistant of the Year 2017/18 for commitment to peer support, mental health first aid knowledge, and going above and beyond to care for those around me.</span>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="flex flex-col p-0 pb-12">
+      <div id="parallax-4" class="parallax w-full"></div>
+      <h2 class="text-lg md:text-xl xl:text-4xl font-bold pt-4 mb-0 w-full text-center">Skills</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 py-8 px-4 md:px-6 lg:px-12 xl:px-40">
+        <div class="flex flex-col">
+          <h3 class="text-base md:text-lg xl:text-2xl font-semibold">Technical Skills</h3>
+          <h4 class="text-base md:text-lg xl:text-xl py-4">Top Skills</h4>
+          <ul class="flex flex-col gap-y-4">
+            <li class="border-l-8 border-slate-400 pl-4 bg-slate-700"><strong class="font-bold">Nuxt 3 & Vue 3</strong> - Yo</li>
+            <li class="border-l-8 border-slate-400 pl-4 bg-slate-700"><strong class="font-bold">Nuxt 3 & Vue 3</strong> - Yo</li>
+            <li class="border-l-8 border-slate-400 pl-4 bg-slate-700"><strong class="font-bold">Nuxt 3 & Vue 3</strong> - Yo</li>
+          </ul>
+        </div>
+        <div class="flex flex-col">
+          <h3 class="text-base md:text-lg xl:text-2xl font-semibold">Soft/Interpersonal Skills</h3>
+          <h4 class="text-base md:text-lg xl:text-xl py-4">Top Skills</h4>
+          <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
         </div>
       </div>
     </section>
@@ -87,6 +141,8 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
     background-repeat: no-repeat;
     background-size: cover;
     transition: background 0.33s ease-out;
+    min-height: 300px;
+    background-position: center;
   }
 
   #parallax-1 {
@@ -97,8 +153,15 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
   #parallax-2 {
     background-image: url('/images/UoP.jpg');
-    min-height: 300px;
-    background-position: center;
+  }
+
+  #parallax-3 {
+    background-image: url('/images/blog/ct-escape-room.png');
+  }
+
+  #parallax-4 {
+    background-image: url('/images/coding.jpg');
+    filter: blur(3px);
   }
 
   #details {

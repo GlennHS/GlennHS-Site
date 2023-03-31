@@ -560,7 +560,7 @@ a.sky:active {
   line-height: 2rem;
 }
 
-.uni-card {
+.cv-card {
   position: relative;
   display: flex;
   aspect-ratio: 1 / 1;
@@ -736,6 +736,10 @@ a.sky:active {
   margin-bottom: 0px;
 }
 
+.ml-1 {
+  margin-left: 0.25rem;
+}
+
 .mt-12 {
   margin-top: 3rem;
 }
@@ -905,6 +909,10 @@ a.sky:active {
   gap: 2.5rem;
 }
 
+.gap-12 {
+  gap: 3rem;
+}
+
 .gap-4 {
   gap: 1rem;
 }
@@ -964,6 +972,15 @@ a.sky:active {
 
 .border-4 {
   border-width: 4px;
+}
+
+.border-l-8 {
+  border-left-width: 8px;
+}
+
+.border-slate-400 {
+  --tw-border-opacity: 1;
+  border-color: rgb(148 163 184 / var(--tw-border-opacity));
 }
 
 .border-white {
@@ -1155,6 +1172,10 @@ a.sky:active {
 
 .pb-2 {
   padding-bottom: 0.5rem;
+}
+
+.pl-4 {
+  padding-left: 1rem;
 }
 
 .pt-4 {

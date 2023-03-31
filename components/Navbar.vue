@@ -81,12 +81,4 @@
     filter: blur(0);
     transform: translateX(0);
   }
-
-  /* #social-icons li {
-    transition: transform 0.3s ease-in-out;
-  }
-
-  #social-icons li:hover {
-    transform: rotate(360deg);
-  } */
 </style>
