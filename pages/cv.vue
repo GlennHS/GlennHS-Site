@@ -1,7 +1,13 @@
 <script setup>
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+import { DOMNodeTransforms } from '@vue/compiler-dom';
+
+  const flipCard = (ev) => ev.target.tagName != 'A' ? ev.target.closest('.flip-card').classList.toggle('flipped') : false
+
+  const hasHover = ref(true);
 
   onMounted(() => {
+    if(window.matchMedia("(any-hover: none)").matches) hasHover.value = false
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if(entry.isIntersecting) {
@@ -34,7 +40,7 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
       <div id="content" class="flex flex-col items-center md:items-end h-min">
         <h2 class="text-lg md:text-xl xl:text-2xl font-bold text-right">Glenn Hamilton-Smith BSc</h2>
         <h3 class="text-base md:text-lg xl:text-xl text-right">
-          <strong class="font-bold">Junior Developer</strong>
+          <strong>Junior Developer</strong>
           at
           <a target="_blank" href="https://clever-touch.com" class="sky">Clevertouch Marketing</a>
         </h3>
@@ -51,28 +57,79 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
       <div id="parallax-3" class="parallax w-full"></div>
       <div class="flex flex-col items-center py-8 px-4 md:px-6 lg:px-12 xl:px-40">
         <h2 class="text-lg md:text-xl xl:text-4xl font-bold pt-4 mb-0">Employment</h2>
-        <h3 class="text-base md:text-lg xl:text-2xl font-semibold">Clevertouch Marketing ~ 2021 to Present</h3>
-        <h4 class="text-base md:text-lg xl:text-xl py-4">Notable Achievements</h4>
+        <h3 class="text-base md:text-lg xl:text-2xl font-semibold"><a class="sky" href="https://clever-touch.com">Clevertouch Marketing</a> ~ 2021 to Present</h3>
+        <h4 class="text-base md:text-lg xl:text-xl py-4 font-bold">Notable Achievements</h4>
         <div class="grid grid-cols-2 md:grid-cols-4 items-stretch justify-around gap-x-12">
-          <div class="cv-card">
-            <font-awesome-icon :icon="['fas', 'gear']" class="text-6xl"/>
-            <span class="z-10">LGIM EPC</span>
+          <div class="flip-card" @click="(ev) => flipCard(ev)">
+            <div class="relative w-full h-full transition flip-card-inner">
+              <div class="cv-card w-full h-full flip-front-face">
+                <font-awesome-icon :icon="['fas', 'gear']" class="text-9xl"/>
+                <span class="z-10 text-2xl">LGIM EPC</span>
+                <span class="click-here flex items-center gap-x-2 italic text-sm">{{ hasHover ? 'Click' : 'Touch' }} Here <font-awesome-icon :icon="['fas', 'arrow-right']" /></span>
+              </div>
+              <div class="cv-card p-4 w-full h-full flip-back-face">
+                <p class="text-center">Legal and General Investment Management had three separate Pardot instances which all needed to be interconnected via a complex multi-instance, multi-language preference center.</p>
+                <a href='/portfolio#lgim-epc' class="italic sky">Read more &gt;&gt;</a>
+              </div>
+            </div>
           </div>
-          <div class="cv-card">
-            <font-awesome-icon :icon="['fab', 'wordpress']" class="text-6xl" />
-            <span class="z-10">SEG WordPress Site</span>
+          <div class="flip-card" @click="(ev) => flipCard(ev)">
+            <div class="relative w-full h-full transition flip-card-inner">
+              <div class="cv-card w-full h-full flip-front-face">
+                <font-awesome-icon :icon="['fab', 'wordpress']" class="text-9xl" />
+                <span class="z-10 text-2xl">SEG WordPress Site</span>
+                <span class="click-here flex items-center gap-x-2 italic text-sm">{{ hasHover ? 'Click' : 'Touch' }} Here <font-awesome-icon :icon="['fas', 'arrow-right']" /></span>
+              </div>
+              <div class="cv-card p-4 w-full h-full flip-back-face">
+                <p class="text-center text-sm">Supporting Education Group approached us and asked for a WordPress solution to aggregate all the posts from their associated sites into their main site. I was tasked with creating a WordPress template that retrieved the posts and used the WP_Query class to allow users to filter/search posts.</p>
+                <a class="italic sky">Read more &gt;&gt;</a>
+              </div>
+            </div>
           </div>
-          <div class="cv-card">
-            <font-awesome-icon :icon="['fas', 'fa-chart-pie']" class="text-6xl" />
-            <span class="z-10">Wonderwall</span>
+          <div class="flip-card" @click="(ev) => flipCard(ev)">
+            <div class="relative w-full h-full transition flip-card-inner">
+              <div class="cv-card w-full h-full flip-front-face">
+                <font-awesome-icon :icon="['fas', 'fa-chart-pie']" class="text-9xl" />
+                <span class="z-10 text-2xl">Wonderwall</span>
+                <span class="click-here flex items-center gap-x-2 italic text-sm">{{ hasHover ? 'Click' : 'Touch' }} Here <font-awesome-icon :icon="['fas', 'arrow-right']" /></span>
+              </div>
+              <div class="cv-card p-4 w-full h-full flip-back-face">
+                <p class="text-center text-sm">Our CEO had envisioned a dashboard for use across the business that contained high-level metrics relevant to all departments across the entire company. I created a NodeJS application to show these visualisations using realtime data pulled from Tableau authenticated using OAuth.</p>
+                <a class="italic sky">Read more &gt;&gt;</a>
+              </div>
+            </div>
           </div>
-          <div class="cv-card" id="reslife">
-            <font-awesome-icon :icon="['fas', 'language']" class="text-6xl" />
-            <span class="z-10">Dynamic Translations</span>
+          <div class="flip-card" @click="(ev) => flipCard(ev)">
+            <div class="relative w-full h-full transition flip-card-inner">
+              <div class="cv-card w-full h-full flip-front-face">
+                <font-awesome-icon :icon="['fas', 'language']" class="text-9xl" />
+                <span class="z-10 text-2xl">Dynamic Translations</span>
+                <span class="click-here flex items-center gap-x-2 italic text-sm">{{ hasHover ? 'Click' : 'Touch' }} Here <font-awesome-icon :icon="['fas', 'arrow-right']" /></span>
+              </div>
+              <div class="cv-card p-4 w-full h-full flip-back-face">
+                <p class="text-center text-sm">I noticed a trend of our clients requesting pages and preference centers in various languages, more so than usual. I created a NodeJS script that takes an HTML file and an Excel document with translations and turns it into either a folder of translated pages or a page that contains a dynamic translation dropdown.</p>
+                <a class="italic sky">Read more &gt;&gt;</a>
+              </div>
+            </div>
           </div>
         </div>
-        <h4 class="text-base md:text-lg xl:text-xl py-4">Company Description</h4>
-        <h4 class="text-base md:text-lg xl:text-xl py-4">Role Description</h4>
+        <div class="flex flex-col w-full mt-4">
+          <h4 class="text-base md:text-lg xl:text-xl py-4 font-bold">Company Description</h4>
+          <p class="text-justify">
+            Clevertouch Marketing is a <strong>Marketing Technology Consultancy</strong>. Guided by their 3 core principles, to 'Simplify, Connect, and Inform', Clevertouch has been helping marketers across the globe love marketing technology since 2009. They have had over 500 clients across the globe and specialise in Marketo, Pardot, Salesforce, Marketing Cloud and more. They also have SaaS offerings including Momentum, Eventum and the Pardot Data Extractor. Momentum offers simplified, streamlined and consistent email development using user-defined templates with a built-in approval flow and, as of recently, version control. Eventum is an event management software for managing events of all sizes and tracking attendees. The Pardot Data Extractor allows for the creation and automation of bespoke data pulls from Pardot.
+          </p>
+          <h4 class="text-base md:text-lg xl:text-xl py-4 font-bold">Role Description</h4>
+          <ul class="list-disc list-inside">
+            <li>Developing editable landing page templates and email templates for international clients with user experience and reusability in mind</li>
+            <li>Attending client-facing meetings and being a subject matter expert on Marketo, Pardot, Salesforce and Marketing Cloud</li>
+            <li>Creating unique solutions to problems within the constraints of each individual MA platform and ensuring those solutions are robust and future-proof</li>
+            <li>Scoping out level of effort for various tech tasks to ensure that people are given sufficient time to complete a task but also we aren't over-charging clients</li>
+            <li>Creating complex solutions to niche problems by engineering unique solutions utilising whatever tool is best for that particular job</li>
+            <li>Furthering myself through workplace-enhanced learning and pushing myself to learn the tools necessary to excel at my job</li>
+            <li>Self-taught languages/frameworks necessary for new projects to ensure I can competently engineer whatever comes my way confidently</li>
+            <li>Became qualified in Marketo (Adobe Certified Expert), Pardot (Pardot Specialist) and Marketing Cloud (Email Specialist)</li>
+          </ul>
+        </div>
       </div>
     </section>
 
@@ -85,7 +142,7 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
         <h4 class="text-base md:text-lg xl:text-xl py-4">Notable Achievements</h4>
         <div class="grid grid-cols-2 md:grid-cols-4 items-stretch justify-around gap-x-12">
           <div class="cv-card uni-card">
-            <img class="uni-card-bg" src="/images/ResLife.png">
+            <img class="uni-card-bg" src="/images/sscc-meeting.jpg">
             <font-awesome-icon :icon="['fas', 'graduation-cap']" class="text-6xl z-10" />
             <span class="z-10">As Chair of the Staff Student Council Committee and Student Representative, demonstrated strong communication skills and the ability to engage with diverse groups of individuals, resulting in successful initiatives that positively impacted the student body.</span>
           </div>
@@ -95,7 +152,7 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
             <span class="z-10">Led an Intermediate Software Engineering group as Scrum Master, championing Agile methodologies and Scrum/Kanban frameworks to ensure timely delivery of high-quality products.</span>
           </div>
           <div class="cv-card uni-card">
-            <img class="uni-card-bg" src="/images/ResLife.png">
+            <img class="uni-card-bg" src="/images/learning-code.jpg">
             <font-awesome-icon :icon="['fas', 'book']" class="text-6xl z-10" />
             <span class="z-10">Rapidly acquired proficiency in new programming languages, libraries, and frameworks, including Python and Java, demonstrating a strong ability to learn and adapt quickly.</span>
           </div>
@@ -113,21 +170,27 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
       <h2 class="text-lg md:text-xl xl:text-4xl font-bold pt-4 mb-0 w-full text-center">Skills</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-12 py-8 px-4 md:px-6 lg:px-12 xl:px-40">
         <div class="flex flex-col">
-          <h3 class="text-base md:text-lg xl:text-2xl font-semibold">Technical Skills</h3>
-          <h4 class="text-base md:text-lg xl:text-xl py-4">Top Skills</h4>
+          <h3 class="text-base md:text-lg xl:text-2xl font-semibold pb-4">Technical Skills</h3>
+          <!-- <h4 class="text-base md:text-lg xl:text-xl py-4">Top Skills</h4> -->
           <ul class="flex flex-col gap-y-4">
-            <li class="border-l-8 border-slate-400 pl-4 bg-slate-700"><strong class="font-bold">Nuxt 3 & Vue 3</strong> - Yo</li>
-            <li class="border-l-8 border-slate-400 pl-4 bg-slate-700"><strong class="font-bold">Nuxt 3 & Vue 3</strong> - Yo</li>
-            <li class="border-l-8 border-slate-400 pl-4 bg-slate-700"><strong class="font-bold">Nuxt 3 & Vue 3</strong> - Yo</li>
+            <li class="border-l-8 border-slate-400 pl-4 bg-slate-700"><strong>Nuxt 3 & Vue 3</strong> - I've been learning & using Vue for well over a year now and using Nuxt for almost as long. They're very likely my 2 favourite technologies I've ever used, so much power and simplicity combined</li>
+            <li class="border-l-8 border-slate-400 pl-4 bg-slate-700"><strong>NodeJS</strong> - I started using NodeJS about 4 years ago when a coworker at the time introduced me to it. It completely reignited my (at the time) dwindling passion for web development and I've used dozens of packages including ExpressJS, Sass, Puppeteer, Cheerio & Axios</li>
+            <li class="border-l-8 border-slate-400 pl-4 bg-slate-700"><strong>PHP</strong> - I've worked with PHP on and off but only recently really sunk my teeth into it. I've now used PHP to craft a bespoke, complex WordPress page template that combined both back-end and front-end to create a searchable, filterable page</li>
+            <li class="border-l-8 border-slate-400 pl-4 bg-slate-700"><strong>Vanilla Web Technologies</strong> - I've been coding for over a decade now and professionally for over 4 years. I began as a hobbyist and student at secondary school and decided I liked it. I went on to craft a suite of deciphering tools in JS at college for the national cipher challenge. At university I found out about NodeJS on my placement year and loved it</li>
+            <li class="border-l-8 border-slate-400 pl-4 bg-slate-700"><strong>Problem Identifying & Solving</strong> - I have both a skill and passion for identifying weak areas and problems within a business and finding ways to alleviate pain points and automate tedious/repetitive tasks. I created an automation script for the morning processes at Be Wiser, turning an hour long morning process into a 5 minute one. I also crafted several internal solutions at Clevertouch</li>
+            <li class="border-l-8 border-slate-400 pl-4 bg-slate-700"><strong>Quick Learning</strong> - I have a track record of picking up new languages, tools and frameworks blazingly fast. I find I learn best on the job and have picked up PHP, WordPress, Python and Visual Basic as and when required of me in order to fulfil various needs in previous roles</li>
           </ul>
         </div>
         <div class="flex flex-col">
-          <h3 class="text-base md:text-lg xl:text-2xl font-semibold">Soft/Interpersonal Skills</h3>
-          <h4 class="text-base md:text-lg xl:text-xl py-4">Top Skills</h4>
-          <ul>
-            <li></li>
-            <li></li>
-            <li></li>
+          <h3 class="text-base md:text-lg xl:text-2xl font-semibold pb-4">Soft/Interpersonal Skills</h3>
+          <!-- <h4 class="text-base md:text-lg xl:text-xl py-4">Top Skills</h4> -->
+          <ul class="flex flex-col gap-y-4">
+            <li class="border-l-8 border-slate-400 pl-4 bg-slate-700"><strong>Team-Oriented</strong> - Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, nemo animi laborum laudantium maiores deserunt aliquam? Maiores sed aliquam esse!</li>
+            <li class="border-l-8 border-slate-400 pl-4 bg-slate-700"><strong>Empathetic</strong> - Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, nemo animi laborum laudantium maiores deserunt aliquam? Maiores sed aliquam esse!</li>
+            <li class="border-l-8 border-slate-400 pl-4 bg-slate-700"><strong>Mental Health Work Background</strong> - Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, nemo animi laborum laudantium maiores deserunt aliquam? Maiores sed aliquam esse!</li>
+            <li class="border-l-8 border-slate-400 pl-4 bg-slate-700"><strong>Passionate Teacher</strong> - Ran several internal "Tech Huddles" on various topics in order to try and teach other techies about different useful technologies, concepts and showcase internal solutions I'd built to help out</li>
+            <li class="border-l-8 border-slate-400 pl-4 bg-slate-700"><strong>Proven Mediator</strong> - Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, nemo animi laborum laudantium maiores deserunt aliquam? Maiores sed aliquam esse!</li>
+            <li class="border-l-8 border-slate-400 pl-4 bg-slate-700"><strong>Intentionally Approachable</strong> - Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, nemo animi laborum laudantium maiores deserunt aliquam? Maiores sed aliquam esse!</li>
           </ul>
         </div>
       </div>
@@ -136,6 +199,49 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 </template>
 
 <style scoped>
+  .flip-card {
+    perspective: 1000px;
+    min-height: 300px;
+    min-width: 300px;
+    cursor: pointer;
+  }
+
+  .flip-card-inner {
+    transform-style: preserve-3d;
+    transition: transform 0.8s ease-out;
+  }
+
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(25deg);
+    transition: box-shadow 0.25s linear, transform 0.8s ease-out;
+    box-shadow: #fff 0 0 16px;
+  }
+
+  .flip-card.flipped .flip-card-inner {
+    transform: rotateY(180deg);
+    box-shadow: none!important;
+  }
+
+  .flip-front-face, .flip-back-face {
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+
+  .flip-back-face {
+    transform: rotateY(180deg);
+  }
+
+  .click-here {
+    transition: all 0.1s linear;
+  }
+
+  .flip-front-face:hover .click-here {
+    padding-left: 10px!important;
+  }
+
   .parallax {
     background-attachment: fixed;
     background-repeat: no-repeat;

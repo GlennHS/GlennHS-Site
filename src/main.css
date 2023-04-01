@@ -34,7 +34,7 @@
   }
 
   a.sky {
-    @apply underline italic text-sky hover:brightness-75 active:brightness-50 transition;
+    @apply underline italic text-sky hover:brightness-75 active:brightness-50 transition cursor-pointer;
   }
 
   .blog-post-content p {
