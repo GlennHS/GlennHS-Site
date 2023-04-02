@@ -46,8 +46,8 @@
 <template>
   <div ref="page">
     <header class="relative w-full h-full flex items-center justify-center parallax">
-      <div class="absolute top-0 left-0 w-full h-full bg-slate-600 bg-opacity-60 flex flex-col items-baseline justify-center">
-        <div ref="heroContent" class="hero-content w-full px-20 py-10 flex flex-col justify-center items-baseline gap-y-6 max-w-3xl">
+      <div class="absolute top-0 left-0 w-full h-full bg-slate-800 bg-opacity-[15%] flex flex-col items-baseline justify-center background-filter">
+        <div ref="heroContent" class="hero-content w-full px-20 py-10 flex flex-col justify-center items-baseline gap-y-6 max-w-3xl bg-slate-600 bg-opacity-40 backdrop-blur-sm rounded-md">
           <h1 class="text-4xl font-bold">Passionate. Curious. Dedicated.</h1>
           <p class="text-base lg:text-lg">Passionate about web development with expertise in Vue and Nuxt, and experience with Laravel. I have a track record of quickly learning new technologies and applying them to projects. Dedicated to constantly improving my skills, both professionally and personally.</p>
           <div class="flex flex-col w-full md:w-auto md:flex-row gap-y-4 md:gap-y-0 md:gap-x-20">
@@ -142,7 +142,7 @@
   #scroll-hint.suppress { opacity: 0; }
 
   /* #region Hero Slide Animation */
-  .hero-content h1, .hero-content p, section, .blog-post-short {
+  .hero-content, .blog-post-short {
     opacity: 0;
     filter: blur(5px);
     transform: translateX(-120%);
@@ -155,15 +155,16 @@
     transform: translateX(100%);
   }
 
-  .hero-content p {
+  .hero-content {
     transition-delay: .75s;
   }
   
-  .hero-content.active p, .hero-content.active h1, section.active, .blog-post-short.active {
+  .hero-content.active, section.active, .blog-post-short.active {
     opacity: 1;
     filter: blur(0);
     transform: translateX(0);
   }
+
   /* #endregion */
   @media (max-width: 1439px) {
     .parallax {

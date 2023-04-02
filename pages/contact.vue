@@ -17,7 +17,7 @@
         </div>
         <div class="contact-row">
           <font-awesome-icon icon="fa-brands fa-linkedin" class="text-2xl sm:text-5xl"/>
-          <a href="https://www.linkedin.com/in/glennhs/" class="sky text-base sm:text-2xl">@Glennhs</a>
+          <a href="https://www.linkedin.com/in/glennhs/" class="sky text-base sm:text-2xl">@GlennHS</a>
         </div>
         <div class="contact-row">
           <font-awesome-icon icon="fa-solid fa-envelope" class="text-2xl sm:text-5xl"/>
