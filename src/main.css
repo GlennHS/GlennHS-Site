@@ -92,6 +92,10 @@
   .cv-skill strong {
     @apply font-extrabold text-slate-100;
   }
+
+  .contact-row {
+    @apply flex items-center gap-4;
+  }
 }
 
 body {

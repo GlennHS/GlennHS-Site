@@ -1,7 +1,4 @@
 <script setup>
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
-import { DOMNodeTransforms } from '@vue/compiler-dom';
-
   const flipCard = (ev) => ev.target.tagName != 'A' ? ev.target.closest('.flip-card').classList.toggle('flipped') : false
 
   const hasHover = ref(true);

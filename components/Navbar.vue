@@ -13,7 +13,7 @@
 
 <template>
   <div class="h-24">
-    <div class="flex justify-between lg:fixed top-0 left-0 z-50 w-full items-center h-24 bg-slate-800 px-4">
+    <div class="flex justify-between lg:fixed top-0 left-0 z-50 w-full items-center h-24 bg-slate-800 px-2">
       <a href="/" class="h-full hidden lg:flex justify-center items-center p-2 transition hover:brightness-75">
         <img src='/images/bannerLogo.png' alt='Logo' class="w-full" />
       </a>
@@ -40,7 +40,7 @@
         </li>
       </ul>
       <div class="w-1 h-12 bg-white hidden md:inline"></div>
-      <ul id="social-icons" class="list-none hidden md:flex items-center justify-between gap-x-4 px-10 text-2xl xl:text-3xl">
+      <ul id="social-icons" class="list-none hidden md:flex items-center justify-between gap-x-2 sm:gap-x-4 px-10 text-2xl xl:text-3xl">
         <li>
           <a class="cursor-pointer transition hover:text-slate-600" href="https://github.com/glennhs" target="_blank">
             <font-awesome-icon icon="fa-brands fa-github" />
