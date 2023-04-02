@@ -59,16 +59,17 @@ import { DOMNodeTransforms } from '@vue/compiler-dom';
         <h2 class="text-lg md:text-xl xl:text-4xl font-bold pt-4 mb-0">Employment</h2>
         <h3 class="text-base md:text-lg xl:text-2xl font-semibold"><a class="sky" href="https://clever-touch.com">Clevertouch Marketing</a> ~ 2021 to Present</h3>
         <h4 class="text-base md:text-lg xl:text-xl py-4 font-bold">Notable Achievements</h4>
-        <div class="grid grid-cols-2 md:grid-cols-4 items-stretch justify-around gap-x-12">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 items-stretch justify-around gap-4 md:gap-6 lg:gap-12">
           <div class="flip-card" @click="(ev) => flipCard(ev)">
             <div class="relative w-full h-full transition flip-card-inner">
               <div class="cv-card w-full h-full flip-front-face">
-                <font-awesome-icon :icon="['fas', 'gear']" class="text-9xl"/>
-                <span class="z-10 text-2xl">LGIM EPC</span>
+                <font-awesome-icon :icon="['fas', 'gear']" class="text-5xl md:text-7xl xl:text-8xl 2xl:text-9xl"/>
+                <span class="z-10 text-base sm:text-lg lg:text-xl xl:text-2xl text-center">LGIM EPC</span>
                 <span class="click-here flex items-center gap-x-2 italic text-sm">{{ hasHover ? 'Click' : 'Touch' }} Here <font-awesome-icon :icon="['fas', 'arrow-right']" /></span>
               </div>
               <div class="cv-card p-4 w-full h-full flip-back-face">
-                <p class="text-center">Legal and General Investment Management had three separate Pardot instances which all needed to be interconnected via a complex multi-instance, multi-language preference center.</p>
+                <p class="long-content">Legal and General Investment Management had three separate Pardot instances which all needed to be interconnected via a complex multi-instance, multi-language preference center.</p>
+                <p class="short-content">LGIM needed an EPC that linked their 3 Pardot instances in 4 different languages. I created a dynamic, future-proofed solution used by thousands of people a month</p>
                 <a href='/portfolio#lgim-epc' class="italic sky">Read more &gt;&gt;</a>
               </div>
             </div>
@@ -76,39 +77,42 @@ import { DOMNodeTransforms } from '@vue/compiler-dom';
           <div class="flip-card" @click="(ev) => flipCard(ev)">
             <div class="relative w-full h-full transition flip-card-inner">
               <div class="cv-card w-full h-full flip-front-face">
-                <font-awesome-icon :icon="['fab', 'wordpress']" class="text-9xl" />
-                <span class="z-10 text-2xl">SEG WordPress Site</span>
+                <font-awesome-icon :icon="['fab', 'wordpress']" class="text-5xl md:text-7xl xl:text-8xl 2xl:text-9xl" />
+                <span class="z-10 text-base sm:text-md lg:text-lg xl:text-xl 2xl:text-2xl text-center">SEG WordPress Site</span>
                 <span class="click-here flex items-center gap-x-2 italic text-sm">{{ hasHover ? 'Click' : 'Touch' }} Here <font-awesome-icon :icon="['fas', 'arrow-right']" /></span>
               </div>
               <div class="cv-card p-4 w-full h-full flip-back-face">
-                <p class="text-center text-sm">Supporting Education Group approached us and asked for a WordPress solution to aggregate all the posts from their associated sites into their main site. I was tasked with creating a WordPress template that retrieved the posts and used the WP_Query class to allow users to filter/search posts.</p>
-                <a class="italic sky">Read more &gt;&gt;</a>
+                <p class="long-content">Supporting Education Group approached us and asked for a WordPress solution to aggregate all the posts from their associated sites into their main site. I was tasked with creating a WordPress template that retrieved the posts and used the WP_Query class to allow users to filter/search posts.</p>
+                <p class="short-content">SEG needed a WordPress template & plugin for aggregating the blog posts from their partner sites into one place. I developed the template which involved front/back end coding using PHP and WP code</p>
+                <a href="/portfolio#seg-content-hub" class="italic sky">Read more &gt;&gt;</a>
               </div>
             </div>
           </div>
           <div class="flip-card" @click="(ev) => flipCard(ev)">
             <div class="relative w-full h-full transition flip-card-inner">
               <div class="cv-card w-full h-full flip-front-face">
-                <font-awesome-icon :icon="['fas', 'fa-chart-pie']" class="text-9xl" />
-                <span class="z-10 text-2xl">Wonderwall</span>
+                <font-awesome-icon :icon="['fas', 'fa-chart-pie']" class="text-5xl md:text-7xl xl:text-8xl 2xl:text-9xl" />
+                <span class="z-10 text-base sm:text-lg lg:text-xl xl:text-2xl text-center">Wonderwall</span>
                 <span class="click-here flex items-center gap-x-2 italic text-sm">{{ hasHover ? 'Click' : 'Touch' }} Here <font-awesome-icon :icon="['fas', 'arrow-right']" /></span>
               </div>
               <div class="cv-card p-4 w-full h-full flip-back-face">
-                <p class="text-center text-sm">Our CEO had envisioned a dashboard for use across the business that contained high-level metrics relevant to all departments across the entire company. I created a NodeJS application to show these visualisations using realtime data pulled from Tableau authenticated using OAuth.</p>
-                <a class="italic sky">Read more &gt;&gt;</a>
+                <p class="long-content">Our CEO had envisioned a dashboard for use across the business that contained high-level metrics relevant to all departments across the entire company. I created a NodeJS application to show these visualisations using realtime data pulled from Tableau authenticated using OAuth.</p>
+                <p class="short-content">Our CEO wanted a company-wide dashboard to show top-level metrics. I created a NodeJS app to show Tableau visualizations in realtime, authenticated using OAuth & JWT</p>
+                <a href="/blog/internal-projects#wonderwall" class="italic sky">Read more &gt;&gt;</a>
               </div>
             </div>
           </div>
           <div class="flip-card" @click="(ev) => flipCard(ev)">
             <div class="relative w-full h-full transition flip-card-inner">
               <div class="cv-card w-full h-full flip-front-face">
-                <font-awesome-icon :icon="['fas', 'language']" class="text-9xl" />
-                <span class="z-10 text-2xl">Dynamic Translations</span>
+                <font-awesome-icon :icon="['fas', 'language']" class="text-5xl md:text-7xl xl:text-8xl 2xl:text-9xl" />
+                <span class="z-10 text-base sm:text-lg lg:text-xl xl:text-2xl text-center">Dynamic Translations</span>
                 <span class="click-here flex items-center gap-x-2 italic text-sm">{{ hasHover ? 'Click' : 'Touch' }} Here <font-awesome-icon :icon="['fas', 'arrow-right']" /></span>
               </div>
               <div class="cv-card p-4 w-full h-full flip-back-face">
-                <p class="text-center text-sm">I noticed a trend of our clients requesting pages and preference centers in various languages, more so than usual. I created a NodeJS script that takes an HTML file and an Excel document with translations and turns it into either a folder of translated pages or a page that contains a dynamic translation dropdown.</p>
-                <a class="italic sky">Read more &gt;&gt;</a>
+                <p class="long-content">I noticed a trend of our clients requesting pages and preference centers in various languages, more so than usual. I created a NodeJS script that takes an HTML file and an Excel document with translations and turns it into either a folder of translated pages or a page that contains a dynamic translation dropdown.</p>
+                <p class="short-content">I identified a business need for a client-friendly way of dynamically translating content for websites. I created a NodeJS script that turns an Excel spreadsheet into a JSON config that's read by an HTML doc that the script modifies</p>
+                <a href="/blog/internal-projects#dynamic-translations" class="italic sky">Read more &gt;&gt;</a>
               </div>
             </div>
           </div>
@@ -135,31 +139,31 @@ import { DOMNodeTransforms } from '@vue/compiler-dom';
 
     <section class="flex flex-col p-0 pb-12">
       <div id="parallax-2" class="parallax w-full"></div>
-      <div class="flex flex-col items-center py-8 px-4 md:px-6 lg:px-12 xl:px-40">
+      <div class="flex flex-col items-center py-8 px-4 md:px-12 lg:px-40 2xl:px-20">
         <h2 class="text-lg md:text-xl xl:text-4xl font-bold pt-4 mb-0">Qualifications</h2>
         <h3 class="text-base md:text-lg xl:text-2xl font-semibold">University of Portsmouth 2017-2021</h3>
         <span class="text-base md:text-lg xl:text-2xl">BSc Hons. Computer Science</span>
         <h4 class="text-base md:text-lg xl:text-xl py-4">Notable Achievements</h4>
-        <div class="grid grid-cols-2 md:grid-cols-4 items-stretch justify-around gap-x-12">
+        <div class="grid grid-cols-1 sm:grid-cols-2 2xl:grid-cols-4 items-stretch justify-around gap-4 md:gap-8 px-8 md:px-20 lg:px-0">
           <div class="cv-card uni-card">
             <img class="uni-card-bg" src="/images/sscc-meeting.jpg">
-            <font-awesome-icon :icon="['fas', 'graduation-cap']" class="text-6xl z-10" />
-            <span class="z-10">As Chair of the Staff Student Council Committee and Student Representative, demonstrated strong communication skills and the ability to engage with diverse groups of individuals, resulting in successful initiatives that positively impacted the student body.</span>
+            <font-awesome-icon :icon="['fas', 'graduation-cap']" class="text-6xl z-10 hidden md:block" />
+            <span class="z-10 text-sm md:text-base">As Chair of the Staff Student Council Committee and Student Representative, demonstrated strong communication skills and the ability to engage with diverse groups of individuals, resulting in successful initiatives that positively impacted the student body.</span>
           </div>
           <div class="cv-card uni-card">
             <img class="uni-card-bg" src="/images/agile.png" />
             <font-awesome-icon :icon="['fas', 'person-chalkboard']" class="text-6xl z-10" />
-            <span class="z-10">Led an Intermediate Software Engineering group as Scrum Master, championing Agile methodologies and Scrum/Kanban frameworks to ensure timely delivery of high-quality products.</span>
+            <span class="z-10 text-sm md:text-base">Led an Intermediate Software Engineering group as Scrum Master, championing Agile methodologies and Scrum/Kanban frameworks to ensure timely delivery of high-quality products.</span>
           </div>
           <div class="cv-card uni-card">
             <img class="uni-card-bg" src="/images/learning-code.jpg">
             <font-awesome-icon :icon="['fas', 'book']" class="text-6xl z-10" />
-            <span class="z-10">Rapidly acquired proficiency in new programming languages, libraries, and frameworks, including Python and Java, demonstrating a strong ability to learn and adapt quickly.</span>
+            <span class="z-10 text-sm md:text-base">Rapidly acquired proficiency in new programming languages, libraries, and frameworks, including Python and Java, demonstrating a strong ability to learn and adapt quickly.</span>
           </div>
           <div class="cv-card uni-card" id="reslife">
             <img class="uni-card-bg" src="/images/ResLife.png">
             <font-awesome-icon :icon="['fas', 'trophy']" class="text-6xl z-10" />
-            <span class="z-10">Awarded Resident Assistant of the Year 2017/18 for commitment to peer support, mental health first aid knowledge, and going above and beyond to care for those around me.</span>
+            <span class="z-10 text-sm md:text-base">Awarded Resident Assistant of the Year 2017/18 for commitment to peer support, mental health first aid knowledge, and going above and beyond to care for those around me.</span>
           </div>
         </div>
       </div>
@@ -173,24 +177,24 @@ import { DOMNodeTransforms } from '@vue/compiler-dom';
           <h3 class="text-base md:text-lg xl:text-2xl font-semibold pb-4">Technical Skills</h3>
           <!-- <h4 class="text-base md:text-lg xl:text-xl py-4">Top Skills</h4> -->
           <ul class="flex flex-col gap-y-4">
-            <li class="border-l-8 border-slate-400 pl-4 bg-slate-700"><strong>Nuxt 3 & Vue 3</strong> - I've been learning & using Vue for well over a year now and using Nuxt for almost as long. They're very likely my 2 favourite technologies I've ever used, so much power and simplicity combined</li>
-            <li class="border-l-8 border-slate-400 pl-4 bg-slate-700"><strong>NodeJS</strong> - I started using NodeJS about 4 years ago when a coworker at the time introduced me to it. It completely reignited my (at the time) dwindling passion for web development and I've used dozens of packages including ExpressJS, Sass, Puppeteer, Cheerio & Axios</li>
-            <li class="border-l-8 border-slate-400 pl-4 bg-slate-700"><strong>PHP</strong> - I've worked with PHP on and off but only recently really sunk my teeth into it. I've now used PHP to craft a bespoke, complex WordPress page template that combined both back-end and front-end to create a searchable, filterable page</li>
-            <li class="border-l-8 border-slate-400 pl-4 bg-slate-700"><strong>Vanilla Web Technologies</strong> - I've been coding for over a decade now and professionally for over 4 years. I began as a hobbyist and student at secondary school and decided I liked it. I went on to craft a suite of deciphering tools in JS at college for the national cipher challenge. At university I found out about NodeJS on my placement year and loved it</li>
-            <li class="border-l-8 border-slate-400 pl-4 bg-slate-700"><strong>Problem Identifying & Solving</strong> - I have both a skill and passion for identifying weak areas and problems within a business and finding ways to alleviate pain points and automate tedious/repetitive tasks. I created an automation script for the morning processes at Be Wiser, turning an hour long morning process into a 5 minute one. I also crafted several internal solutions at Clevertouch</li>
-            <li class="border-l-8 border-slate-400 pl-4 bg-slate-700"><strong>Quick Learning</strong> - I have a track record of picking up new languages, tools and frameworks blazingly fast. I find I learn best on the job and have picked up PHP, WordPress, Python and Visual Basic as and when required of me in order to fulfil various needs in previous roles</li>
+            <li class="cv-skill"><strong>Nuxt 3 & Vue 3</strong> - I've been learning & using Vue for well over a year now and using Nuxt for almost as long. They're very likely my 2 favourite technologies I've ever used, so much power and simplicity combined</li>
+            <li class="cv-skill"><strong>NodeJS</strong> - I started using NodeJS about 4 years ago when a coworker at the time introduced me to it. It completely reignited my (at the time) dwindling passion for web development and I've used dozens of packages including ExpressJS, Sass, Puppeteer, Cheerio & Axios</li>
+            <li class="cv-skill"><strong>PHP</strong> - I've worked with PHP on and off but only recently really sunk my teeth into it. I've now used PHP to craft a bespoke, complex WordPress page template that combined both back-end and front-end to create a searchable, filterable page</li>
+            <li class="cv-skill"><strong>Vanilla Web Technologies</strong> - I've been coding for over a decade now and professionally for over 4 years. I began as a hobbyist and student at secondary school and decided I liked it. I went on to craft a suite of deciphering tools in JS at college for the national cipher challenge. At university I found out about NodeJS on my placement year and loved it</li>
+            <li class="cv-skill"><strong>Problem Identifying & Solving</strong> - I have both a skill and passion for identifying weak areas and problems within a business and finding ways to alleviate pain points and automate tedious/repetitive tasks. I created an automation script for the morning processes at Be Wiser, turning an hour long morning process into a 5 minute one. I also crafted several internal solutions at Clevertouch</li>
+            <li class="cv-skill"><strong>Quick Learning</strong> - I have a track record of picking up new languages, tools and frameworks blazingly fast. I find I learn best on the job and have picked up PHP, WordPress, Python and Visual Basic as and when required of me in order to fulfil various needs in previous roles</li>
           </ul>
         </div>
         <div class="flex flex-col">
           <h3 class="text-base md:text-lg xl:text-2xl font-semibold pb-4">Soft/Interpersonal Skills</h3>
           <!-- <h4 class="text-base md:text-lg xl:text-xl py-4">Top Skills</h4> -->
           <ul class="flex flex-col gap-y-4">
-            <li class="border-l-8 border-slate-400 pl-4 bg-slate-700"><strong>Team-Oriented</strong> - Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, nemo animi laborum laudantium maiores deserunt aliquam? Maiores sed aliquam esse!</li>
-            <li class="border-l-8 border-slate-400 pl-4 bg-slate-700"><strong>Empathetic</strong> - Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, nemo animi laborum laudantium maiores deserunt aliquam? Maiores sed aliquam esse!</li>
-            <li class="border-l-8 border-slate-400 pl-4 bg-slate-700"><strong>Mental Health Work Background</strong> - Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, nemo animi laborum laudantium maiores deserunt aliquam? Maiores sed aliquam esse!</li>
-            <li class="border-l-8 border-slate-400 pl-4 bg-slate-700"><strong>Passionate Teacher</strong> - Ran several internal "Tech Huddles" on various topics in order to try and teach other techies about different useful technologies, concepts and showcase internal solutions I'd built to help out</li>
-            <li class="border-l-8 border-slate-400 pl-4 bg-slate-700"><strong>Proven Mediator</strong> - Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, nemo animi laborum laudantium maiores deserunt aliquam? Maiores sed aliquam esse!</li>
-            <li class="border-l-8 border-slate-400 pl-4 bg-slate-700"><strong>Intentionally Approachable</strong> - Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, nemo animi laborum laudantium maiores deserunt aliquam? Maiores sed aliquam esse!</li>
+            <li class="cv-skill"><strong>Team-Oriented</strong> - I enjoy working within a team, I find I work well filling gaps in knowledge/ability and enjoy helping out others with their work</li>
+            <li class="cv-skill"><strong>Empathetic</strong> - I believe that being kind costs nothing and being understanding and empathetic can make a world of difference, especially to someone going through a tough time, therefore I make it my business to be as understanding as I can</li>
+            <li class="cv-skill"><strong>Mental Health Work Background</strong> - I have previous experience working in the mental health sector, spending 2 years working as a resident assistant and even winning resident assistant of the year 2017/18</li>
+            <li class="cv-skill"><strong>Passionate Teacher</strong> - Ran several internal "Tech Huddles" on various topics in order to try and teach other techies about different useful technologies, concepts and showcase internal solutions I'd built to help out</li>
+            <li class="cv-skill"><strong>Proven Mediator</strong> - I have experience helping individuals and groups find common ground and resolutions that benefit both parties, both in my Resident Assistant role and when working with clients at Clevertouch</li>
+            <li class="cv-skill"><strong>Intentionally Approachable</strong> - A big part of who I am is that I want my coworkers to see me as approachable, friendly, dependable and knowledgeable. I make sure to let people know I'm here to help and try my hardest to be as approachable and friendly as I can</li>
           </ul>
         </div>
       </div>
@@ -199,22 +203,21 @@ import { DOMNodeTransforms } from '@vue/compiler-dom';
 </template>
 
 <style scoped>
+  @media (hover: hover) {
+    .flip-card:hover .flip-card-inner {
+      transform: rotateY(25deg);
+      transition: box-shadow 0.25s linear, transform 0.8s ease-out;
+      box-shadow: #fff 0 0 16px;
+    }
+  }
+
   .flip-card {
     perspective: 1000px;
-    min-height: 300px;
-    min-width: 300px;
-    cursor: pointer;
   }
 
   .flip-card-inner {
     transform-style: preserve-3d;
     transition: transform 0.8s ease-out;
-  }
-
-  .flip-card:hover .flip-card-inner {
-    transform: rotateY(25deg);
-    transition: box-shadow 0.25s linear, transform 0.8s ease-out;
-    box-shadow: #fff 0 0 16px;
   }
 
   .flip-card.flipped .flip-card-inner {
@@ -240,6 +243,26 @@ import { DOMNodeTransforms } from '@vue/compiler-dom';
 
   .flip-front-face:hover .click-here {
     padding-left: 10px!important;
+  }
+
+  .uni-card:hover {
+    justify-content: flex-end;
+    color: #cbd5e1;
+  }
+
+  .uni-card:hover .text-6xl { opacity: 0.5; }
+
+  .uni-card:hover span {
+    display: none;
+  }
+
+  .uni-card img {
+    transition: opacity 1s ease-out;
+    opacity: 0;
+  }
+
+  .uni-card:hover img {
+    opacity: 1;
   }
 
   .parallax {
@@ -297,15 +320,6 @@ import { DOMNodeTransforms } from '@vue/compiler-dom';
     transform: translateX(0);
   }
 
-  .uni-card img {
-    transition: opacity 1s ease-out;
-    opacity: 0;
-  }
-
-  .uni-card:hover img {
-    opacity: 1;
-  }
-
   #reslife img {
     object-position: 25% 50%;
   }
@@ -344,6 +358,10 @@ import { DOMNodeTransforms } from '@vue/compiler-dom';
     .parallax {
       background-attachment: scroll;
       background-size: cover;
+    }
+
+    #parallax-1 {
+      background-position: center 80%;
     }
   }
 </style>

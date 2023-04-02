@@ -26,6 +26,5 @@ module.exports = {
         "sky": '#60a5fa'
       }
     },
-  },
-  plugins: [],
+  }
 }

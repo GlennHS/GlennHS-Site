@@ -6,7 +6,7 @@
 
 @layer base {
   body {
-    @apply bg-slate-800 text-slate-100 overflow-x-hidden;
+    @apply bg-slate-800 text-slate-100 overflow-x-hidden text-sm sm:text-base;
   }
 
   section {
@@ -61,8 +61,36 @@
     @apply flex flex-col items-center justify-around border-8 border-slate-300 bg-slate-600 p-6 aspect-square relative;
   }
 
+  .flip-card {
+    @apply w-60 md:w-72 lg:w-60 2xl:w-72 h-60 md:h-72 lg:h-60 2xl:h-72 cursor-pointer;
+  }
+
+  .flip-card .flip-back-face {
+    @apply text-sm text-center;
+  }
+
+  .flip-card .long-content {
+    @apply hidden md:block lg:hidden 2xl:block;
+  }
+
+  .flip-card .short-content {
+    @apply block md:hidden lg:block 2xl:hidden;
+  }
+
+  .uni-card {
+    @apply w-full gap-4;
+  }
+
   .uni-card-bg {
-    @apply absolute w-full h-full object-cover brightness-75;
+    @apply absolute top-0 left-0 w-full h-full object-cover brightness-75;
+  }
+
+  .cv-skill {
+    @apply border-l-8 border-slate-400 pl-4 py-2 bg-slate-700;
+  }
+
+  .cv-skill strong {
+    @apply font-extrabold text-slate-100;
   }
 }
 
