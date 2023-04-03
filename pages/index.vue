@@ -69,7 +69,7 @@
             <h3 class="preline">Currently at...</h3>
             <h2>Clevertouch Marketing.</h2>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam exercitationem, similique dolores natus esse, aliquam blanditiis architecto saepe sunt magni deserunt fuga voluptas minus tempore nihil iusto laborum, ex cumque voluptates. Suscipit a modi, fuga labore dicta dolorem voluptates nemo. Numquam eos distinctio alias assumenda repudiandae sunt reprehenderit officia, praesentium aut earum, eaque odit harum culpa vero explicabo ad dolorem. Dolores eligendi placeat velit magni veritatis mollitia maiores quibusdam ratione repellat nostrum quam iste rerum, incidunt officiis voluptatibus, reprehenderit adipisci, pariatur esse optio dolorem quos soluta cum illo! Obcaecati eius officiis voluptatum atque rerum exercitationem sapiente dolor autem, ad excepturi.
+              I currently work as a Junior Developer (technically a Marketing Technology Expert) at Clevertouch Marketing, a marketing technology consultancy based in Ropley, Hampshire. My role is very varied, comprising many different duties including (but not limited to): Vanilla Web Development, WordPress Full-Stack Development, SaaS Testing and Development, Marketing Automation Platform Management, and Email Development. I think the best part of my job is either the variety of tasks I perform or the technical challenge of achieving seemingly simple things within the restrictive bounds of Marketing Automation Platforms. Well, that or the Thursday Thai lunches!
             </p>
           </section>
         </div>
@@ -78,7 +78,7 @@
             <h3 class="preline">Currently working on...</h3>
             <h2>This Site.</h2>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam exercitationem, similique dolores natus esse, aliquam blanditiis architecto saepe sunt magni deserunt fuga voluptas minus tempore nihil iusto laborum, ex cumque voluptates. Suscipit a modi, fuga labore dicta dolorem voluptates nemo. Numquam eos distinctio alias assumenda repudiandae sunt reprehenderit officia, praesentium aut earum, eaque odit harum culpa vero explicabo ad dolorem. Dolores eligendi placeat velit magni veritatis mollitia maiores quibusdam ratione repellat nostrum quam iste rerum, incidunt officiis voluptatibus, reprehenderit adipisci, pariatur esse optio dolorem quos soluta cum illo! Obcaecati eius officiis voluptatum atque rerum exercitationem sapiente dolor autem, ad excepturi.
+              This site has been a passion project of mine for a little over a month now. Many evenings and weekends have been dedicated to pushing myself to learn more, to become a better developer and to learn Nuxt/Vue/Nuxt-Content in far greater detail than I have before. I've learned so much from making this site, both some valuable lessons and that I should be proud of how much I've achieved in a relatively short space of time. I hope to use this learning and discovery as a springboard into making both small, helpful apps and also bigger side projects! I'm hoping to completely redevelop Center, my first Vue app I properly worked on. You can tell it was one of my first projects!
             </p>
           </section>
         </div>
@@ -87,7 +87,7 @@
             <h3 class="preline">My Dream Role...</h3>
             <h2>Full Stack Nuxt Developer.</h2>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam exercitationem, similique dolores natus esse, aliquam blanditiis architecto saepe sunt magni deserunt fuga voluptas minus tempore nihil iusto laborum, ex cumque voluptates. Suscipit a modi, fuga labore dicta dolorem voluptates nemo. Numquam eos distinctio alias assumenda repudiandae sunt reprehenderit officia, praesentium aut earum, eaque odit harum culpa vero explicabo ad dolorem. Dolores eligendi placeat velit magni veritatis mollitia maiores quibusdam ratione repellat nostrum quam iste rerum, incidunt officiis voluptatibus, reprehenderit adipisci, pariatur esse optio dolorem quos soluta cum illo! Obcaecati eius officiis voluptatum atque rerum exercitationem sapiente dolor autem, ad excepturi.
+              I want to work as a Full Stack Nuxt Developer, ideally within a small team that encourages learning and development with at least one or two knowledgeable, senior people who I can learn from. I'm not naive enough to think that, after a year or so of learning Nuxt/Vue, I'm ready to solo huge projects but I'm confident in both my ability to learn and my ability to deliver quality work. I'd love to work for a company in an industry I care about, or at least one that has a positive impact on the world around me. I also love companies that champion meaningful learning for their developers, companies that give out praise and make people feel wanted/appreciated.
             </p>
           </section>
         </div>
@@ -146,9 +146,7 @@
     opacity: 0;
     filter: blur(5px);
     transform: translateX(-120%);
-    transition-property: filter, transform;
-    transition-duration: 1.25s;
-    transition-timing-function: ease;
+    transition-property: filter 1.25s ease, transform 1.25s ease;
   }
 
   .blog-post-short {

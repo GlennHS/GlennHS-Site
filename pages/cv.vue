@@ -27,7 +27,7 @@
         <div ref="heroContent" class="slide-in-left backdrop-blur-md bg-gray-900 bg-opacity-50 rounded-r-lg w-full px-4 lg:px-20 py-4 lg:py-10 flex flex-col justify-center items-baseline gap-y-6 max-w-lg lg:max-w-xl xl:max-w-3xl mt-32 md:mt-0">
           <h1 class="text-lg md:text-xl lg:text-2xl xl:text-4xl font-bold">Digital CV.</h1>
           <span class="text-base lg:text-lg italic font-semibold">In a hurry? Need a different format? 
-            <a href="/files/cv.pdf" class="sky">Download a .pdf copy of my CV here.</a>
+            <a href="/files/cv.pdf" class="sky">Download a .pdf copy of my CV here <font-awesome-icon :icon="['fas', 'file-arrow-down']" /></a>
           </span>
         </div>
       </div>
