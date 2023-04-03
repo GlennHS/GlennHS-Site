@@ -146,15 +146,11 @@
     opacity: 0;
     filter: blur(5px);
     transform: translateX(-120%);
-    transition-property: filter 1.25s ease, transform 1.25s ease;
+    transition: filter 1.25s ease, transform 1.25s ease;
   }
 
   .blog-post-short {
     transform: translateX(100%);
-  }
-
-  .hero-content {
-    transition-delay: .75s;
   }
   
   .hero-content.active, section.active, .blog-post-short.active {
