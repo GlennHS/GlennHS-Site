@@ -3,7 +3,7 @@
   const page = ref(null)
   const { path } = useRoute()
   const { data: recentBlogPosts } = await useAsyncData(`content-${path}`, () => {
-    return queryContent()
+    return queryContent('/live')
       .only(['title', 'excerpt', 'created', 'updated', 'slug', 'tags', '_id'])
       .limit(5)
       .sort({ 'updated': -1 })
@@ -19,9 +19,9 @@
       document.getElementById('scroll-hint').classList.add('suppress')
       if(screen.width > 1439) {
         var windowYOffset = window.pageYOffset,
-          elBackgrounPos = "50% " + Math.max(windowYOffset * -1.95 - 580, -1650) + "px";
+          elBackgroundPos = "50% " + Math.max(windowYOffset * -1.95 - 580, -1650) + "px";
   
-        parallax.style.backgroundPosition = elBackgrounPos;
+        parallax.style.backgroundPosition = elBackgroundPos;
       }
     };
 
@@ -101,7 +101,7 @@
             </div>
           </div>
         </div>
-        <div v-for="post in recentBlogPosts" :key="post._id">
+        <div v-for="post in recentBlogPosts">
           <NuxtLink :to="`blog/${post.slug}`">
             <BlogPostShort class="blog-post-short"
               :title="post.title"

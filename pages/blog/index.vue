@@ -6,7 +6,7 @@
   const filterTypeOR = ref(true)
   const loadingPosts = ref(true)
   
-  const contentBasePath = ''
+  const contentBasePath = '/live'
 
   const orderPostArrayByCreated = (pArr) => {
     return pArr.sort((a,b) => {
@@ -133,7 +133,7 @@
         <span class="fade-repeat mt-4">Posts loading. Please wait...</span>
       </div>
       <div v-else-if="blogPosts.length > 0" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-        <BlogPostCard v-for="post in blogPosts" :blog-post="post"/>
+        <BlogPostCard v-for="post in blogPosts" :key="post._id" :blog-post="post"/>
       </div>
       <div v-else>
         Nothing to show
