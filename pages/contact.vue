@@ -15,7 +15,7 @@
           <font-awesome-icon icon="fa-brands fa-github" class="text-2xl sm:text-5xl"/>
           <a href="https://github.com/glennhs" class="sky text-base sm:text-2xl">@GlennHS</a>
         </div>
-        <div class="contact-row">
+        <div class="contact-row ml-1.5">
           <font-awesome-icon icon="fa-brands fa-linkedin" class="text-2xl sm:text-5xl"/>
           <a href="https://www.linkedin.com/in/glennhs/" class="sky text-base sm:text-2xl">@GlennHS</a>
         </div>
@@ -37,8 +37,8 @@
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
-    background-image: url('/images/me-square/2.png');
+    background-position: center 8%;
+    background-image: url('/images/choo.jpeg');
     min-height: 300px;
     transition: background 0.33s ease-out;
   }
