@@ -1,4 +1,9 @@
 <script setup>
+  // import Swiper JS
+  import Swiper from 'swiper/bundle';
+  // import Swiper styles
+  import 'swiper/css/bundle';
+
   onMounted(() => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
@@ -12,6 +17,27 @@
 
     const slideInEls = document.querySelectorAll( ".slide-in-left");
     slideInEls.forEach((el) => observer.observe(el));
+
+    const swiper = new Swiper('.swiper', {
+      // Optional parameters
+      loop: true,
+
+      // If we need pagination
+      pagination: {
+        el: '.swiper-pagination',
+      },
+
+      // Navigation arrows
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+
+      // And if we need scrollbar
+      scrollbar: {
+        el: '.swiper-scrollbar',
+      },
+    });
   })
 </script>
 
@@ -25,6 +51,33 @@
         </div>
       </div>
     </header>
+
+    <section>
+      <p>Coming soon! It'll be worth the wait &lt;3</p>
+    </section>
+
+    <section class="hidden">
+      <!-- Slider main container -->
+      <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">Slide 1</div>
+          <div class="swiper-slide">Slide 2</div>
+          <div class="swiper-slide">Slide 3</div>
+          ...
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+        <!-- If we need scrollbar -->
+        <div class="swiper-scrollbar"></div>
+      </div>
+    </section>
   </div>
 </template>
 
@@ -51,5 +104,10 @@
     opacity: 1;
     filter: blur(0);
     transform: translateX(0);
+  }
+
+  .swiper {
+    width: 600px;
+    height: 300px;
   }
 </style>

@@ -19,5 +19,5 @@ export default defineNuxtConfig({
       '@fortawesome/free-brands-svg-icons',
       '@fortawesome/vue-fontawesome'
     ]
-  }
+  },
 })
