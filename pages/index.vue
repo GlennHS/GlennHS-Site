@@ -28,9 +28,6 @@
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if(entry.isIntersecting) {
-          if(entry.target.classList.contains('intersect-container')) {
-            entry.target.firstChild.classList.add('active')
-          }
           entry.target.classList.add('active')
         } else {
           // entry.target.classList.remove('active')
@@ -64,8 +61,8 @@
 
     <div id="main-content" class="grid grid-cols-1 lg:grid-cols-2 gap-8">
       <div id="about-sections">
-        <div class="intersect-container">
-          <section>
+        <div>
+          <section class="intersect-container">
             <h3 class="preline">Currently at...</h3>
             <h2>Clevertouch Marketing.</h2>
             <p>
@@ -73,8 +70,8 @@
             </p>
           </section>
         </div>
-        <div class="intersect-container">
-          <section>
+        <div>
+          <section class="intersect-container">
             <h3 class="preline">Currently working on...</h3>
             <h2>This Site.</h2>
             <p>
@@ -82,8 +79,8 @@
             </p>
           </section>
         </div>
-        <div class="intersect-container">
-          <section>
+        <div>
+          <section class="intersect-container">
             <h3 class="preline">My Dream Role...</h3>
             <h2>Full Stack Nuxt Developer.</h2>
             <p>
@@ -142,10 +139,10 @@
   #scroll-hint.suppress { opacity: 0; }
 
   /* #region Hero Slide Animation */
-  .hero-content, .blog-post-short {
+  .hero-content, .blog-post-short, .intersect-container {
     opacity: 0;
     filter: blur(5px);
-    transform: translateX(-120%);
+    transform: translateX(-100%);
     transition: filter 1.25s ease, transform 1.25s ease;
   }
 
@@ -153,7 +150,7 @@
     transform: translateX(100%);
   }
   
-  .hero-content.active, section.active, .blog-post-short.active {
+  .hero-content.active, .intersect-container.active, .blog-post-short.active {
     opacity: 1;
     filter: blur(0);
     transform: translateX(0);

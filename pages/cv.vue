@@ -46,7 +46,7 @@
         <span class="italic text-lg"><a href="https://github.com/glennhs" target="_blank" class="sky"><em class="font-bold">Github:</em> glennhs</a></span>
         <span class="italic text-lg"><a href="https://linkedin.com/in/glennhs" target="_blank" class="sky"><em class="font-bold">LinkedIn:</em> glennhs</a></span>
       </div>
-      <p id="statement" class="text-justify last-right mt-4">Dedicated, curious and passionate team player proficient in various Front End Web Development technologies as well as Agile, Git, and CI/CD. Fast learner with a passion for learning and self-improvement both within my professional and personal settings. Graduated with honours in Computer Science at University of Portsmouth. Entered the National Cipher Challenge twice, was awarded Resident Assistant of the Year 2017-18 and was Chair of the Staff Student Council Committee. Have self-taught Laravel, Nuxt and Vue and have a deep passion for both learning all things web development and helping others succeed.</p>
+      <p id="statement" class="text-justify last-right mt-4">Passionate and dedicated team player with strong proficiency in Vue.js and Nuxt.js, as well as PHP and Laravel development. Experienced in WordPress and Git, and skilled in various Front End Web Development technologies. A fast learner with a deep passion for self-improvement and continuous learning in all things web development. Graduated with honours in Computer Science from the University of Portsmouth, and was awarded Resident Assistant of the Year 2017-18 as well as serving as Chair of the Staff Student Council Committee. With a focus on collaboration and innovation, I bring a strong work ethic and a drive to help others succeed.</p>
       <img src="/images/me-square/4.png" alt="Side-on portrait photo of my face, mouth slightly open smiling wearing glasses with brown hair in a light blue polo shirt" class="aspect-square w-64 md:w-96" />
     </section>
 
@@ -272,9 +272,11 @@
   }
 
   #parallax-1 {
-    background-image: url('/images/me-square/2.png');
-    min-height: 400px;
-    background-position: 50% min(-560px, -32vw);
+    background-image: url('/images/hexcellence.png');
+    background-position: unset;
+    background-size: cover;
+    /* min-height: 400px; */
+    /* background-position: 50% min(-560px, -32vw); */
   }
 
   #parallax-2 {
