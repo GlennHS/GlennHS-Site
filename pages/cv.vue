@@ -95,7 +95,7 @@
               <div class="cv-card p-4 w-full h-full flip-back-face">
                 <p class="long-content">Our CEO had envisioned a dashboard for use across the business that contained high-level metrics relevant to all departments across the entire company. I created a NodeJS application to show these visualisations using realtime data pulled from Tableau authenticated using OAuth.</p>
                 <p class="short-content">Our CEO wanted a company-wide dashboard to show top-level metrics. I created a NodeJS app to show Tableau visualizations in realtime, authenticated using OAuth & JWT</p>
-                <a href="/blog/internal-projects#wonderwall" class="italic sky">Read more &gt;&gt;</a>
+                <a href="/portfolio#wonderwall" class="italic sky">Read more &gt;&gt;</a>
               </div>
             </div>
           </div>
@@ -109,7 +109,7 @@
               <div class="cv-card p-4 w-full h-full flip-back-face">
                 <p class="long-content">I noticed a trend of our clients requesting pages and preference centers in various languages, more so than usual. I created a NodeJS script that takes an HTML file and an Excel document with translations and turns it into either a folder of translated pages or a page that contains a dynamic translation dropdown.</p>
                 <p class="short-content">I identified a business need for a client-friendly way of dynamically translating content for websites. I created a NodeJS script that turns an Excel spreadsheet into a JSON config that's read by an HTML doc that the script modifies</p>
-                <a href="/blog/internal-projects#dynamic-translations" class="italic sky">Read more &gt;&gt;</a>
+                <a href="/portfolio#dynamic-translations" class="italic sky">Read more &gt;&gt;</a>
               </div>
             </div>
           </div>
@@ -272,11 +272,11 @@
   }
 
   #parallax-1 {
-    background-image: url('/images/hexcellence.png');
+    background-image: url('/images/me-square/2.png');
     background-position: unset;
     background-size: cover;
-    /* min-height: 400px; */
-    /* background-position: 50% min(-560px, -32vw); */
+    min-height: 400px;
+    background-position: 50% min(-560px, -32vw);
   }
 
   #parallax-2 {

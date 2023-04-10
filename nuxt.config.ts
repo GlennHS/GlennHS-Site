@@ -1,5 +1,12 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  app: {
+    head: {
+      link: [
+        { rel: 'icon', href: '/favicon.png' }
+      ]
+    }
+  },
   modules: [
     '@nuxt/content'
   ],
