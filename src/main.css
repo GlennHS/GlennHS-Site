@@ -128,11 +128,11 @@ section p {
 }
 
 .swiper-slide {
-  @apply bg-slate-50;
+  @apply bg-slate-50 cursor-grab;
 }
 
 .slide-link {
-  @apply w-full h-full;
+  @apply w-full h-full cursor-pointer;
 }
 
 .slide-img {
