@@ -28,9 +28,6 @@
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if(entry.isIntersecting) {
-          if(entry.target.classList.contains('intersect-container')) {
-            entry.target.firstChild.classList.add('active')
-          }
           entry.target.classList.add('active')
         } else {
           // entry.target.classList.remove('active')
@@ -49,7 +46,7 @@
       <div class="absolute top-0 left-0 w-full h-full bg-slate-800 bg-opacity-[15%] flex flex-col items-baseline justify-center background-filter">
         <div ref="heroContent" class="hero-content w-full px-20 py-10 flex flex-col justify-center items-baseline gap-y-6 max-w-3xl bg-slate-600 bg-opacity-40 backdrop-blur-sm rounded-md">
           <h1 class="text-4xl font-bold">Passionate. Curious. Dedicated.</h1>
-          <p class="text-base lg:text-lg">Passionate about web development with expertise in Vue and Nuxt, and experience with Laravel. I have a track record of quickly learning new technologies and applying them to projects. Dedicated to constantly improving my skills, both professionally and personally.</p>
+          <p class="text-base lg:text-lg">Passionate about web development with expertise in Vue and Nuxt, and experience with Laravel, WordPress and PHP. I have a track record of quickly learning new technologies and applying them to projects. Dedicated to constantly improving my skills, both professionally and personally.</p>
           <div class="flex flex-col w-full md:w-auto md:flex-row gap-y-4 md:gap-y-0 md:gap-x-20">
             <a class="cta" href="/portfolio">View my work</a>
             <a class="cta" href="#main-content">More about me</a>
@@ -64,8 +61,8 @@
 
     <div id="main-content" class="grid grid-cols-1 lg:grid-cols-2 gap-8">
       <div id="about-sections">
-        <div class="intersect-container">
-          <section>
+        <div>
+          <section class="intersect-container">
             <h3 class="preline">Currently at...</h3>
             <h2>Clevertouch Marketing.</h2>
             <p>
@@ -73,8 +70,8 @@
             </p>
           </section>
         </div>
-        <div class="intersect-container">
-          <section>
+        <div>
+          <section class="intersect-container">
             <h3 class="preline">Currently working on...</h3>
             <h2>This Site.</h2>
             <p>
@@ -82,8 +79,8 @@
             </p>
           </section>
         </div>
-        <div class="intersect-container">
-          <section>
+        <div>
+          <section class="intersect-container">
             <h3 class="preline">My Dream Role...</h3>
             <h2>Full Stack Nuxt Developer.</h2>
             <p>
@@ -142,10 +139,10 @@
   #scroll-hint.suppress { opacity: 0; }
 
   /* #region Hero Slide Animation */
-  .hero-content, .blog-post-short {
+  .hero-content, .blog-post-short, .intersect-container {
     opacity: 0;
     filter: blur(5px);
-    transform: translateX(-120%);
+    transform: translateX(-100%);
     transition: filter 1.25s ease, transform 1.25s ease;
   }
 
@@ -153,7 +150,7 @@
     transform: translateX(100%);
   }
   
-  .hero-content.active, section.active, .blog-post-short.active {
+  .hero-content.active, .intersect-container.active, .blog-post-short.active {
     opacity: 1;
     filter: blur(0);
     transform: translateX(0);

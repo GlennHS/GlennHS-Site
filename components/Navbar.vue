@@ -20,23 +20,23 @@
       <ul class="list-none flex items-center justify-between w-full px-2 md:px-12 lg:px-20 xl:px-40 font-bold">
         <li class="text-sm md:text-base xl:text-lg cursor-pointer transition hover:underline hover:text-slate-500 flex gap-x-3 justify-center items-center">
           <a href="/">Home</a>
-          <font-awesome-icon icon="fa-solid fa-house" class="nav-fadein hidden lg:inline" />
+          <font-awesome-icon icon="fa-solid fa-house" class="nav-fadein !hidden lg:inline" />
         </li>
         <li class="text-sm md:text-base xl:text-lg cursor-pointer transition hover:underline hover:text-slate-500 flex gap-x-3 justify-center items-center">
           <a href="/blog">Blog</a>
-          <font-awesome-icon icon="fa-solid fa-pen-nib" class="nav-fadein hidden lg:inline" />
+          <font-awesome-icon icon="fa-solid fa-pen-nib" class="nav-fadein !hidden lg:inline" />
         </li>
         <li class="text-sm md:text-base xl:text-lg cursor-pointer transition hover:underline hover:text-slate-500 flex gap-x-3 justify-center items-center">
           <a href="/cv">CV</a>
-          <font-awesome-icon icon="fa-solid fa-book" class="nav-fadein hidden lg:inline" />
+          <font-awesome-icon icon="fa-solid fa-book" class="nav-fadein !hidden lg:inline" />
         </li>
         <li class="text-sm md:text-base xl:text-lg cursor-pointer transition hover:underline hover:text-slate-500 flex gap-x-3 justify-center items-center">
           <a href="/portfolio">Portfolio</a>
-          <font-awesome-icon icon="fa-solid fa-briefcase" class="nav-fadein hidden lg:inline" />
+          <font-awesome-icon icon="fa-solid fa-briefcase" class="nav-fadein !hidden lg:inline" />
         </li>
         <li class="text-sm md:text-base xl:text-lg cursor-pointer transition hover:underline hover:text-slate-500 flex gap-x-3 justify-center items-center">
           <a href="/contact">Contact</a>
-          <font-awesome-icon icon="fa-solid fa-envelope" class="nav-fadein hidden lg:inline" />
+          <font-awesome-icon icon="fa-solid fa-envelope" class="nav-fadein !hidden lg:inline" />
         </li>
       </ul>
       <div class="w-1 h-12 bg-white hidden md:inline"></div>

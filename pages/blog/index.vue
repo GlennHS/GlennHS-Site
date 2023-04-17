@@ -107,7 +107,7 @@
 <template>
   <div>
     <header class="relative w-full h-full flex items-center justify-center parallax">
-      <div class="absolute top-0 left-0 w-full h-full bg-slate-600 bg-opacity-60 flex flex-col items-baseline justify-center">
+      <div class="absolute top-0 left-0 w-full h-full bg-slate-600 bg-opacity-20 flex flex-col items-baseline justify-center">
         <div ref="heroContent" class="hero-content w-full px-20 py-10 flex flex-col justify-center items-baseline gap-y-6 max-w-3xl">
           <h1 class="text-4xl font-bold">Welcome to my blog.</h1>
           <p class="text-xl italic">Grab a drink and stay a while...</p>

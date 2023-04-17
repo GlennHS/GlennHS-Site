@@ -23,7 +23,7 @@
 <template>
   <div>
     <header id="parallax-1" class="relative w-full h-full flex items-center justify-center parallax">
-      <div class="absolute top-0 left-0 w-full h-full bg-slate-600 bg-opacity-60 flex flex-col items-baseline justify-center">
+      <div class="absolute top-0 left-0 w-full h-full bg-slate-600 bg-opacity-20 flex flex-col items-baseline justify-center">
         <div ref="heroContent" class="slide-in-left backdrop-blur-md bg-gray-900 bg-opacity-50 rounded-r-lg w-full px-4 lg:px-20 py-4 lg:py-10 flex flex-col justify-center items-baseline gap-y-6 max-w-lg lg:max-w-xl xl:max-w-3xl mt-32 md:mt-0">
           <h1 class="text-lg md:text-xl lg:text-2xl xl:text-4xl font-bold">Digital CV.</h1>
           <span class="text-base lg:text-lg italic font-semibold">In a hurry? Need a different format? 
@@ -46,7 +46,7 @@
         <span class="italic text-lg"><a href="https://github.com/glennhs" target="_blank" class="sky"><em class="font-bold">Github:</em> glennhs</a></span>
         <span class="italic text-lg"><a href="https://linkedin.com/in/glennhs" target="_blank" class="sky"><em class="font-bold">LinkedIn:</em> glennhs</a></span>
       </div>
-      <p id="statement" class="text-justify last-right mt-4">Dedicated, curious and passionate team player proficient in various Front End Web Development technologies as well as Agile, Git, and CI/CD. Fast learner with a passion for learning and self-improvement both within my professional and personal settings. Graduated with honours in Computer Science at University of Portsmouth. Entered the National Cipher Challenge twice, was awarded Resident Assistant of the Year 2017-18 and was Chair of the Staff Student Council Committee. Have self-taught Laravel, Nuxt and Vue and have a deep passion for both learning all things web development and helping others succeed.</p>
+      <p id="statement" class="text-justify last-right mt-4">Passionate and dedicated team player with strong proficiency in Vue.js and Nuxt.js, as well as PHP and Laravel development. Experienced in WordPress and Git, and skilled in various Front End Web Development technologies. A fast learner with a deep passion for self-improvement and continuous learning in all things web development. Graduated with honours in Computer Science from the University of Portsmouth, and was awarded Resident Assistant of the Year 2017-18 as well as serving as Chair of the Staff Student Council Committee. With a focus on collaboration and innovation, I bring a strong work ethic and a drive to help others succeed.</p>
       <img src="/images/me-square/4.png" alt="Side-on portrait photo of my face, mouth slightly open smiling wearing glasses with brown hair in a light blue polo shirt" class="aspect-square w-64 md:w-96" />
     </section>
 
@@ -95,7 +95,7 @@
               <div class="cv-card p-4 w-full h-full flip-back-face">
                 <p class="long-content">Our CEO had envisioned a dashboard for use across the business that contained high-level metrics relevant to all departments across the entire company. I created a NodeJS application to show these visualisations using realtime data pulled from Tableau authenticated using OAuth.</p>
                 <p class="short-content">Our CEO wanted a company-wide dashboard to show top-level metrics. I created a NodeJS app to show Tableau visualizations in realtime, authenticated using OAuth & JWT</p>
-                <a href="/blog/internal-projects#wonderwall" class="italic sky">Read more &gt;&gt;</a>
+                <a href="/portfolio#wonderwall" class="italic sky">Read more &gt;&gt;</a>
               </div>
             </div>
           </div>
@@ -109,7 +109,7 @@
               <div class="cv-card p-4 w-full h-full flip-back-face">
                 <p class="long-content">I noticed a trend of our clients requesting pages and preference centers in various languages, more so than usual. I created a NodeJS script that takes an HTML file and an Excel document with translations and turns it into either a folder of translated pages or a page that contains a dynamic translation dropdown.</p>
                 <p class="short-content">I identified a business need for a client-friendly way of dynamically translating content for websites. I created a NodeJS script that turns an Excel spreadsheet into a JSON config that's read by an HTML doc that the script modifies</p>
-                <a href="/blog/internal-projects#dynamic-translations" class="italic sky">Read more &gt;&gt;</a>
+                <a href="/portfolio#dynamic-translations" class="italic sky">Read more &gt;&gt;</a>
               </div>
             </div>
           </div>
@@ -273,6 +273,8 @@
 
   #parallax-1 {
     background-image: url('/images/me-square/2.png');
+    background-position: unset;
+    background-size: cover;
     min-height: 400px;
     background-position: 50% min(-560px, -32vw);
   }
