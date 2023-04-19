@@ -19,7 +19,7 @@
       document.getElementById('scroll-hint').classList.add('suppress')
       if(screen.width > 1439) {
         var windowYOffset = window.pageYOffset,
-          elBackgroundPos = "50% " + Math.max(windowYOffset * -1.95 - 580, -1650) + "px";
+          elBackgroundPos = "50% " + Math.max(windowYOffset * -1.35, -1650) + "px";
   
         parallax.style.backgroundPosition = elBackgroundPos;
       }
@@ -41,10 +41,10 @@
 </script>
 
 <template>
-  <div ref="page">
+  <div ref="page" class="overflow-x-hidden">
     <header class="relative w-full h-full flex items-center justify-center parallax">
       <div class="absolute top-0 left-0 w-full h-full bg-slate-800 bg-opacity-[15%] flex flex-col items-baseline justify-center background-filter">
-        <div ref="heroContent" class="hero-content w-full px-20 py-10 flex flex-col justify-center items-baseline gap-y-6 max-w-3xl bg-slate-600 bg-opacity-40 backdrop-blur-sm rounded-md">
+        <div ref="heroContent" class="hero-content w-full px-20 py-10 flex flex-col justify-center items-baseline gap-y-6 max-w-3xl bg-slate-600 bg-opacity-40 md:backdrop-blur-sm rounded-md">
           <h1 class="text-4xl font-bold">Passionate. Curious. Dedicated.</h1>
           <p class="text-base lg:text-lg">Passionate about web development with expertise in Vue and Nuxt, and experience with Laravel, WordPress and PHP. I have a track record of quickly learning new technologies and applying them to projects. Dedicated to constantly improving my skills, both professionally and personally.</p>
           <div class="flex flex-col w-full md:w-auto md:flex-row gap-y-4 md:gap-y-0 md:gap-x-20">
@@ -117,18 +117,18 @@
   .parallax {
     /* The image used */
     /* background-image: url('/images/CodingVue.gif'); */
-    background: url('/images/parallax.jpg');
+    background: url('/images/choo.jpeg');
     
     /* Set a specific height */
     min-height: 800px;
     
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
-    background-position: 50% -580px;
+    background-position: 50% 10%;
     background-repeat: no-repeat;
     background-size: cover;
 
-    transition: background 0.33s ease-out;
+    /* transition: background 0.33s ease-out; */
   }
 
   #scroll-hint {
@@ -161,7 +161,6 @@
     .parallax {
       height: 100%;
       background-attachment: scroll;
-      background-position: 0;
       transition: none;
     }
   }
