@@ -14,6 +14,10 @@
     const elHC = heroContent.value
     elHC.classList.add("active")
 
+    // Possibly stops lag?
+    elHC.classList.remove('md:backdrop-blur-sm')
+    setTimeout(() => elHC.classList.add('md:backdrop-blur-sm'), 1000)
+
     const parallax = document.querySelector(".parallax");
     window.onscroll = function() {
       document.getElementById('scroll-hint').classList.add('suppress')
@@ -124,7 +128,7 @@
     
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
-    background-position: 50% 10%;
+    background-position: 50% 0%;
     background-repeat: no-repeat;
     background-size: cover;
 
