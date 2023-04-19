@@ -262,7 +262,7 @@
     opacity: 1;
   }
 
-  .parallax {
+  .parallax:not(header) {
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -275,7 +275,6 @@
     background-image: url('/images/me-square/2.png');
     background-position: unset;
     background-size: cover;
-    min-height: 400px;
     background-position: 50% min(-560px, -32vw);
   }
 

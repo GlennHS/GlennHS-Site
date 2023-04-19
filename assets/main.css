@@ -1563,6 +1563,10 @@ section p {
   margin-bottom: 0.5rem;
 }
 
+header.parallax {
+  min-height: 500px;
+}
+
 .cta {
   font-family: 'Fira Sans', sans-serif;
 }
