@@ -119,6 +119,10 @@ section p {
   @apply my-2
 }
 
+header.parallax {
+  min-height: 500px;
+}
+
 .cta {
   font-family: 'Fira Sans', sans-serif;
 }

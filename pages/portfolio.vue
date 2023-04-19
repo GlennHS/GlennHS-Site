@@ -41,7 +41,7 @@
 <template>
   <div>
     <header id="parallax-1" class="relative w-full h-full flex items-center justify-center parallax">
-      <div class="absolute w-full h-full top-0 left-0 backdrop-blur-[2px]"></div>
+      <!-- <div class="absolute w-full h-full top-0 left-0 backdrop-blur-[2px]"></div> -->
       <div class="absolute z-20 top-0 left-0 w-full h-full bg-slate-600 bg-opacity-20 flex flex-col items-baseline justify-center">
         <div ref="heroContent" class="slide-in-left backdrop-blur-md bg-gray-900 bg-opacity-50 rounded-r-lg w-full px-4 lg:px-20 py-4 lg:py-10 flex flex-col justify-center items-baseline gap-y-6 max-w-lg lg:max-w-xl xl:max-w-3xl mt-32 md:mt-0">
           <h1 class="text-lg md:text-xl lg:text-2xl xl:text-4xl font-bold">Portfolio.</h1>
@@ -209,12 +209,12 @@
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
-    min-height: 300px;
+    background-position: 50% 40%;
+    min-height: 500px;
     transition: background 0.33s ease-out;
   }
 
-  #parallax-1 { background-image: url('/images/coding.jpg'); }
+  #parallax-1 { background-image: url('/images/parallax.jpg'); }
   #parallax-2 { background-image: url('https://media-s3-us-east-1.ceros.com/incisive-media/images/2020/06/05/afb067f18457c8015149a529ba5985ee/l-and-g-sponsorship-logo-rgb-4c-black-4c-black.png'); background-attachment: scroll;background-size: contain;background-color: white;}
   #parallax-3 { background-image: url('https://sp-ao.shortpixel.ai/client/to_webp,q_lossless,ret_img/https://www.besa.org.uk/wp-content/uploads/2022/04/SEGFullLogoFinal-1.png'); background-attachment: scroll;background-size: contain;background-color: white;}
   #parallax-4 { background-image: url('https://images.pexels.com/photos/590016/pexels-photo-590016.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'); background-attachment: scroll;}

@@ -57,7 +57,7 @@
           </a>
         </li>
         <li>
-          <a class="cursor-pointer transition hover:text-slate-600" href="tel:0757354460">
+          <a class="cursor-pointer transition hover:text-slate-600" href="tel:07572354460">
             <font-awesome-icon icon="fa-solid fa-phone" />
           </a>
         </li>

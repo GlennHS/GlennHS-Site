@@ -11,8 +11,8 @@
   <div>
     <Navbar />
     <NuxtPage />
-    <ExtraFooter />
     <Footer />
+    <ExtraFooter />
   </div>
 </template>
 
