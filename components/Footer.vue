@@ -2,7 +2,7 @@
   const { path } = useRoute()
   const { data: recentBlogPosts } = await useAsyncData(`content-${path}`, () => {
     return queryContent('/live')
-      .only(['title', 'updated', 'slug', '_id'])
+      .only(['title', 'excerpt', 'created', 'updated', 'slug', 'tags', '_id'])
       .limit(5)
       .sort({ 'updated': -1 })
       .find()
