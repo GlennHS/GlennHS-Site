@@ -32,7 +32,7 @@
   </div>
 </template>
 
-<style>
+<style scoped>
   .parallax {
     background-attachment: fixed;
     background-repeat: no-repeat;
