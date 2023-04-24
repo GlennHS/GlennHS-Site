@@ -132,7 +132,7 @@
     background-repeat: no-repeat;
     background-size: cover;
 
-    /* transition: background 0.33s ease-out; */
+    transition: background 0.33s ease-out;
   }
 
   #scroll-hint {
