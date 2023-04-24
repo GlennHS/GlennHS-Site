@@ -40,6 +40,5 @@
     background-position: center 8%;
     background-image: url('/images/choo.jpeg');
     min-height: 300px;
-    transition: background 0.33s ease-out;
   }
 </style>
