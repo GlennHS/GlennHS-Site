@@ -61,13 +61,13 @@
             <div class="relative w-full h-full transition flip-card-inner">
               <div class="cv-card w-full h-full flip-front-face">
                 <font-awesome-icon :icon="['fas', 'gear']" class="text-5xl md:text-7xl xl:text-8xl 2xl:text-9xl"/>
-                <span class="z-10 text-base sm:text-lg lg:text-xl xl:text-2xl text-center">LGIM EPC</span>
+                <span class="z-10 text-base sm:text-lg lg:text-xl xl:text-2xl text-center">Investment Management EPC</span>
                 <span class="click-here flex items-center gap-x-2 italic text-sm">{{ hasHover ? 'Click' : 'Touch' }} Here <font-awesome-icon :icon="['fas', 'arrow-right']" /></span>
               </div>
               <div class="cv-card p-4 w-full h-full flip-back-face">
-                <p class="long-content">Legal and General Investment Management had three separate Pardot instances which all needed to be interconnected via a complex multi-instance, multi-language preference center.</p>
-                <p class="short-content">LGIM needed an EPC that linked their 3 Pardot instances in 4 different languages. I created a dynamic, future-proofed solution used by thousands of people a month</p>
-                <a href='/portfolio#lgim-epc' class="italic sky">Read more &gt;&gt;</a>
+                <p class="long-content">A fortune 500 client had three separate Pardot instances which all needed to be interconnected via a complex multi-instance, multi-language preference center.</p>
+                <p class="short-content">A client needed an EPC that linked their 3 Pardot instances in 4 different languages. I created a dynamic, future-proofed solution used by thousands of people a month</p>
+                <a href='/portfolio#client-1-epc' class="italic sky">Read more &gt;&gt;</a>
               </div>
             </div>
           </div>
@@ -75,13 +75,13 @@
             <div class="relative w-full h-full transition flip-card-inner">
               <div class="cv-card w-full h-full flip-front-face">
                 <font-awesome-icon :icon="['fab', 'wordpress']" class="text-5xl md:text-7xl xl:text-8xl 2xl:text-9xl" />
-                <span class="z-10 text-base sm:text-md lg:text-lg xl:text-xl 2xl:text-2xl text-center">SEG WordPress Site</span>
+                <span class="z-10 text-base sm:text-md lg:text-lg xl:text-xl 2xl:text-2xl text-center">WordPress Content Hub</span>
                 <span class="click-here flex items-center gap-x-2 italic text-sm">{{ hasHover ? 'Click' : 'Touch' }} Here <font-awesome-icon :icon="['fas', 'arrow-right']" /></span>
               </div>
               <div class="cv-card p-4 w-full h-full flip-back-face">
-                <p class="long-content">Supporting Education Group approached us and asked for a WordPress solution to aggregate all the posts from their associated sites into their main site. I was tasked with creating a WordPress template that retrieved the posts and used the WP_Query class to allow users to filter/search posts.</p>
-                <p class="short-content">SEG needed a WordPress template & plugin for aggregating the blog posts from their partner sites into one place. I developed the template which involved front/back end coding using PHP and WP code</p>
-                <a href="/portfolio#seg-content-hub" class="italic sky">Read more &gt;&gt;</a>
+                <p class="long-content">An education-sector client approached us and asked for a WordPress solution to aggregate all the posts from their associated sites into their main site. I was tasked with creating a WordPress template that retrieved the posts and used the WP_Query class to allow users to filter/search posts.</p>
+                <p class="short-content">A client needed a WordPress template & plugin for aggregating the blog posts from their partner sites into one place. I developed the template which involved front/back end coding using PHP and WP code</p>
+                <a href="/portfolio#client-2-content-hub" class="italic sky">Read more &gt;&gt;</a>
               </div>
             </div>
           </div>
