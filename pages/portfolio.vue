@@ -40,7 +40,7 @@
 
 <template>
   <div>
-    <header id="parallax-1" class="relative w-full h-full flex items-center justify-center parallax">
+    <header id="banner-1" class="relative w-full h-full flex items-center justify-center banner">
       <!-- <div class="absolute w-full h-full top-0 left-0 backdrop-blur-[2px]"></div> -->
       <div class="absolute z-20 top-0 left-0 w-full h-full bg-slate-600 bg-opacity-20 flex flex-col items-baseline justify-center">
         <div ref="heroContent" class="slide-in-left backdrop-blur-md bg-gray-900 bg-opacity-50 rounded-r-lg w-full px-4 lg:px-20 py-4 lg:py-10 flex flex-col justify-center items-baseline gap-y-6 max-w-lg lg:max-w-xl xl:max-w-3xl mt-32 md:mt-0">
@@ -52,7 +52,7 @@
 
     <section>
       <!-- Slider main container -->
-      <div class="swiper">
+      <div class="swiper main-carousel">
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
           <!-- Slides -->
@@ -80,6 +80,18 @@
               <span class="slide-text">Total Rewards Calculator: A Real View Into Employee Remuneration.</span>
             </NuxtLink>
           </div>
+          <div class="swiper-slide">
+            <NuxtLink to="#glennhs" class="slide-link">
+              <img src='/images/bannerLogo.png' alt='' class="slide-img !object-contain px-4 bg-slate-400" />
+              <span class="slide-text">GlennHS: My Personal Site.</span>
+            </NuxtLink>
+          </div>
+          <div class="swiper-slide">
+            <NuxtLink to="#aetherslay" class="slide-link">
+              <img src='/images/aetherslayLogo.png' alt='' class="slide-img !object-contain px-4 bg-cyan-200" />
+              <span class="slide-text">ÆtherSlay: A C#-based D&D Toolkit for DMs & Players.</span>
+            </NuxtLink>
+          </div>
         </div>
         <!-- If we need pagination -->
         <div class="swiper-pagination"></div>
@@ -92,10 +104,10 @@
     </section>
 
     <section id="client-1-epc" class="flex flex-col p-0 pb-12">
-      <div id="parallax-2" class="parallax pattern w-full"></div>
+      <div id="banner-2" class="banner pattern w-full"></div>
       <div class="section-content">
         <h2>[Fortune 500 Client]'s Email Preference Centre</h2>
-        <div class="flex items-center justify-center gap-12">
+        <div class="flex flex-col-reverse 2xl:flex-row items-center justify-center 2xl:gap-12">
           <div class="w-auto">
             <p>A year ago I worked on a complex technical project for [Fortune 500 Client]'s Investment Management section, creating an email preference center solution that integrated three different Pardot Business Units together. My main objective was to create a user-friendly experience for customers to manage their email preferences in four different languages, including automatic redirection for unknown users.</p>
             <p>To achieve this, I developed a solution that ran off of a 4-layer-deep JSON object that stored user preferences, investor profiles, language, and country data which was used to mutate the DOM of the page and present each user with a bespoke experience. The JSON also had the additional effect of gating content users shouldn't be able to access from them. The solution was designed to be highly customizable and scalable, ensuring that the company's email marketing efforts were targeted and effective.</p>
@@ -105,7 +117,7 @@
             <p>While the project is no longer functional due to changes made by the company, I am proud of the work I accomplished and the technical skills I developed during the project. I believe that my experience working on such a complex and challenging project for such a high-profile client has equipped me with new skills needed to excel in future technical projects.</p>
           </div>
           <div>
-            <div class="swiper">
+            <div class="swiper hide-on-mobile">
             <!-- Additional required wrapper -->
               <div class="swiper-wrapper">
                 <!-- Slides -->
@@ -137,10 +149,11 @@
     </section>
 
     <section id="client-2-content-hub" class="flex flex-col p-0 pb-12">
-      <div id="parallax-3" class="parallax pattern w-full"></div>
+      <div id="banner-3" class="banner pattern w-full"></div>
       <div class="section-content">
         <h2>[Education Client]'s WordPress Content Hub.</h2>
-        <div class="flex items-center justify-center gap-12">
+        <div class="flex flex-col 2xl:flex-row items-center justify-center 2xl:gap-12">
+          <!-- <img src='/images/soon.png' class="w-96"/> -->
           <div>
             <p>[Education Blog Client] came to us with a unique challenge: they needed a WordPress template file and a bespoke plugin to aggregate, filter, search and display blog posts from their partner sites. The plugin was designed to pull posts from various content management systems used by the client's partner sites, including WordPress, SetSquare, SquareSpace, and Volcanic. I created a custom template file that seamlessly integrated with the plugin, resulting in a visually appealing and user-friendly grid format for displaying the posts.</p>
             <p>One of the key features of the WordPress template file was its fully responsive design. To ensure that the page would look great on any device, I implemented a range of optimization techniques to improve performance, including pagination of the results using response headers from the WP Query performed. The end result was a page that loaded quickly and provided a smooth user experience.</p>
@@ -149,38 +162,28 @@
             <p>One of the challenges I faced during the project was the fact that the existing theme, Divi, heavily modified the "single.php" file. This meant that I couldn't safely modify it without risking conflicts. To overcome this challenge, I used the WPCode plugin and wrote the normalization and injection script in a way that worked with the existing theme file. This required a great deal of technical skill and attention to detail, but the end result was a solution that worked seamlessly and without any issues.</p>
             <p>While I am unfortunately unable to share any images of the finished site due to it not being live yet, the client is very happy with the deliverable. The custom WordPress template file and bespoke plugin worked seamlessly together to create a visually appealing and user-friendly page that allowed users to easily find the content they were looking for. The filters and normalization script added an extra level of functionality and user experience, while the fully responsive design and optimization techniques ensured that the page loaded quickly and provided a smooth experience across all devices. Overall, I am proud of the work I did on this project and am confident that it will be a valuable asset for the client going forward.</p>
           </div>
-          <div>
-            <div class="swiper">
-            <!-- Additional required wrapper -->
-              <div class="swiper-wrapper">
-                <!-- Slides -->
-                <div class="swiper-slide">
-                  <div class="client-1-slide">
-                    <img src='/images/swiper/client-2/soon.png' class="slide-img object-contain"/>
-                  </div>
-                </div>
-              </div>
-              <!-- If we need pagination -->
-              <!-- <div class="swiper-pagination"></div> -->
-              <!-- If we need navigation buttons -->
-              <!-- <div class="swiper-button-prev"></div>
-              <div class="swiper-button-next"></div> -->
-            </div>
-          </div>
         </div>
       </div>
     </section>
 
     <section id="wonderwall" class="flex flex-col p-0 pb-12">
-      <div id="parallax-4" class="parallax w-full"></div>
+      <div id="banner-4" class="banner w-full"></div>
       <div class="section-content">
         <h2>Wonderwall: A Company-Wide Realtime Analytics Dashboard</h2>
-        <p>[Description coming soon!]</p>
+        <div class="flex flex-col-reverse 2xl:flex-row items-center justify-center 2xl:gap-12">
+          <div>
+            <p>As part of a small team of data scientists and web developers, I had the opportunity to co-lead the development of a custom dashboard application for our company using NodeJS, ExpressJS, TailwindCSS, and Tableau. The dashboard's primary purpose was to provide a single-screen display of several core business metrics that could be easily viewed on televisions throughout our offices.</p>
+            <p>To meet this objective, I was responsible for eliciting requirements, designing the application architecture, and implementing the majority of the backend logic. Leveraging my expertise in NodeJS and ExpressJS, I was able to create a scalable and reliable application that could handle the demands of our business. In addition, I incorporated TailwindCSS into the project, enabling us to create a visually stunning dashboard that was both responsive and user-friendly.</p>
+            <p>One of the most challenging aspects of the project was integrating Tableau charts into the dashboard. To achieve this, I used an OAuth connection to retrieve pre-prepared charts from Tableau, which were then cycled through the dashboard in a seamless manner. The success of this integration was a key factor in the project's overall success.</p>
+            <p>Currently, we are in the process of planning version 2 of the dashboard application. This new version will incorporate a real-time alerts system, driven by both Snowflake and Excel data sources, as well as real-time data pulls from Snowflake and additional key metrics for the dashboard charts. The ongoing development of the dashboard is a testament to the value it provides to our business and its continued relevance in our company's culture.</p>
+          </div>
+          <!-- <img src='/images/soon.png' class="w-96"/> -->
+        </div>
       </div>
     </section>
     
     <section id="total-rewards-calculator" class="flex flex-col p-0 pb-12">
-      <div id="parallax-5" class="parallax w-full"></div>
+      <div id="banner-5" class="banner w-full"></div>
       <div class="section-content">
         <h2>Total Rewards Calculator: A Real View Into Employee Remuneration</h2>
         <p>[Description coming soon!]</p>
@@ -188,42 +191,77 @@
     </section>
     
     <section id="glennhs" class="flex flex-col p-0 pb-12">
-      <div id="parallax-6" class="parallax w-full"></div>
+      <div id="banner-6" class="banner pattern w-full bg-slate-600"></div>
       <div class="section-content">
         <h2>GlennHS: My Site</h2>
-        <p>[Description coming soon!]</p>
+        <p>You are here! Please see <NuxtLink to="/blog/hello-world" class="sky">this blog post</NuxtLink> for more details!</p>
       </div>
     </section>
 
     <section id="aetherslay" class="flex flex-col p-0 pb-12">
-      <div id="parallax-7" class="parallax w-full"></div>
+      <div id="banner-7" class="banner pattern w-full bg-slate-600"></div>
       <div class="section-content">
-        <h2>Aetherslay: A Toolkit for Dungeons &amp; Dragons</h2>
-        <p>[Description coming soon!]</p>
+        <h2>AetherSlay: A Toolkit for Dungeons &amp; Dragons</h2>
+        <div class="flex flex-col-reverse 2xl:flex-row items-center justify-center 2xl:gap-12">
+          <div>
+            <p>ÆtherSlay is a lightweight toolkit for Dungeons & Dragons 5th Edition for both players and dungeon masters.</p>
+            <p>Designed with the DM in mind, built for comfort and speed above all else. I have endeavoured to make this application as simple to use as well as lightweight. The current footprint of the application is 33MB memory usage (correct as of v0.6alpha.2).</p>
+            <strong>Current Features:</strong>
+            <ul class="list-disc list-inside">
+              <li><strong>Randomized Character Creation</strong> - <em>Ability to create player characters using the "Player's Handbook" races & classes</em></li>
+              <li><strong>Intelligent Roll Allocation</strong> - <em>Rolled stats are assigned to the character's stats in the commonly accepted "best to worst"</em></li>
+              <li><strong>Creature Catalog</strong> - <em>A catalog containing all creatures from the 5th edition Monster Manual</em></li>
+              <li><strong>Creature Filtering/Searching</strong> - <em>Ability to search and filter creatures within the catalog</em></li>
+              <li><strong>Character Sheet Storage</strong> - <em>Short-term session storage for character sheets</em></li>
+              <li><strong>Dice Rolling (Multiple/Single)</strong> - <em>Ability to roll both single and multiple dice simultaneously</em></li>
+              <li><strong>Coin Flipping</strong> - <em>A pretty little fake coin flip with animation (well, animation's generous but it works!)</em></li>
+            </ul>
+          </div>
+          <div>
+            <div class="swiper hide-on-mobile">
+            <!-- Additional required wrapper -->
+              <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                  <div class="aetherslay-slide">
+                    <img src='/images/swiper/aetherslay/1.png' class="slide-img object-contain bg-slate-800"/>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="aetherslay-slide">
+                    <img src='/images/swiper/aetherslay/2.png' class="slide-img object-contain bg-slate-800"/>
+                  </div>
+                </div>
+              </div>
+              <!-- If we need pagination -->
+              <div class="swiper-pagination"></div>
+              <!-- If we need navigation buttons -->
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   </div>
 </template>
 
 <style scoped>
-  .parallax {
-    background-attachment: fixed;
+  .banner {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 40%;
-    min-height: 500px;
+    min-height: 200px;
     transition: background 0.33s ease-out;
   }
 
-  .parallax.pattern { min-height: 200px; }
-
-  #parallax-1 { background-image: url('/images/parallax.jpg'); }
-  #parallax-2 { background-image: url('/images/patterns/polygon-1.svg'); background-attachment: scroll;background-size: cover;background-color: white;}
-  #parallax-3 { background-image: url('/images/patterns/lpg-3.svg'); background-attachment: scroll;background-size: cover;background-color: white;}
-  #parallax-4 { background-image: url('https://images.pexels.com/photos/590016/pexels-photo-590016.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'); background-attachment: scroll;}
-  #parallax-5 { background-image: url('https://images.pexels.com/photos/6693665/pexels-photo-6693665.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'); background-attachment: scroll;}
-  #parallax-6 { background-image: url('https://placekitten.com/2000/500'); background-attachment: scroll;}
-  #parallax-7 { background-image: url('https://placekitten.com/2000/500'); background-attachment: scroll;}
+  #banner-1 { background-image: url('/images/parallax.jpg'); min-height: 500px; background-attachment: fixed;}
+  #banner-2 { background-image: url('/images/patterns/polygon-1.svg'); }
+  #banner-3 { background-image: url('/images/patterns/lpg-3.svg'); }
+  #banner-4 { background-image: url('https://images.pexels.com/photos/590016/pexels-photo-590016.jpeg?cs=tinysrgb&w=1920'); background-attachment: scroll;}
+  #banner-5 { background-image: url('https://images.pexels.com/photos/6693665/pexels-photo-6693665.jpeg?cs=tinysrgb&w=1920'); background-attachment: scroll;}
+  #banner-6 { background-image: url('/images/bannerLogo.png'); background-size: 40%; }
+  #banner-7 { background-image: url('/images/aetherslayLogo.png'); background-size: 25%; }
 
   .slide-in-left {
     opacity: 0;
@@ -240,7 +278,27 @@
   }
 
   .swiper {
-    width: 600px;
-    height: 420px;
+    --dimensions: 600px;
+
+    width: var(--dimensions);
+    height: var(--dimensions);
+  }
+
+  .aetherslay-slide img {
+    object-fit: contain;
+  }
+
+  @media (max-width:768px) {
+    .section-content img {
+      display: none;
+    }
+  }
+
+  @media (max-width:600px) {
+    .main-carousel {
+      --dimensions: 300px;
+      --swiper-pagination-bullet-width: 10px;
+      --swiper-pagination-bullet-height: 10px;
+    }
   }
 </style>
