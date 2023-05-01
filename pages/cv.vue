@@ -141,7 +141,7 @@
         <h3 class="text-base md:text-lg xl:text-2xl font-semibold">University of Portsmouth 2017-2021</h3>
         <span class="text-base md:text-lg xl:text-2xl">BSc Hons. Computer Science</span>
         <h4 class="text-base md:text-lg xl:text-xl py-4">Notable Achievements</h4>
-        <div class="grid grid-cols-1 sm:grid-cols-2 2xl:grid-cols-4 items-stretch justify-around gap-4 md:gap-8 px-8 md:px-20 lg:px-0">
+        <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 items-stretch justify-around gap-4 md:gap-8 px-8 md:px-20 lg:px-0">
           <div class="cv-card uni-card">
             <img class="uni-card-bg" src="/images/sscc-meeting.jpg">
             <font-awesome-icon :icon="['fas', 'graduation-cap']" class="text-6xl z-10 hidden md:block" />
