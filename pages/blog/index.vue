@@ -103,7 +103,6 @@
     }
 
     filterPosts()
-    alert(contentRoot)
   })
 </script>
 
