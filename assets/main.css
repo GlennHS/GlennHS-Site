@@ -473,8 +473,8 @@ section {
   margin-bottom: 1rem;
   padding-left: 1rem;
   padding-right: 1rem;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 @media (min-width: 768px) {
@@ -488,6 +488,8 @@ section {
   .section-content {
     padding-left: 3rem;
     padding-right: 3rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
   }
 }
 
@@ -732,6 +734,16 @@ a.sky:active {
   gap: 1rem;
 }
 
+.swiper.hide-on-mobile {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .swiper.hide-on-mobile {
+    display: block;
+  }
+}
+
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -904,16 +916,12 @@ a.sky:active {
   z-index: 50;
 }
 
+.col-span-10 {
+  grid-column: span 10 / span 10;
+}
+
 .col-span-2 {
   grid-column: span 2 / span 2;
-}
-
-.col-span-3 {
-  grid-column: span 3 / span 3;
-}
-
-.col-span-5 {
-  grid-column: span 5 / span 5;
 }
 
 .col-span-full {
@@ -955,10 +963,6 @@ a.sky:active {
 
 .mt-8 {
   margin-top: 2rem;
-}
-
-.mt-2 {
-  margin-top: 0.5rem;
 }
 
 .block {
@@ -1034,17 +1038,16 @@ a.sky:active {
   width: 16rem;
 }
 
+.w-72 {
+  width: 18rem;
+}
+
 .w-96 {
   width: 24rem;
 }
 
 .w-auto {
   width: auto;
-}
-
-.w-fit {
-  width: -moz-fit-content;
-  width: fit-content;
 }
 
 .w-full {
@@ -1101,6 +1104,10 @@ a.sky:active {
 
 .flex-col {
   flex-direction: column;
+}
+
+.flex-col-reverse {
+  flex-direction: column-reverse;
 }
 
 .flex-wrap {
@@ -1190,10 +1197,6 @@ a.sky:active {
   place-self: center;
 }
 
-.justify-self-center {
-  justify-self: center;
-}
-
 .overflow-x-hidden {
   overflow-x: hidden;
 }
@@ -1231,6 +1234,11 @@ a.sky:active {
 .border-white {
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
+}
+
+.bg-cyan-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(165 243 252 / var(--tw-bg-opacity));
 }
 
 .bg-emerald-300 {
@@ -1276,6 +1284,11 @@ a.sky:active {
 .bg-slate-300 {
   --tw-bg-opacity: 1;
   background-color: rgb(203 213 225 / var(--tw-bg-opacity));
+}
+
+.bg-slate-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(148 163 184 / var(--tw-bg-opacity));
 }
 
 .bg-slate-500 {
@@ -1342,6 +1355,11 @@ a.sky:active {
   --tw-bg-opacity: 15%;
 }
 
+.\!object-contain {
+  -o-object-fit: contain !important;
+     object-fit: contain !important;
+}
+
 .object-contain {
   -o-object-fit: contain;
      object-fit: contain;
@@ -1391,11 +1409,6 @@ a.sky:active {
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
-}
-
-.px-6 {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
 }
 
 .px-8 {
@@ -1452,6 +1465,10 @@ a.sky:active {
 
 .pt-4 {
   padding-top: 1rem;
+}
+
+.pt-8 {
+  padding-top: 2rem;
 }
 
 .text-center {
@@ -1642,7 +1659,7 @@ header.parallax {
 
 .slide-text {
   position: absolute;
-  bottom: 2rem;
+  bottom: 2.5rem;
   left: 0px;
   width: 100%;
   background-color: rgb(71 85 105 / var(--tw-bg-opacity));
@@ -1656,11 +1673,23 @@ header.parallax {
 }
 
 .swiper {
-  --swiper-pagination-color: #090446;
+  --swiper-pagination-color: #fff;
   --swiper-pagination-bullet-inactive-color: rgb(73, 75, 78);
   --swiper-pagination-bullet-inactive-opacity: 0.5;
-  --swiper-navigation-color: #090446;
+  --swiper-navigation-color: #fff;
+  --swiper-pagination-bullet-width: 18px;
+  --swiper-pagination-bullet-height: 18px;
 }
+
+.swiper-button-prev:after, .swiper-button-next:after {
+  text-shadow: 0 0 8px black, 0 0 8px black;
+}
+
+.swiper-button-lock {
+  display: block!important;
+}
+
+/* Swiper was applying a class to my carousel. Couldn't figure out why */
 
 @media(prefers-reduced-motion) {
   * {
@@ -1727,12 +1756,29 @@ header.parallax {
 }
 
 @media (min-width: 640px) {
+  .sm\:col-span-3 {
+    grid-column: span 3 / span 3;
+  }
+
+  .sm\:col-span-7 {
+    grid-column: span 7 / span 7;
+  }
+
   .sm\:block {
     display: block;
   }
 
+  .sm\:w-fit {
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+
   .sm\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .sm\:justify-items-center {
+    justify-items: center;
   }
 
   .sm\:gap-x-4 {
@@ -1884,6 +1930,18 @@ header.parallax {
     position: fixed;
   }
 
+  .lg\:col-span-2 {
+    grid-column: span 2 / span 2;
+  }
+
+  .lg\:col-span-3 {
+    grid-column: span 3 / span 3;
+  }
+
+  .lg\:col-span-5 {
+    grid-column: span 5 / span 5;
+  }
+
   .lg\:inline {
     display: inline;
   }
@@ -1924,6 +1982,10 @@ header.parallax {
     gap: 3rem;
   }
 
+  .lg\:justify-self-center {
+    justify-self: center;
+  }
+
   .lg\:px-0 {
     padding-left: 0px;
     padding-right: 0px;
@@ -1947,6 +2009,11 @@ header.parallax {
   .lg\:px-40 {
     padding-left: 10rem;
     padding-right: 10rem;
+  }
+
+  .lg\:px-6 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 
   .lg\:py-10 {
@@ -1985,6 +2052,11 @@ header.parallax {
     padding-right: 10rem;
   }
 
+  .xl\:px-8 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
   .xl\:text-2xl {
     font-size: 1.5rem;
     line-height: 2rem;
@@ -2019,6 +2091,14 @@ header.parallax {
 @media (min-width: 1536px) {
   .\32xl\:grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .\32xl\:flex-row {
+    flex-direction: row;
+  }
+
+  .\32xl\:gap-12 {
+    gap: 3rem;
   }
 
   .\32xl\:px-20 {

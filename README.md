@@ -1,6 +1,6 @@
-# Nuxt 3 Minimal Starter
+# Glenn HS: My Personal Site
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+This is the public-facing repository for my personal site, [GlennHS](https://glennhs.co.uk). Please feel free to clone it and have a play around! If you have any suggestions or find any bugs/issues please let me know by raising a Github "Issue" :)
 
 ## Setup
 
@@ -15,6 +15,12 @@ npm install
 
 # pnpm
 pnpm install
+```
+
+## Environment Variable Configuration
+
+```bash
+NUXT_PUBLIC_CONTENT_ROOT=/ # Use '/' for all posts, '/live' for what's on my site
 ```
 
 ## Development Server
@@ -39,4 +45,4 @@ Locally preview production build:
 npm run preview
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+Check out the [Nuxt documentation](https://nuxt.com/docs/) for more info!

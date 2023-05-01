@@ -14,7 +14,7 @@
   }
 
   .section-content {
-    @apply px-4 md:px-6 lg:px-12 xl:px-40 py-12 my-4;
+    @apply px-4 md:px-6 lg:px-12 xl:px-40 py-2 lg:py-12 my-4;
   }
 
   section h2 {
@@ -100,6 +100,10 @@
   .contact-row {
     @apply flex items-center gap-4;
   }
+
+  .swiper.hide-on-mobile {
+    @apply hidden md:block;
+  }
 }
 
 body {
@@ -144,15 +148,23 @@ header.parallax {
 }
 
 .slide-text {
-  @apply absolute bottom-8 left-0 w-full py-2 text-center bg-slate-600 bg-opacity-70 backdrop-blur-sm;
+  @apply absolute bottom-10 left-0 w-full py-2 text-center bg-slate-600 bg-opacity-70 backdrop-blur-sm;
 }
 
 .swiper {
-  --swiper-pagination-color: #090446;
+  --swiper-pagination-color: #fff;
   --swiper-pagination-bullet-inactive-color: rgb(73, 75, 78);
   --swiper-pagination-bullet-inactive-opacity: 0.5;
-  --swiper-navigation-color: #090446;
+  --swiper-navigation-color: #fff;
+  --swiper-pagination-bullet-width: 18px;
+  --swiper-pagination-bullet-height: 18px;
 }
+
+.swiper-button-prev:after, .swiper-button-next:after {
+  text-shadow: 0 0 8px black, 0 0 8px black;
+}
+
+.swiper-button-lock { display: block!important; } /* Swiper was applying a class to my carousel. Couldn't figure out why */
 
 @media(prefers-reduced-motion) {
   * { transition: none!important; }
