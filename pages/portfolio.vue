@@ -35,6 +35,12 @@
         prevEl: '.swiper-button-prev',
       },
     });
+
+    document.querySelectorAll('.slide-img').forEach(el => {
+      el.addEventListener('click', () => {
+        window.open(el.getAttribute('src'), '_blank')
+      })
+    })
   })
 </script>
 
@@ -107,7 +113,7 @@
       <div id="banner-2" class="banner pattern w-full"></div>
       <div class="section-content">
         <h2>[Fortune 500 Client]'s Email Preference Centre</h2>
-        <div class="flex flex-col-reverse 2xl:flex-row items-center justify-center 2xl:gap-12">
+        <div class="flex flex-col-reverse 3xl:flex-row items-center justify-center 2xl:gap-12">
           <div class="w-auto">
             <p>A year ago I worked on a complex technical project for [Fortune 500 Client]'s Investment Management section, creating an email preference center solution that integrated three different Pardot Business Units together. My main objective was to create a user-friendly experience for customers to manage their email preferences in four different languages, including automatic redirection for unknown users.</p>
             <p>To achieve this, I developed a solution that ran off of a 4-layer-deep JSON object that stored user preferences, investor profiles, language, and country data which was used to mutate the DOM of the page and present each user with a bespoke experience. The JSON also had the additional effect of gating content users shouldn't be able to access from them. The solution was designed to be highly customizable and scalable, ensuring that the company's email marketing efforts were targeted and effective.</p>
@@ -286,6 +292,12 @@
 
   .aetherslay-slide img {
     object-fit: contain;
+  }
+
+  @media (max-width:1366px) {
+    .swiper {
+      --dimensions: 400px;
+    }
   }
 
   @media (max-width:768px) {
