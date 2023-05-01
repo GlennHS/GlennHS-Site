@@ -6,7 +6,8 @@
   const filterTypeOR = ref(true)
   const loadingPosts = ref(true)
   
-  const contentBasePath = '/live'
+  const config = useRuntimeConfig()
+  const contentRoot = config.public.contentRoot
 
   const orderPostArrayByCreated = (pArr) => {
     return pArr.sort((a,b) => {
@@ -16,7 +17,7 @@
   }
 
   const getAllTags = async () => {
-    const allPostTags = await queryContent(contentBasePath)
+    const allPostTags = await queryContent(contentRoot)
       .only(['tags'])
       .sort({ 'tags': 1 })
       .find()
@@ -26,7 +27,7 @@
   const setPostsByTag = async (tags) => {
     let allPosts = []
     tags.forEach((tag) => {
-      allPosts.push(queryContent(contentBasePath).where({ 'tags': { $contains: tag } }).find())
+      allPosts.push(queryContent(contentRoot).where({ 'tags': { $contains: tag } }).find())
     })
     let posts = await Promise.all(allPosts);
     posts = [...new Set(posts.flat())]
@@ -44,12 +45,12 @@
   }
 
   const setPostsByTagAND = async (tags) => {
-    const posts = await queryContent(contentBasePath).where({ 'tags': { $contains: tags } }).find()
+    const posts = await queryContent(contentRoot).where({ 'tags': { $contains: tags } }).find()
     blogPosts.value = orderPostArrayByCreated(posts)
   }
 
   const setPostsALL = async () => {
-    const posts = await queryContent(contentBasePath).find()
+    const posts = await queryContent(contentRoot).find()
     blogPosts.value = orderPostArrayByCreated(posts)
   }
 
@@ -102,6 +103,7 @@
     }
 
     filterPosts()
+    alert(contentRoot)
   })
 </script>
 
