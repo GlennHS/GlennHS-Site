@@ -1028,6 +1028,18 @@ a.sky:active {
   height: 100vh;
 }
 
+.h-auto {
+  height: auto;
+}
+
+.h-8 {
+  height: 2rem;
+}
+
+.h-6 {
+  height: 1.5rem;
+}
+
 .max-h-52 {
   max-height: 13rem;
 }
@@ -1062,6 +1074,14 @@ a.sky:active {
 
 .w-screen {
   width: 100vw;
+}
+
+.w-0 {
+  width: 0px;
+}
+
+.w-0\.5 {
+  width: 0.125rem;
 }
 
 .max-w-3xl {
@@ -1658,7 +1678,6 @@ header.parallax {
   left: 0px;
   height: 100%;
   width: 100%;
-  cursor: zoom-in;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -1772,6 +1791,10 @@ header.parallax {
 
   .sm\:block {
     display: block;
+  }
+
+  .sm\:h-12 {
+    height: 3rem;
   }
 
   .sm\:w-fit {
@@ -1962,6 +1985,18 @@ header.parallax {
 
   .lg\:h-auto {
     height: auto;
+  }
+
+  .lg\:h-24 {
+    height: 6rem;
+  }
+
+  .lg\:h-12 {
+    height: 3rem;
+  }
+
+  .lg\:w-1 {
+    width: 0.25rem;
   }
 
   .lg\:max-w-2xl {

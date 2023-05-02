@@ -144,7 +144,7 @@ header.parallax {
 }
 
 .slide-img {
-  @apply absolute top-0 left-0 w-full h-full object-cover cursor-zoom-in;
+  @apply absolute top-0 left-0 w-full h-full object-cover;
 }
 
 .slide-text {
