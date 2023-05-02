@@ -13,9 +13,6 @@ export default defineNuxtConfig({
       script: [
         { "data-id":"101408396", "src":"//static.getclicky.com/js", async: true }
       ],
-      noscript: [
-        { children: '<p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/101408396ns.gif" /></p>' }
-      ]
     }
   },
   modules: [
