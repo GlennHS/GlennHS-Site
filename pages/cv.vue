@@ -354,7 +354,7 @@
     }
 
     .parallax {
-      background-attachment: scroll;
+      background-attachment: scroll!important;
       background-size: cover;
     }
 
