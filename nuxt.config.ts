@@ -9,7 +9,10 @@ export default defineNuxtConfig({
     head: {
       link: [
         { rel: 'icon', href: '/favicon.png' }
-      ]
+      ],
+      script: [
+        { "data-id":"101408396", "src":"//static.getclicky.com/js", async: true }
+      ],
     }
   },
   modules: [

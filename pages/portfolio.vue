@@ -4,7 +4,11 @@
   // import Swiper styles
   import 'swiper/css/bundle';
 
+  const shownSections = ref([])
+  const isMobile = ref(true);
+
   onMounted(() => {
+    isMobile.value = screen.width < 600
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if(entry.isIntersecting) {
@@ -36,7 +40,7 @@
       },
     });
 
-    document.querySelectorAll('.slide-img').forEach(el => {
+    document.querySelectorAll('.swiper:not(.main-carousel) .slide-img').forEach(el => {
       el.addEventListener('click', () => {
         window.open(el.getAttribute('src'), '_blank')
       })
@@ -113,14 +117,17 @@
       <div id="banner-2" class="banner pattern w-full"></div>
       <div class="section-content">
         <h2>[Fortune 500 Client]'s Email Preference Centre</h2>
-        <div class="flex flex-col-reverse 3xl:flex-row items-center justify-center 2xl:gap-12">
+        <div class="flex flex-col-reverse 3xl:flex-row items-top justify-center 2xl:gap-12">
           <div class="w-auto">
             <p>A year ago I worked on a complex technical project for [Fortune 500 Client]'s Investment Management section, creating an email preference center solution that integrated three different Pardot Business Units together. My main objective was to create a user-friendly experience for customers to manage their email preferences in four different languages, including automatic redirection for unknown users.</p>
-            <p>To achieve this, I developed a solution that ran off of a 4-layer-deep JSON object that stored user preferences, investor profiles, language, and country data which was used to mutate the DOM of the page and present each user with a bespoke experience. The JSON also had the additional effect of gating content users shouldn't be able to access from them. The solution was designed to be highly customizable and scalable, ensuring that the company's email marketing efforts were targeted and effective.</p>
-            <p>Throughout the six-month development process, I encountered and overcame many technical challenges, such as changing requirements, increase in scope and ensuring that the project worked smoothly across different devices and browsers. Despite these challenges, I was able to successfully deliver a comprehensive email preference center solution that met the company's requirements and exceeded their expectations.</p>
-            <p>As part of my work on a complex email preference center solution for this client, I developed a user-friendly NodeJS app that automated the transformation of an Excel file with translations, investor profiles, and preferences into a 4-layer-deep JSON object. The app's primary goal was to make the process of creating the JSON object easier and more efficient, streamlining the workflow for the client.</p>
-            <p>Through my careful planning and attention to detail, I was able to create an app that successfully bridged the gap between human-readable Excel files and machine-readable JSON objects. The app's flexibility allowed for easy updates to the Excel file, ensuring that the JSON object remained up-to-date and accurate. Overall, my work on the NodeJS app was an essential component of the email preference center solution, providing the client with a reliable and user-friendly tool for data transformation and automation.</p>
-            <p>While the project is no longer functional due to changes made by the company, I am proud of the work I accomplished and the technical skills I developed during the project. I believe that my experience working on such a complex and challenging project for such a high-profile client has equipped me with new skills needed to excel in future technical projects.</p>
+            <div v-if="!isMobile || shownSections.includes(1)">
+              <p>To achieve this, I developed a solution that ran off of a 4-layer-deep JSON object that stored user preferences, investor profiles, language, and country data which was used to mutate the DOM of the page and present each user with a bespoke experience. The JSON also had the additional effect of gating content users shouldn't be able to access from them. The solution was designed to be highly customizable and scalable, ensuring that the company's email marketing efforts were targeted and effective.</p>
+              <p>Throughout the six-month development process, I encountered and overcame many technical challenges, such as changing requirements, increase in scope and ensuring that the project worked smoothly across different devices and browsers. Despite these challenges, I was able to successfully deliver a comprehensive email preference center solution that met the company's requirements and exceeded their expectations.</p>
+              <p>As part of my work on a complex email preference center solution for this client, I developed a user-friendly NodeJS app that automated the transformation of an Excel file with translations, investor profiles, and preferences into a 4-layer-deep JSON object. The app's primary goal was to make the process of creating the JSON object easier and more efficient, streamlining the workflow for the client.</p>
+              <p>Through my careful planning and attention to detail, I was able to create an app that successfully bridged the gap between human-readable Excel files and machine-readable JSON objects. The app's flexibility allowed for easy updates to the Excel file, ensuring that the JSON object remained up-to-date and accurate. Overall, my work on the NodeJS app was an essential component of the email preference center solution, providing the client with a reliable and user-friendly tool for data transformation and automation.</p>
+              <p>While the project is no longer functional due to changes made by the company, I am proud of the work I accomplished and the technical skills I developed during the project. I believe that my experience working on such a complex and challenging project for such a high-profile client has equipped me with new skills needed to excel in future technical projects.</p>
+            </div>
+            <div v-else class="cursor-pointer italic" @click="shownSections.push(1)">Read More &gt;&gt;</div>
           </div>
           <div>
             <div class="swiper hide-on-mobile">
@@ -162,11 +169,14 @@
           <!-- <img src='/images/soon.png' class="w-96"/> -->
           <div>
             <p>[Education Blog Client] came to us with a unique challenge: they needed a WordPress template file and a bespoke plugin to aggregate, filter, search and display blog posts from their partner sites. The plugin was designed to pull posts from various content management systems used by the client's partner sites, including WordPress, SetSquare, SquareSpace, and Volcanic. I created a custom template file that seamlessly integrated with the plugin, resulting in a visually appealing and user-friendly grid format for displaying the posts.</p>
-            <p>One of the key features of the WordPress template file was its fully responsive design. To ensure that the page would look great on any device, I implemented a range of optimization techniques to improve performance, including pagination of the results using response headers from the WP Query performed. The end result was a page that loaded quickly and provided a smooth user experience.</p>
-            <p>The WordPress template file also included a range of filters that allowed users to query and filter the posts based on various criteria. To achieve this, I used WordPress' inbuilt JSON REST API, which provided an easy and efficient way to query the data and load more posts as required. The filters were intuitive and easy to use, making it simple for users to find the content they were looking for.</p>
-            <p>Another key feature of the project was the normalization and injection script that I developed. This script was designed to ensure that posts displayed in a uniform format on the single post's page, regardless of the CMS system they came from. To achieve this, I used a plugin called "WPCode" and wrote a script that added a subscribe button to trigger a lightboxed form and a scroll progress bar attached to the navigation. The script also included conditional logic and conditional styling to ensure that the appropriate formatting was applied based on the CMS system the post came from.</p>
-            <p>One of the challenges I faced during the project was the fact that the existing theme, Divi, heavily modified the "single.php" file. This meant that I couldn't safely modify it without risking conflicts. To overcome this challenge, I used the WPCode plugin and wrote the normalization and injection script in a way that worked with the existing theme file. This required a great deal of technical skill and attention to detail, but the end result was a solution that worked seamlessly and without any issues.</p>
-            <p>While I am unfortunately unable to share any images of the finished site due to it not being live yet, the client is very happy with the deliverable. The custom WordPress template file and bespoke plugin worked seamlessly together to create a visually appealing and user-friendly page that allowed users to easily find the content they were looking for. The filters and normalization script added an extra level of functionality and user experience, while the fully responsive design and optimization techniques ensured that the page loaded quickly and provided a smooth experience across all devices. Overall, I am proud of the work I did on this project and am confident that it will be a valuable asset for the client going forward.</p>
+            <div v-if="!isMobile || shownSections.includes(2)">
+              <p>One of the key features of the WordPress template file was its fully responsive design. To ensure that the page would look great on any device, I implemented a range of optimization techniques to improve performance, including pagination of the results using response headers from the WP Query performed. The end result was a page that loaded quickly and provided a smooth user experience.</p>
+              <p>The WordPress template file also included a range of filters that allowed users to query and filter the posts based on various criteria. To achieve this, I used WordPress' inbuilt JSON REST API, which provided an easy and efficient way to query the data and load more posts as required. The filters were intuitive and easy to use, making it simple for users to find the content they were looking for.</p>
+              <p>Another key feature of the project was the normalization and injection script that I developed. This script was designed to ensure that posts displayed in a uniform format on the single post's page, regardless of the CMS system they came from. To achieve this, I used a plugin called "WPCode" and wrote a script that added a subscribe button to trigger a lightboxed form and a scroll progress bar attached to the navigation. The script also included conditional logic and conditional styling to ensure that the appropriate formatting was applied based on the CMS system the post came from.</p>
+              <p>One of the challenges I faced during the project was the fact that the existing theme, Divi, heavily modified the "single.php" file. This meant that I couldn't safely modify it without risking conflicts. To overcome this challenge, I used the WPCode plugin and wrote the normalization and injection script in a way that worked with the existing theme file. This required a great deal of technical skill and attention to detail, but the end result was a solution that worked seamlessly and without any issues.</p>
+              <p>While I am unfortunately unable to share any images of the finished site due to it not being live yet, the client is very happy with the deliverable. The custom WordPress template file and bespoke plugin worked seamlessly together to create a visually appealing and user-friendly page that allowed users to easily find the content they were looking for. The filters and normalization script added an extra level of functionality and user experience, while the fully responsive design and optimization techniques ensured that the page loaded quickly and provided a smooth experience across all devices. Overall, I am proud of the work I did on this project and am confident that it will be a valuable asset for the client going forward.</p>
+            </div>
+            <div v-else class="cursor-pointer italic" @click="shownSections.push(2)">Read More &gt;&gt;</div>
           </div>
         </div>
       </div>
@@ -179,9 +189,12 @@
         <div class="flex flex-col-reverse 2xl:flex-row items-center justify-center 2xl:gap-12">
           <div>
             <p>As part of a small team of data scientists and web developers, I had the opportunity to co-lead the development of a custom dashboard application for our company using NodeJS, ExpressJS, TailwindCSS, and Tableau. The dashboard's primary purpose was to provide a single-screen display of several core business metrics that could be easily viewed on televisions throughout our offices.</p>
-            <p>To meet this objective, I was responsible for eliciting requirements, designing the application architecture, and implementing the majority of the backend logic. Leveraging my expertise in NodeJS and ExpressJS, I was able to create a scalable and reliable application that could handle the demands of our business. In addition, I incorporated TailwindCSS into the project, enabling us to create a visually stunning dashboard that was both responsive and user-friendly.</p>
-            <p>One of the most challenging aspects of the project was integrating Tableau charts into the dashboard. To achieve this, I used an OAuth connection to retrieve pre-prepared charts from Tableau, which were then cycled through the dashboard in a seamless manner. The success of this integration was a key factor in the project's overall success.</p>
-            <p>Currently, we are in the process of planning version 2 of the dashboard application. This new version will incorporate a real-time alerts system, driven by both Snowflake and Excel data sources, as well as real-time data pulls from Snowflake and additional key metrics for the dashboard charts. The ongoing development of the dashboard is a testament to the value it provides to our business and its continued relevance in our company's culture.</p>
+            <div v-if="!isMobile || shownSections.includes(3)">
+              <p>To meet this objective, I was responsible for eliciting requirements, designing the application architecture, and implementing the majority of the backend logic. Leveraging my expertise in NodeJS and ExpressJS, I was able to create a scalable and reliable application that could handle the demands of our business. In addition, I incorporated TailwindCSS into the project, enabling us to create a visually stunning dashboard that was both responsive and user-friendly.</p>
+              <p>One of the most challenging aspects of the project was integrating Tableau charts into the dashboard. To achieve this, I used an OAuth connection to retrieve pre-prepared charts from Tableau, which were then cycled through the dashboard in a seamless manner. The success of this integration was a key factor in the project's overall success.</p>
+              <p>Currently, we are in the process of planning version 2 of the dashboard application. This new version will incorporate a real-time alerts system, driven by both Snowflake and Excel data sources, as well as real-time data pulls from Snowflake and additional key metrics for the dashboard charts. The ongoing development of the dashboard is a testament to the value it provides to our business and its continued relevance in our company's culture.</p>
+            </div>
+            <div v-else class="cursor-pointer italic" @click="shownSections.push(3)">Read More &gt;&gt;</div>
           </div>
           <!-- <img src='/images/soon.png' class="w-96"/> -->
         </div>
@@ -211,17 +224,20 @@
         <div class="flex flex-col-reverse 2xl:flex-row items-center justify-center 2xl:gap-12">
           <div>
             <p>ÆtherSlay is a lightweight toolkit for Dungeons & Dragons 5th Edition for both players and dungeon masters.</p>
-            <p>Designed with the DM in mind, built for comfort and speed above all else. I have endeavoured to make this application as simple to use as well as lightweight. The current footprint of the application is 33MB memory usage (correct as of v0.6alpha.2).</p>
-            <strong>Current Features:</strong>
-            <ul class="list-disc list-inside">
-              <li><strong>Randomized Character Creation</strong> - <em>Ability to create player characters using the "Player's Handbook" races & classes</em></li>
-              <li><strong>Intelligent Roll Allocation</strong> - <em>Rolled stats are assigned to the character's stats in the commonly accepted "best to worst"</em></li>
-              <li><strong>Creature Catalog</strong> - <em>A catalog containing all creatures from the 5th edition Monster Manual</em></li>
-              <li><strong>Creature Filtering/Searching</strong> - <em>Ability to search and filter creatures within the catalog</em></li>
-              <li><strong>Character Sheet Storage</strong> - <em>Short-term session storage for character sheets</em></li>
-              <li><strong>Dice Rolling (Multiple/Single)</strong> - <em>Ability to roll both single and multiple dice simultaneously</em></li>
-              <li><strong>Coin Flipping</strong> - <em>A pretty little fake coin flip with animation (well, animation's generous but it works!)</em></li>
-            </ul>
+            <div v-if="!isMobile || shownSections.includes(6)">
+              <p>Designed with the DM in mind, built for comfort and speed above all else. I have endeavoured to make this application as simple to use as well as lightweight. The current footprint of the application is 33MB memory usage (correct as of v0.6alpha.2).</p>
+              <strong>Current Features:</strong>
+              <ul class="list-disc list-inside">
+                <li><strong>Randomized Character Creation</strong> - <em>Ability to create player characters using the "Player's Handbook" races & classes</em></li>
+                <li><strong>Intelligent Roll Allocation</strong> - <em>Rolled stats are assigned to the character's stats in the commonly accepted "best to worst"</em></li>
+                <li><strong>Creature Catalog</strong> - <em>A catalog containing all creatures from the 5th edition Monster Manual</em></li>
+                <li><strong>Creature Filtering/Searching</strong> - <em>Ability to search and filter creatures within the catalog</em></li>
+                <li><strong>Character Sheet Storage</strong> - <em>Short-term session storage for character sheets</em></li>
+                <li><strong>Dice Rolling (Multiple/Single)</strong> - <em>Ability to roll both single and multiple dice simultaneously</em></li>
+                <li><strong>Coin Flipping</strong> - <em>A pretty little fake coin flip with animation (well, animation's generous but it works!)</em></li>
+              </ul>
+            </div>
+            <div v-else class="cursor-pointer italic" @click="shownSections.push(6)">Read More &gt;&gt;</div>
           </div>
           <div>
             <div class="swiper hide-on-mobile">
@@ -288,6 +304,10 @@
 
     width: var(--dimensions);
     height: var(--dimensions);
+  }
+
+  .swiper:not(.main-carousel) .slide-img {
+    cursor: zoom-in;
   }
 
   .aetherslay-slide img {
