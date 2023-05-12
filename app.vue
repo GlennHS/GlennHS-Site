@@ -10,7 +10,11 @@
 <template>
   <div>
     <Head>
-      <NoScript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/101408396ns.gif" /></p></NoScript>
+      <NoScript>
+        <p>
+          <img alt="Clicky" width="1" height="1" src="//in.getclicky.com/101408396ns.gif" />
+        </p>
+      </NoScript>
     </Head>
     <Navbar />
     <NuxtPage />
