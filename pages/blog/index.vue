@@ -147,7 +147,7 @@
 <style scoped>
   .parallax {
     /* The image used */
-    background-image: url('/images/coffee-ambience.jpg');
+    background-image: url('/images/japan/me-hikone-mascot.jpg');
     
     /* Create the parallax scrolling effect */
     background-attachment: fixed;

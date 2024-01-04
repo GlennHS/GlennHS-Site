@@ -261,7 +261,7 @@
     transition: background 0.33s ease-out;
   }
 
-  #banner-1 { background-image: url('/images/parallax.jpg'); min-height: 500px; background-attachment: fixed;}
+  #banner-1 { background-image: url('/images/japan/vertical-fuji.jpg'); min-height: 500px; background-attachment: fixed;}
   #banner-2 { background-image: url('/images/patterns/polygon-1.svg'); }
   #banner-3 { background-image: url('/images/patterns/lpg-3.svg'); }
   #banner-4 { background-image: url('https://images.pexels.com/photos/590016/pexels-photo-590016.jpeg?cs=tinysrgb&w=1920'); background-attachment: scroll;}

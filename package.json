@@ -6,7 +6,8 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "tw": "npx tailwindcss -i ./src/main.css -o ./assets/main.css --watch"
+    "tw": "npx tailwindcss -i ./src/main.css -o ./assets/main.css --watch",
+    "tw-no-watch": "npx tailwindcss -i ./src/main.css -o ./assets/main.css"
   },
   "devDependencies": {
     "@nuxt/content": "^2.5.2",

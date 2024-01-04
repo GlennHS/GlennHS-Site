@@ -272,7 +272,7 @@
   }
 
   #parallax-1 {
-    background-image: url('/images/me-square/2.png');
+    background-image: url('/images/japan/fuji.jpg');
     background-position: unset;
     background-size: cover;
     background-position: 50% min(-560px, -32vw);

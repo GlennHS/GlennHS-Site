@@ -23,7 +23,7 @@
       document.getElementById('scroll-hint').classList.add('suppress')
       if(screen.width > 1439) {
         var windowYOffset = window.pageYOffset,
-          elBackgroundPos = "50% " + Math.max(windowYOffset * -1.35, -1650) + "px";
+          elBackgroundPos = "50% " + Math.max(windowYOffset * -1.35, -450) + "px";
   
         parallax.style.backgroundPosition = elBackgroundPos;
       }
@@ -121,7 +121,7 @@
   .parallax {
     /* The image used */
     /* background-image: url('/images/CodingVue.gif'); */
-    background: url('/images/choo.jpeg');
+    background: url('/images/japan/me-moat.jpg');
     
     /* Set a specific height */
     min-height: 800px;
