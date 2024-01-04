@@ -12,8 +12,8 @@
 </script>
 
 <template>
-  <div class="h-24">
-    <div class="flex justify-between lg:fixed top-0 left-0 z-50 w-full items-center h-24 bg-slate-800 px-2">
+  <div class="h-12 lg:h-24">
+    <div class="flex justify-between fixed top-0 left-0 z-50 w-full items-center h-12 lg:h-24 bg-slate-800 px-2">
       <a href="/" class="h-full hidden lg:flex justify-center items-center p-2 transition hover:brightness-75">
         <img src='/images/bannerLogo.png' alt='Logo' class="w-full" />
       </a>
@@ -39,7 +39,7 @@
           <font-awesome-icon icon="fa-solid fa-envelope" class="nav-fadein !hidden lg:inline" />
         </li>
       </ul>
-      <div class="w-1 h-12 bg-white hidden md:inline"></div>
+      <div class="w-0.5 lg:w-1 h-6 lg:h-12 bg-white hidden md:inline"></div>
       <ul id="social-icons" class="list-none hidden md:flex items-center justify-between gap-x-2 sm:gap-x-4 px-10 text-2xl xl:text-3xl">
         <li>
           <a class="cursor-pointer transition hover:text-slate-600" href="https://github.com/glennhs" target="_blank">
@@ -63,7 +63,7 @@
         </li>
       </ul>
     </div>
-    <div class="lg:hidden -z-10 absolute top-0 left-0 w-full h-24"></div>
+    <div class="lg:hidden -z-10 absolute top-0 left-0 w-full h-12 lg:h-24"></div>
   </div>
 </template>
 
