@@ -68,9 +68,9 @@
         <div>
           <section class="intersect-container">
             <h3 class="preline">Currently at...</h3>
-            <h2>Clevertouch Marketing.</h2>
+            <h2>Viable Data.</h2>
             <p>
-              I currently work as a Junior Developer (technically a Marketing Technology Expert) at Clevertouch Marketing, a marketing technology consultancy based in Ropley, Hampshire. My role is very varied, comprising many different duties including (but not limited to): Vanilla Web Development, WordPress Full-Stack Development, SaaS Testing and Development, Marketing Automation Platform Management, and Email Development. I think the best part of my job is either the variety of tasks I perform or the technical challenge of achieving seemingly simple things within the restrictive bounds of Marketing Automation Platforms. Well, that or the Thursday Thai lunches!
+              I currently work as a Front End React Developer at Viable Data. I'm learning React, Testing Framework and a bunch of other cool things! I'm learning so much just being there and I'm surrounded by an incredibly supportive, empathetic and kind team that help me grow as a dev. I work on all sorts of FE stuff including bug fixes, UI/UX features, maintenance spikes, PR/Code reviews and testing (including a bit of TDD). It's a real mixed bag. My work can be found on my GitHub it's pretty much all public. I am not brown-nosing when I say I love my job and I love my colleagues even more.
             </p>
           </section>
         </div>
@@ -86,9 +86,10 @@
         <div>
           <section class="intersect-container">
             <h3 class="preline">My Dream Role...</h3>
-            <h2>Full Stack Nuxt Developer.</h2>
+            <h2><span class="line-through">Full Stack Nuxt Developer.</span></h2>
+            <h2>I don't know anymore...</h2>
             <p>
-              I want to work as a Full Stack Nuxt Developer, ideally within a small team that encourages learning and development with at least one or two knowledgeable, senior people who I can learn from. I'm not naive enough to think that, after a year or so of learning Nuxt/Vue, I'm ready to solo huge projects but I'm confident in both my ability to learn and my ability to deliver quality work. I'd love to work for a company in an industry I care about, or at least one that has a positive impact on the world around me. I also love companies that champion meaningful learning for their developers, companies that give out praise and make people feel wanted/appreciated.
+              I used to think Nuxt was the coolest thing since I discovered you can make new desktops in Windows with Win+Ctrl+D but now I'm not so sure. Next isn't nearly as hard as I thought it was going to be and the ecosystem is far larger and has far better support. I think the only thing I can say with certainty any more is that I want to be in a position I can share my knowledge with others and help them grow but also keep learning myself. I think my environment is a bigger determiner of job satisfaction that my actual job. Is that weird? Is that too honest? Who knows! But it's how I feel.
             </p>
           </section>
         </div>

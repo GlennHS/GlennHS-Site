@@ -5,7 +5,7 @@ tags: [ 'coding', 'personal', 'favourites' ]
 excerpt: "Based on an article I read on Stack Overflow, this blog post looks at my thoughts on the tech toolbox and, by extension, my own personal toolbox."
 created: '2023-03-31'
 updated: '2023-03-31'
-image: 'https://149351115.v2.pressablecdn.com/wp-content/uploads/2023/03/032223-Stack-Overflow-Everyone-should-have-a-tech-toolbox-1200x630.jpg'
+image: '/images/blog/tech-toolbox.png'
 ---
 <p><em>Disclaimer: This blog post is based off of <a href="https://stackoverflow.blog/2023/03/23/your-tech-toolbox-the-middle-ground-between-tech-chaos-and-rigidity/">a very interesting article from Stack Overflow</a>. I highly recommend reading this article before reading this blog post however it's not necessary to understand this post.</em></p>
 

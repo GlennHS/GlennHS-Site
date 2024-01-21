@@ -617,6 +617,32 @@ a.sky:active {
   padding: 1.5rem;
 }
 
+.cv-card-icon {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+@media (min-width: 768px) {
+  .cv-card-icon {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .cv-card-icon {
+    font-size: 3rem;
+    line-height: 1;
+  }
+}
+
+@media (min-width: 1366px) {
+  .cv-card-icon {
+    font-size: 4.5rem;
+    line-height: 1;
+  }
+}
+
 .flip-card {
   height: 15rem;
   width: 15rem;
@@ -1009,12 +1035,12 @@ a.sky:active {
   height: 3rem;
 }
 
-.h-24 {
-  height: 6rem;
-}
-
 .h-52 {
   height: 13rem;
+}
+
+.h-6 {
+  height: 1.5rem;
 }
 
 .h-full {
@@ -1038,8 +1064,12 @@ a.sky:active {
   max-height: 24rem;
 }
 
-.w-1 {
-  width: 0.25rem;
+.w-0 {
+  width: 0px;
+}
+
+.w-0\.5 {
+  width: 0.125rem;
 }
 
 .w-64 {
@@ -1066,14 +1096,6 @@ a.sky:active {
   width: 100vw;
 }
 
-.w-0 {
-  width: 0px;
-}
-
-.w-0\.5 {
-  width: 0.125rem;
-}
-
 .max-w-3xl {
   max-width: 48rem;
 }
@@ -1088,6 +1110,10 @@ a.sky:active {
 
 .max-w-sm {
   max-width: 24rem;
+}
+
+.grow {
+  flex-grow: 1;
 }
 
 .transform {
@@ -1514,11 +1540,6 @@ a.sky:active {
   line-height: 2.5rem;
 }
 
-.text-5xl {
-  font-size: 3rem;
-  line-height: 1;
-}
-
 .text-6xl {
   font-size: 3.75rem;
   line-height: 1;
@@ -1583,6 +1604,10 @@ a.sky:active {
 
 .underline {
   text-decoration-line: underline;
+}
+
+.line-through {
+  text-decoration-line: line-through;
 }
 
 .blur {
@@ -1783,10 +1808,6 @@ header.parallax {
     display: block;
   }
 
-  .sm\:h-12 {
-    height: 3rem;
-  }
-
   .sm\:w-fit {
     width: -moz-fit-content;
     width: fit-content;
@@ -1917,11 +1938,6 @@ header.parallax {
     line-height: 2rem;
   }
 
-  .md\:text-7xl {
-    font-size: 4.5rem;
-    line-height: 1;
-  }
-
   .md\:text-base {
     font-size: 1rem;
     line-height: 1.5rem;
@@ -1945,10 +1961,6 @@ header.parallax {
 }
 
 @media (min-width: 1024px) {
-  .lg\:fixed {
-    position: fixed;
-  }
-
   .lg\:col-span-2 {
     grid-column: span 2 / span 2;
   }
@@ -1973,16 +1985,16 @@ header.parallax {
     display: none;
   }
 
-  .lg\:h-auto {
-    height: auto;
+  .lg\:h-12 {
+    height: 3rem;
   }
 
   .lg\:h-24 {
     height: 6rem;
   }
 
-  .lg\:h-12 {
-    height: 3rem;
+  .lg\:h-auto {
+    height: auto;
   }
 
   .lg\:w-1 {
@@ -2107,11 +2119,6 @@ header.parallax {
     line-height: 2.5rem;
   }
 
-  .xl\:text-8xl {
-    font-size: 6rem;
-    line-height: 1;
-  }
-
   .xl\:text-lg {
     font-size: 1.125rem;
     line-height: 1.75rem;
@@ -2140,11 +2147,6 @@ header.parallax {
   .\32xl\:text-2xl {
     font-size: 1.5rem;
     line-height: 2rem;
-  }
-
-  .\32xl\:text-9xl {
-    font-size: 8rem;
-    line-height: 1;
   }
 }
 

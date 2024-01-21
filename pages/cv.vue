@@ -37,30 +37,52 @@
       <div id="content" class="flex flex-col items-center md:items-end h-min">
         <h2 class="text-lg md:text-xl xl:text-2xl font-bold text-right">Glenn Hamilton-Smith BSc</h2>
         <h3 class="text-base md:text-lg xl:text-xl text-right">
-          <strong>Junior Developer</strong>
+          <strong>Junior Front-End React Developer</strong>
           at
-          <a target="_blank" href="https://clever-touch.com" class="sky">Clevertouch Marketing</a>
+          <a target="_blank" href="https://www.viabledata.co.uk" class="sky">Viable Data</a>
         </h3>
         <span class="italic text-lg"><em class="font-bold">Email:</em> glenniumhs@gmail.com</span>
         <span class="italic text-lg"><em class="font-bold">Mobile:</em> +44 7572 354 460</span>
         <span class="italic text-lg"><a href="https://github.com/glennhs" target="_blank" class="sky"><em class="font-bold">Github:</em> glennhs</a></span>
         <span class="italic text-lg"><a href="https://linkedin.com/in/glennhs" target="_blank" class="sky"><em class="font-bold">LinkedIn:</em> glennhs</a></span>
       </div>
-      <p id="statement" class="text-justify last-right mt-4">Passionate and dedicated team player with strong proficiency in Vue.js and Nuxt.js, as well as PHP and Laravel development. Experienced in WordPress and Git, and skilled in various Front End Web Development technologies. A fast learner with a deep passion for self-improvement and continuous learning in all things web development. Graduated with honours in Computer Science from the University of Portsmouth, and was awarded Resident Assistant of the Year 2017-18 as well as serving as Chair of the Staff Student Council Committee. With a focus on collaboration and innovation, I bring a strong work ethic and a drive to help others succeed.</p>
+      <p id="statement" class="text-justify last-right mt-4">Passionate and dedicated team player with proficiency in frontend frameworks such as Vue/Nuxt and React/Next, as well as PHP and Laravel development. Experienced in WordPress and Git, and skilled in various Front End Web Development technologies. A fast learner with a deep passion for self-improvement and continuous learning in all things web development. Graduated with honours in Computer Science from the University of Portsmouth, and was awarded Resident Assistant of the Year 2017-18 as well as serving as Chair of the Staff Student Council Committee. With a focus on collaboration and innovation, I bring a strong work ethic and a drive to help others succeed.</p>
       <img src="/images/me-square/4.png" alt="Side-on portrait photo of my face, mouth slightly open smiling wearing glasses with brown hair in a light blue polo shirt" class="aspect-square w-64 md:w-96" />
+    </section>
+
+    <section class="flex flex-col p-0 pb-12">
+      <div id="static-vd-banner" class="w-full"></div>
+      <div class="flex flex-col items-center py-8 px-4 md:px-6 lg:px-12 xl:px-40">
+        <h2 class="text-lg md:text-xl xl:text-4xl font-bold pt-4 mb-0">Employment</h2>
+        <h3 class="text-base md:text-lg xl:text-2xl font-semibold"><a class="sky" href="https://www.viabledata.co.uk">Viable Data</a> ~ Nov 2023 to Present</h3>
+        <div class="flex flex-col w-full mt-4">
+          <h4 class="text-base md:text-lg xl:text-xl py-4 font-bold">Company Description</h4>
+          <p class="text-justify">
+            At Viable Data we create web-based software for clients using modern technologies to deliver value and cater for business needs. We use Agile/Scrum to incrementally deliver value to our customers and have glowing feedback from our many satisfied clients nationally.
+          </p>
+          <h4 class="text-base md:text-lg xl:text-xl py-4 font-bold">Role Description</h4>
+          <ul class="list-disc list-inside">
+            <li>Use Agile/Scrum to work incrementally and continuously deliver value through features, fixes and maintenance</li>
+            <li>Work using a Kanban board and scrum ceremonies to determine which tickets are highest value and work on them</li>
+            <li>Work in a supportive, empathetic and cross-functional environment where learning is encouraged and self-growth is valued</li>
+            <li>Work with people who have a variety of different skills as part of a larger team whilst maintaining the benefits of small-team scrum in my team of FE developers</li>
+            <li>Get to see the entire development process including BE, FE, UX/UI design, Testing, User Feedback and Project Management via daily ceremonies</li>
+            <li>I'll no doubt add more as I spend longer in my role!</li>
+          </ul>
+        </div>
+      </div>
     </section>
 
     <section class="flex flex-col p-0 pb-12">
       <div id="parallax-3" class="parallax w-full"></div>
       <div class="flex flex-col items-center py-8 px-4 md:px-6 lg:px-12 xl:px-40">
-        <h2 class="text-lg md:text-xl xl:text-4xl font-bold pt-4 mb-0">Employment</h2>
-        <h3 class="text-base md:text-lg xl:text-2xl font-semibold"><a class="sky" href="https://clever-touch.com">Clevertouch Marketing</a> ~ 2021 to Present</h3>
+        <h3 class="text-base md:text-lg xl:text-2xl font-semibold"><a class="sky" href="https://clever-touch.com">Clevertouch Marketing</a> ~ Mar 2021 to Sept 2023</h3>
         <h4 class="text-base md:text-lg xl:text-xl py-4 font-bold">Notable Achievements</h4>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 items-stretch justify-around gap-4 md:gap-6 lg:gap-12">
           <div class="flip-card" @click="(ev) => flipCard(ev)">
             <div class="relative w-full h-full transition flip-card-inner">
               <div class="cv-card w-full h-full flip-front-face">
-                <font-awesome-icon :icon="['fas', 'gear']" class="text-5xl md:text-7xl xl:text-8xl 2xl:text-9xl"/>
+                <font-awesome-icon :icon="['fas', 'gear']" class="cv-card-icon"/>
                 <span class="z-10 text-base sm:text-lg lg:text-xl xl:text-2xl text-center">Investment Management EPC</span>
                 <span class="click-here flex items-center gap-x-2 italic text-sm">{{ hasHover ? 'Click' : 'Touch' }} Here <font-awesome-icon :icon="['fas', 'arrow-right']" /></span>
               </div>
@@ -74,7 +96,7 @@
           <div class="flip-card" @click="(ev) => flipCard(ev)">
             <div class="relative w-full h-full transition flip-card-inner">
               <div class="cv-card w-full h-full flip-front-face">
-                <font-awesome-icon :icon="['fab', 'wordpress']" class="text-5xl md:text-7xl xl:text-8xl 2xl:text-9xl" />
+                <font-awesome-icon :icon="['fab', 'wordpress']" class="cv-card-icon" />
                 <span class="z-10 text-base sm:text-md lg:text-lg xl:text-xl 2xl:text-2xl text-center">WordPress Content Hub</span>
                 <span class="click-here flex items-center gap-x-2 italic text-sm">{{ hasHover ? 'Click' : 'Touch' }} Here <font-awesome-icon :icon="['fas', 'arrow-right']" /></span>
               </div>
@@ -88,7 +110,7 @@
           <div class="flip-card" @click="(ev) => flipCard(ev)">
             <div class="relative w-full h-full transition flip-card-inner">
               <div class="cv-card w-full h-full flip-front-face">
-                <font-awesome-icon :icon="['fas', 'fa-chart-pie']" class="text-5xl md:text-7xl xl:text-8xl 2xl:text-9xl" />
+                <font-awesome-icon :icon="['fas', 'fa-chart-pie']" class="cv-card-icon" />
                 <span class="z-10 text-base sm:text-lg lg:text-xl xl:text-2xl text-center">Wonderwall</span>
                 <span class="click-here flex items-center gap-x-2 italic text-sm">{{ hasHover ? 'Click' : 'Touch' }} Here <font-awesome-icon :icon="['fas', 'arrow-right']" /></span>
               </div>
@@ -102,7 +124,7 @@
           <div class="flip-card" @click="(ev) => flipCard(ev)">
             <div class="relative w-full h-full transition flip-card-inner">
               <div class="cv-card w-full h-full flip-front-face">
-                <font-awesome-icon :icon="['fas', 'language']" class="text-5xl md:text-7xl xl:text-8xl 2xl:text-9xl" />
+                <font-awesome-icon :icon="['fas', 'language']" class="cv-card-icon" />
                 <span class="z-10 text-base sm:text-lg lg:text-xl xl:text-2xl text-center">Dynamic Translations</span>
                 <span class="click-here flex items-center gap-x-2 italic text-sm">{{ hasHover ? 'Click' : 'Touch' }} Here <font-awesome-icon :icon="['fas', 'arrow-right']" /></span>
               </div>
@@ -275,6 +297,7 @@
     background-image: url('/images/japan/fuji.jpg');
     background-position: unset;
     background-size: cover;
+    background-repeat: no-repeat;
     background-position: 50% min(-560px, -32vw);
   }
 
@@ -289,6 +312,14 @@
   #parallax-4 {
     background-image: url('/images/coding.jpg');
     filter: blur(3px);
+  }
+  
+  #static-vd-banner {
+    background-image: url('/images/VD-Banner.png');
+    height: 300px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
   }
 
   #details {
