@@ -151,7 +151,7 @@
     
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
-    background-position: 80% center;
+    background-position: 20% center;
     background-repeat: no-repeat;
     background-size: cover;
   }
