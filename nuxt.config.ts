@@ -11,7 +11,7 @@ export default defineNuxtConfig({
         { rel: 'icon', href: '/favicon.png' }
       ],
       script: [
-        { "data-id":"101408396", "src":"//static.getclicky.com/js", async: true }
+        { "data-id":"101453603", "src":"//static.getclicky.com/js", async: true }
       ],
     }
   },
