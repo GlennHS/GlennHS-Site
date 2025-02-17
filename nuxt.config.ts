@@ -5,6 +5,7 @@ export default defineNuxtConfig({
       contentRoot: '/'
     }
   },
+
   app: {
     head: {
       link: [
@@ -15,16 +16,20 @@ export default defineNuxtConfig({
       ],
     }
   },
+
   modules: [
     '@nuxt/content'
   ],
+
   content: {
     // https://content.nuxtjs.org/api/configuration
   },
+
   css: [
     '@/assets/main.css',
     '@fortawesome/fontawesome-svg-core/styles.css'
   ],
+
   // https://stackoverflow.com/a/74999711/18073437
   build: {
     transpile: [
@@ -35,4 +40,6 @@ export default defineNuxtConfig({
       '@fortawesome/vue-fontawesome'
     ]
   },
+
+  compatibilityDate: '2025-02-17',
 })
