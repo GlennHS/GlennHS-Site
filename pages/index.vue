@@ -4,7 +4,7 @@
   const { path } = useRoute()
   const { data: recentBlogPosts } = await useAsyncData(`content-${path}`, () => {
     return queryContent('/live')
-      .only(['title', 'excerpt', 'created', 'updated', 'slug', 'tags', '_id'])
+      .only(['title', 'blurb', 'created', 'updated', 'slug', 'tags', '_id'])
       .limit(5)
       .sort({ 'updated': -1 })
       .find()
@@ -109,7 +109,7 @@
               :title="post.title"
               :createdDate="post.created"
               :updatedDate="post.updated"
-              :excerpt="post.excerpt"
+              :blurb="post.blurb"
               :tags="post.tags" />
           </NuxtLink>
         </div>

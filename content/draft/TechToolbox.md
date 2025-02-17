@@ -2,7 +2,7 @@
 title: 'My Tech Toolbox: Balancing Want and Need'
 slug: 'tech-toolbox'
 tags: [ 'coding', 'personal', 'favourites' ]
-excerpt: "Based on an article I read on Stack Overflow, this blog post looks at my thoughts on the tech toolbox and, by extension, my own personal toolbox."
+blurb: "Based on an article I read on Stack Overflow, this blog post looks at my thoughts on the tech toolbox and, by extension, my own personal toolbox."
 created: '2023-03-31'
 updated: '2023-03-31'
 image: '/images/blog/tech-toolbox.png'

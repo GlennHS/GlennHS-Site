@@ -2,7 +2,7 @@
 title: 'Measures of Success'
 slug: 'measures-of-success'
 tags: [ 'personal', 'work-culture', 'favourites' ]
-excerpt: "People measure success in many ways. I only use 2, Work Output & Coworker Impact. In this post I discuss what I mean by that and why raising others up is so important to me."
+blurb: "People measure success in many ways. I only use 2, Work Output & Coworker Impact. In this post I discuss what I mean by that and why raising others up is so important to me."
 created: '2023-03-25'
 updated: '2023-03-25'
 image: '/images/blog/ct-escape-room.png'
