@@ -2,7 +2,8 @@
 export default defineNuxtConfig({
   runtimeConfig: {
     public: {
-      contentRoot: '/'
+      contentRoot: '/',
+      isMaintenance: true
     }
   },
 
