@@ -3,7 +3,7 @@
     title: String,
     updatedDate: String,
     createdDate: String,
-    excerpt: String,
+    blurb: String,
     tags: Array,
   })
 </script>
@@ -22,7 +22,7 @@
         <TagPill :postTag="tag" />
       </NuxtLink>
     </div>
-    <p class="col-span-full">{{ props.excerpt }}</p>
+    <p class="col-span-full">{{ props.blurb }}</p>
   </div>
 </template>
 
