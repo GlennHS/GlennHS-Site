@@ -56,11 +56,6 @@
             <font-awesome-icon icon="fa-solid fa-envelope" />
           </a>
         </li>
-        <li>
-          <a class="cursor-pointer transition hover:text-slate-600" href="tel:07572354460">
-            <font-awesome-icon icon="fa-solid fa-phone" />
-          </a>
-        </li>
       </ul>
     </div>
     <div class="lg:hidden -z-10 absolute top-0 left-0 w-full h-12 lg:h-24"></div>
