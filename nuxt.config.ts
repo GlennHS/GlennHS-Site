@@ -2,13 +2,9 @@
 export default defineNuxtConfig({
   runtimeConfig: {
     public: {
-<<<<<<< HEAD
       contentRoot: '/live',
-      availableForHire: true
-=======
-      contentRoot: '/',
+      availableForHire: true,
       isMaintenance: false
->>>>>>> 6c45afb4b36c4606c64b129082b3fafff2897dfe
     }
   },
 
@@ -45,7 +41,5 @@ export default defineNuxtConfig({
       '@fortawesome/free-brands-svg-icons',
       '@fortawesome/vue-fontawesome'
     ]
-  },
-
-  compatibilityDate: '2025-02-17',
+  }
 })
