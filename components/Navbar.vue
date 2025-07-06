@@ -1,4 +1,7 @@
 <script setup>
+  const config = useRuntimeConfig()
+  const forHire = config.public.availableForHire || false
+
   onMounted(() => {
     document.querySelectorAll('.nav-fadein').forEach(el => {
       el.closest('li').addEventListener('mouseenter', (ev) => {
@@ -12,8 +15,9 @@
 </script>
 
 <template>
-  <div class="h-12 lg:h-24">
-    <div class="flex justify-between fixed top-0 left-0 z-50 w-full items-center h-12 lg:h-24 bg-slate-800 px-2">
+  <div class="fixed top-0 left-0 w-full z-40">
+    <HireSticky v-if="forHire" />
+    <div class="flex justify-between items-center py-4 bg-slate-800 px-2">
       <a href="/" class="h-full hidden lg:flex justify-center items-center p-2 transition hover:brightness-75">
         <img src='/images/bannerLogo.png' alt='Logo' class="w-full" />
       </a>

@@ -2,8 +2,10 @@
   const heroContent = ref(null)
   const page = ref(null)
   const { path } = useRoute()
+  const config = useRuntimeConfig()
+  const contentRoot = config.public.contentRoot
   const { data: recentBlogPosts } = await useAsyncData(`content-${path}`, () => {
-    return queryContent('/live')
+    return queryContent(contentRoot)
       .only(['title', 'excerpt', 'created', 'updated', 'slug', 'tags', '_id'])
       .limit(5)
       .sort({ 'updated': -1 })

@@ -16,6 +16,7 @@
         </p>
       </NoScript>
     </Head>
+    <!-- <HireSticky /> -->
     <Navbar />
     <NuxtPage />
     <Footer />
