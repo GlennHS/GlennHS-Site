@@ -2,7 +2,7 @@
 title: 'Hello World! My First Blog Post'
 slug: 'hello-world'
 tags: [ 'nuxt/vue', 'coding', 'learning', 'favourites' ]
-excerpt: "This was the first blog post I placed on my site! It was primarily used as a test but also contains some thoughts on my site's composition."
+blurb: "This was the first blog post I placed on my site! It was primarily used as a test but also contains some thoughts on my site's composition."
 created: '2023-03-16'
 updated: '2023-04-04'
 image: '/images/parallax.jpg'

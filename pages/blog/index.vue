@@ -121,7 +121,7 @@
     <div class="w-full mt-24 bg-slate-500 flex gap-4 items-center px-12 py-4 flex-wrap">
       <div class="flex flex-col w-full md:w-fit">
         <h2 class="text-2xl font-bold">Filter by tag: </h2>
-        <h3 class="text-base cursor-pointer" @click="toggleFilterMode()">Filter Type: <strong class="font-bold">{{ filterTypeOR ? 'OR' : 'AND' }}</strong></h3>
+        <h3 class="text-base cursor-pointer" @click="toggleFilterMode()">Filter Type: <strong class="font-bold text-navy-500 underline">{{ filterTypeOR ? 'OR' : 'AND' }}</strong></h3>
       </div>
       <TagPill v-for="tag in allTags" :post-tag="tag"
         class="border-white rounded-full cursor-pointer"

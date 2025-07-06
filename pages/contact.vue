@@ -23,10 +23,6 @@
           <font-awesome-icon icon="fa-solid fa-envelope" class="text-2xl sm:text-5xl"/>
           <a href="mailto:glenniumhs@gmail.com" class="sky text-base sm:text-2xl">glenniumhs@gmail.com</a>
         </div>
-        <div class="contact-row">
-          <font-awesome-icon icon="fa-solid fa-phone" class="text-2xl sm:text-5xl"/>
-          <a href="tel:0757354460" class="sky text-base sm:text-2xl">+44 07572354460</a>
-        </div>
       </div>
     </section>
   </div>

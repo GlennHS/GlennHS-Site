@@ -39,7 +39,7 @@
         <span class="click-hint absolute z-10 bg-slate-900 bg-opacity-40 px-2 py-5 rounded-2xl transition">{{ hasHover ? 'Hover to expand | ' : ''  }}Click to see full image</span>
       </NuxtLink>
       <h1 class="text-3xl font-bold">{{ blogPost.title }}</h1>
-      <p class="italic">{{ blogPost.excerpt }}</p>
+      <p class="italic">{{ blogPost.blurb }}</p>
       <span class="text-sm">Posted: {{ blogPost.created }}</span>
       <em class="text-sm italic" v-if="blogPost.updated != blogPost.created">(Post updated: {{ blogPost.updated }})</em>
       <hr class="w-full" />

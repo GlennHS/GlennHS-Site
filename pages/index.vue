@@ -5,8 +5,13 @@
   const config = useRuntimeConfig()
   const contentRoot = config.public.contentRoot
   const { data: recentBlogPosts } = await useAsyncData(`content-${path}`, () => {
+<<<<<<< HEAD
     return queryContent(contentRoot)
       .only(['title', 'excerpt', 'created', 'updated', 'slug', 'tags', '_id'])
+=======
+    return queryContent('/live')
+      .only(['title', 'blurb', 'created', 'updated', 'slug', 'tags', '_id'])
+>>>>>>> 6c45afb4b36c4606c64b129082b3fafff2897dfe
       .limit(5)
       .sort({ 'updated': -1 })
       .find()
@@ -111,7 +116,7 @@
               :title="post.title"
               :createdDate="post.created"
               :updatedDate="post.updated"
-              :excerpt="post.excerpt"
+              :blurb="post.blurb"
               :tags="post.tags" />
           </NuxtLink>
         </div>

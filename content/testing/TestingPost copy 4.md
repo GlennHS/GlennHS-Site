@@ -2,7 +2,7 @@
 title: 'Test 1'
 slug: 'test-1'
 tags: [ 'testing' ]
-excerpt: "lorem ipsum dolor sit amet consectetur adipiscing elit non nobis domine pandemonium regnat satani vitae"
+blurb: "lorem ipsum dolor sit amet consectetur adipiscing elit non nobis domine pandemonium regnat satani vitae"
 created: '2023-03-04'
 updated: '2023-03-04'
 ---

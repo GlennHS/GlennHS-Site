@@ -2,10 +2,16 @@
 export default defineNuxtConfig({
   runtimeConfig: {
     public: {
+<<<<<<< HEAD
       contentRoot: '/live',
       availableForHire: true
+=======
+      contentRoot: '/',
+      isMaintenance: false
+>>>>>>> 6c45afb4b36c4606c64b129082b3fafff2897dfe
     }
   },
+
   app: {
     head: {
       link: [
@@ -16,16 +22,20 @@ export default defineNuxtConfig({
       ],
     }
   },
+
   modules: [
     '@nuxt/content'
   ],
+
   content: {
     // https://content.nuxtjs.org/api/configuration
   },
+
   css: [
     '@/assets/main.css',
     '@fortawesome/fontawesome-svg-core/styles.css'
   ],
+
   // https://stackoverflow.com/a/74999711/18073437
   build: {
     transpile: [
@@ -36,4 +46,6 @@ export default defineNuxtConfig({
       '@fortawesome/vue-fontawesome'
     ]
   },
+
+  compatibilityDate: '2025-02-17',
 })

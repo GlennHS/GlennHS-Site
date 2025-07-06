@@ -2,7 +2,7 @@
 title: 'Test 1'
 slug: 'test-1'
 tags: [ 'testing' ]
-excerpt: "This is a post being used for testing purposes. It will be removed in live"
+blurb: "This is a post being used for testing purposes. It will be removed in live"
 created: '2023-02-28'
 updated: '2023-03-02'
 ---

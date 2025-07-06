@@ -4,7 +4,7 @@
   })
 
   const cardSource = props.blogPost.image || `https://placekitten.com/${400+Math.floor(Math.random() * 16)}/200`
-  const shortExcerpt = () => props.blogPost.excerpt.length > 50 ? props.blogPost.excerpt.slice(0, 80) + ' (...)' : props.blogPost.excerpt
+  const shortblurb = () => props.blogPost.blurb.length > 50 ? props.blogPost.blurb.slice(0, 80) + ' (...)' : props.blogPost.blurb
 </script>
 
 <template>
@@ -17,8 +17,8 @@
           <div class="hidden md:flex gap-x-4 gap-y-2 flex-wrap items-center">
             <TagPill v-for="tag in props.blogPost.tags" :post-tag="tag" />
           </div>
-          <p class="md:block hidden">{{ props.blogPost.excerpt }}</p>
-          <p class="block md:hidden">{{ shortExcerpt() }}</p>
+          <p class="md:block hidden">{{ props.blogPost.blurb }}</p>
+          <p class="block md:hidden">{{ shortblurb() }}</p>
           <div class="flex justify-between">
             <span class="text-sm italic">Read More >></span>
             <span class="text-sm">{{ props.blogPost.created }}</span>
