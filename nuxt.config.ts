@@ -20,7 +20,8 @@ export default defineNuxtConfig({
   },
 
   modules: [
-    '@nuxt/content'
+    '@nuxt/content',
+    '@nuxtjs/tailwindcss'
   ],
 
   content: {
