@@ -164,11 +164,11 @@
   }
 
   /* #endregion */
-  @media (max-width: 1439px) {
+  /* @media (max-width: 1439px) {
     .parallax {
       height: 100%;
       background-attachment: scroll;
       transition: none;
     }
-  }
+  } */
 </style>

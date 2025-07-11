@@ -1,6 +1,8 @@
 <script setup>
   const config = useRuntimeConfig()
   const forHire = config.public.availableForHire || false
+  const navHeader = useTemplateRef("navHeader")
+  const navSpacer = useTemplateRef("navSpacer")
 
   onMounted(() => {
     document.querySelectorAll('.nav-fadein').forEach(el => {
@@ -11,11 +13,14 @@
         el.classList.remove('active')
       })
     })
+
+    const height = navHeader.value.offsetHeight;
+    navSpacer.value.style.height = `${height}px`;
   })
 </script>
 
 <template>
-  <div class="fixed top-0 left-0 w-full z-40">
+  <div ref="navHeader" class="fixed top-0 left-0 w-full z-40">
     <HireSticky v-if="forHire" />
     <div class="flex justify-between items-center py-4 bg-slate-800 px-2">
       <a href="/" class="h-full hidden lg:flex justify-center items-center p-2 transition hover:brightness-75">
@@ -62,8 +67,8 @@
         </li>
       </ul>
     </div>
-    <div class="lg:hidden -z-10 absolute top-0 left-0 w-full h-12 lg:h-24"></div>
   </div>
+  <div ref="navSpacer" class="-z-10 w-full"></div>
 </template>
 
 <style scoped>

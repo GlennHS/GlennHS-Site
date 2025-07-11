@@ -10,7 +10,7 @@
     "tw-no-watch": "npx tailwindcss -i ./src/main.css -o ./assets/main.css"
   },
   "devDependencies": {
-    "@nuxt/content": "^2.5.2",
+    "@nuxt/content": "^3.6.3",
     "nuxt": "^3.2.3",
     "tailwindcss": "^3.2.7"
   },
@@ -20,6 +20,8 @@
     "@fortawesome/free-regular-svg-icons": "^6.3.0",
     "@fortawesome/free-solid-svg-icons": "^6.3.0",
     "@fortawesome/vue-fontawesome": "^3.0.3",
+    "@vercel/analytics": "^1.5.0",
+    "better-sqlite3": "^12.2.0",
     "dotenv": "^16.0.3",
     "swiper": "^9.2.0"
   }
