@@ -37,7 +37,7 @@
       <div id="content" class="flex flex-col items-center md:items-end h-min">
         <h2 class="text-lg md:text-xl xl:text-2xl font-bold text-right">Glenn Hamilton-Smith BSc</h2>
         <h3 class="text-base md:text-lg xl:text-xl text-right">
-          <strong>Junior Front-End React Developer</strong>
+          <strong>Front-End React Developer</strong>
           at
           <a target="_blank" href="https://www.viabledata.co.uk" class="sky">Viable Data</a>
         </h3>
