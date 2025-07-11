@@ -47,7 +47,7 @@
         <span class="italic text-lg"><a href="https://linkedin.com/in/glennhs" target="_blank" class="sky"><em class="font-bold">LinkedIn:</em> glennhs</a></span>
       </div>
       <p id="statement" class="text-justify last-right mt-4">Passionate and dedicated team player with proficiency in frontend frameworks such as Vue/Nuxt and React/Next, as well as PHP and Laravel development. Experienced in WordPress and Git, and skilled in various Front End Web Development technologies. A fast learner with a deep passion for self-improvement and continuous learning in all things web development. Graduated with honours in Computer Science from the University of Portsmouth, and was awarded Resident Assistant of the Year 2017-18 as well as serving as Chair of the Staff Student Council Committee. With a focus on collaboration and innovation, I bring a strong work ethic and a drive to help others succeed.</p>
-      <img src="/images/me-square/4.png" alt="Side-on portrait photo of my face, mouth slightly open smiling wearing glasses with brown hair in a light blue polo shirt" class="aspect-square w-64 md:w-96" />
+      <img src="/images/me-square/5.png" alt="Side-on portrait photo of my face, mouth slightly open smiling wearing glasses with brown hair in a light blue polo shirt" class="aspect-square w-64 md:w-96" />
     </section>
 
     <section class="flex flex-col p-0 pb-12">
