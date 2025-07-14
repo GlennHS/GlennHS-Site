@@ -1,4 +1,6 @@
 <script setup>
+import { dateToString } from '~/src/utils';
+
   const props = defineProps({
     blogPost: Object
   })
@@ -21,7 +23,7 @@
           <p class="block md:hidden">{{ shortblurb() }}</p>
           <div class="flex justify-between">
             <span class="text-sm italic">Read More >></span>
-            <span class="text-sm">{{ props.blogPost.created }}</span>
+            <span class="text-sm">{{ dateToString(props.blogPost.created) }}</span>
           </div>
         </div>
       </div>

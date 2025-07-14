@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   runtimeConfig: {
     public: {
-      contentRoot: '/live',
+      blogCollection: 'live',
       availableForHire: true,
       isMaintenance: false
     }
@@ -13,9 +13,9 @@ export default defineNuxtConfig({
       link: [
         { rel: 'icon', href: '/favicon.png' }
       ],
-      script: [
-        { "data-id":"101453603", "src":"//static.getclicky.com/js", async: true }
-      ],
+      // script: [
+      //   { "data-id":"101453603", "src":"//static.getclicky.com/js", async: true }
+      // ],
     }
   },
 
@@ -24,7 +24,13 @@ export default defineNuxtConfig({
   ],
 
   content: {
-    // https://content.nuxtjs.org/api/configuration
+    build: {
+      markdown: {
+        toc: {
+          depth: 3, // include h3 headings
+        }
+      }
+    }
   },
 
   css: [

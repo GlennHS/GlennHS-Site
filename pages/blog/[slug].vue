@@ -1,11 +1,18 @@
 <script setup>
+  import { dateToString } from '~/src/utils'
+
   const route = useRoute()
   const postSlug = route.params.slug || ""
-  const { path } = useRoute()
-  const { data: blogPost } = await useAsyncData(`content-${path}`, () => {
-    if(postSlug) {
-      return queryContent().where({ slug: postSlug }).findOne()
-    } else { return { "error" : true } }
+  const config = useRuntimeConfig()
+  const blogCollection = config.public.blogCollection
+  const blogPost = computed(() => blogPostRaw.value || {})
+
+  const { data: blogPostRaw, status } = await useAsyncData(blogCollection, () => {
+    const res = queryCollection(blogCollection)
+      .where('slug', '=', postSlug)
+      .first()
+    console.log(res)
+    return res
   })
   const hasHover = ref(true);
 
@@ -33,15 +40,18 @@
 <template>
   <div class="blog-post flex flex-col gap-y-6 w-full px-2 md:px-12 lg:px-20 xl:px-40 py-8">
     <a class="text-slate-200 hover:text-slate-400 transition cursor-pointer font-bold text-md" onclick="window.history.go(-1)">&lt;&lt; Go Back</a>
-    <div class="flex flex-col items-start gap-y-4">
+    <div v-if="status == 'pending'">
+      <p>Post loading...</p>
+    </div>
+    <div v-else class="flex flex-col items-start gap-y-4">
       <NuxtLink v-if="blogPost.image" :to="blogPost.image" class="w-full flex items-center justify-center" target="_blank">
         <img :src="blogPost.image" id="post-image" class="object-cover w-full max-h-96"/>
         <span class="click-hint absolute z-10 bg-slate-900 bg-opacity-40 px-2 py-5 rounded-2xl transition">{{ hasHover ? 'Hover to expand | ' : ''  }}Click to see full image</span>
       </NuxtLink>
       <h1 class="text-3xl font-bold">{{ blogPost.title }}</h1>
       <p class="italic">{{ blogPost.blurb }}</p>
-      <span class="text-sm">Posted: {{ blogPost.created }}</span>
-      <em class="text-sm italic" v-if="blogPost.updated != blogPost.created">(Post updated: {{ blogPost.updated }})</em>
+      <span class="text-sm">Posted: {{ dateToString(blogPost.created) }}</span>
+      <em class="text-sm italic" v-if="blogPost.updated != blogPost.created">(Post updated: {{ dateToString(blogPost.updated) }})</em>
       <hr class="w-full" />
       <div class="blog-post-content">
         <ContentRenderer :value="blogPost" />

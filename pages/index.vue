@@ -1,15 +1,15 @@
 <script setup>
   const heroContent = ref(null)
   const page = ref(null)
-  const { path } = useRoute()
+  const blogPosts = computed(() => blogPostsRaw.value || [])
   const config = useRuntimeConfig()
-  const contentRoot = config.public.contentRoot
-  const { data: recentBlogPosts } = await useAsyncData(`content-${path}`, () => {
-    return queryContent(contentRoot)
-      .only(['title', 'excerpt', 'created', 'updated', 'slug', 'tags', '_id'])
-      .limit(5)
-      .sort({ 'updated': -1 })
-      .find()
+  const blogCollection = config.public.blogCollection
+
+  const { data: blogPostsRaw } = await useAsyncData(blogCollection, () => {
+  return queryCollection(blogCollection)
+    .order('updated', 'DESC')
+    .limit(5)
+    .all()
   })
 
   onMounted(() => {
@@ -105,7 +105,7 @@
             </div>
           </div>
         </div>
-        <div v-for="post in recentBlogPosts">
+        <div v-for="post in blogPosts">
           <NuxtLink :to="`blog/${post.slug}`">
             <BlogPostShort class="blog-post-short"
               :title="post.title"
