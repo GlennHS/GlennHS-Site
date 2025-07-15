@@ -1,10 +1,10 @@
 ---
-title: 'Testing Midjourney'
-slug: 'testing-midjourney'
+title: 'Midjourney and the Ethics of AI Art'
+slug: 'ai-art'
 tags: [ 'testing', 'ai', 'learning' ]
 blurb: "A look into image generation with Midjourney and my thoughts on AI's place in the artistic world"
 created: '2023-03-17'
-updated: '2023-03-17'
+updated: '2025-07-15'
 image: '/images/blog/midjourney-background.png'
 ---
 

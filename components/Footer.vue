@@ -1,13 +1,13 @@
 <script setup>
-  const { path } = useRoute()
+import { dateToString } from '~/src/utils'
+
   const config = useRuntimeConfig()
-  const contentRoot = config.public.contentRoot
-  const { data: recentBlogPosts } = await useAsyncData(`content-${path}`, () => {
-    return queryContent(contentRoot)
-      .only(['title', 'excerpt', 'created', 'updated', 'slug', 'tags', '_id'])
-      .limit(5)
-      .sort({ 'updated': -1 })
-      .find()
+  const blogCollection = config.public.blogCollection
+  const blogPosts = computed(() => blogPostsRaw.value || [])
+  const { data: blogPostsRaw } = await useAsyncData(blogCollection, () => {
+  return queryCollection(blogCollection)
+    .order('updated', 'DESC')
+    .all()
   })
 </script>
 
@@ -49,7 +49,7 @@
     <div class="col-span-10 sm:col-span-7 lg:col-span-5 lg:justify-self-center">
       <span class="font-bold text-lg underline">Recent Blog Posts</span>
       <div class="flex flex-col gap-2 mt-4">
-        <NuxtLink :to="'/blog/'+bp.slug" v-for="bp in recentBlogPosts" class="sky"><span class='italic'>{{ bp.updated.replace(/\-/g, '.') }}</span> - {{ bp.title }}</NuxtLink>
+        <NuxtLink :to="'/blog/'+bp.slug" v-for="bp in blogPosts" class="sky"><span class='italic'>{{ dateToString(bp.updated) }}</span> - {{ bp.title }}</NuxtLink>
       </div>
     </div>
   </div>
