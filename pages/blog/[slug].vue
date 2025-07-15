@@ -5,35 +5,39 @@
   const postSlug = route.params.slug || ""
   const config = useRuntimeConfig()
   const blogCollection = config.public.blogCollection
-  const blogPost = computed(() => blogPostRaw.value || {})
+  const blogPost = computed(() => blogPostRaw.value || {
+    created: '2024-02-01'
+  })
 
-  const { data: blogPostRaw, status } = await useAsyncData(blogCollection, () => {
+  const hasHover = ref(true);
+
+  const { data: blogPostRaw, status } = await useAsyncData("", () => {
     const res = queryCollection(blogCollection)
       .where('slug', '=', postSlug)
       .first()
-    console.log(res)
     return res
   })
-  const hasHover = ref(true);
 
-  onMounted(() => {
-    if(window.matchMedia("(any-hover: none)").matches) {
-        hasHover.value = false
-        setTimeout(() => document.querySelector('.click-hint').style.opacity = 0, 3000)
-    }
+  console.log(blogPost.value)
 
-    let hoverTimer;
-    const elImage = document.getElementById('post-image')
-    elImage.addEventListener('mouseenter', () => {
-      hoverTimer = setTimeout(()=> {
-        elImage.classList.add('hover')
-        document.querySelector('.click-hint').style.display = 'none'
-      }, 1000)
-    })
-    elImage.addEventListener('mouseleave', () => {
-      elImage.classList.remove('hover')
-      if(hoverTimer) clearTimeout(hoverTimer)
-    })
+  onMounted(async () => {
+    // if(window.matchMedia("(any-hover: none)").matches) {
+    //     hasHover.value = false
+    //     setTimeout(() => document.querySelector('.click-hint').style.opacity = 0, 3000)
+    // }
+
+    // let hoverTimer;
+    // const elImage = document.getElementById('post-image')
+    // elImage.addEventListener('mouseenter', () => {
+    //   hoverTimer = setTimeout(()=> {
+    //     elImage.classList.add('hover')
+    //     document.querySelector('.click-hint').style.display = 'none'
+    //   }, 1000)
+    // })
+    // elImage.addEventListener('mouseleave', () => {
+    //   elImage.classList.remove('hover')
+    //   if(hoverTimer) clearTimeout(hoverTimer)
+    // })
   })
 </script>
 
