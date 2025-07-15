@@ -1,4 +1,6 @@
 <script setup>
+  import { Analytics } from '@vercel/analytics/nuxt'
+
   useHead({
     title: 'GlennHS',
     viewport: 'width=device-width, initial-scale=1, maximum-scale=1',
@@ -12,14 +14,7 @@
 
 <template>
   <div>
-    <!-- <Head>
-      <NoScript>
-        <p>
-          <img alt="Clicky" width="1" height="1" src="//in.getclicky.com/101408396ns.gif" />
-        </p>
-      </NoScript>
-    </Head> -->
-    <!-- <HireSticky /> -->
+    <Analytics />
     <Navbar />
     <NuxtPage v-if="!isMaintenance"/>
     <div v-else class="flex flex-col items-center content-center">
