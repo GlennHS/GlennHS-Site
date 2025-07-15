@@ -21,23 +21,23 @@
   console.log(blogPost.value)
 
   onMounted(async () => {
-    // if(window.matchMedia("(any-hover: none)").matches) {
-    //     hasHover.value = false
-    //     setTimeout(() => document.querySelector('.click-hint').style.opacity = 0, 3000)
-    // }
+    if(window.matchMedia("(any-hover: none)").matches) {
+        hasHover.value = false
+        setTimeout(() => document.querySelector('.click-hint').style.opacity = 0, 3000)
+    }
 
-    // let hoverTimer;
-    // const elImage = document.getElementById('post-image')
-    // elImage.addEventListener('mouseenter', () => {
-    //   hoverTimer = setTimeout(()=> {
-    //     elImage.classList.add('hover')
-    //     document.querySelector('.click-hint').style.display = 'none'
-    //   }, 1000)
-    // })
-    // elImage.addEventListener('mouseleave', () => {
-    //   elImage.classList.remove('hover')
-    //   if(hoverTimer) clearTimeout(hoverTimer)
-    // })
+    let hoverTimer;
+    const elImage = document.getElementById('post-image')
+    elImage.addEventListener('mouseenter', () => {
+      hoverTimer = setTimeout(()=> {
+        elImage.classList.add('hover')
+        document.querySelector('.click-hint').style.display = 'none'
+      }, 1000)
+    })
+    elImage.addEventListener('mouseleave', () => {
+      elImage.classList.remove('hover')
+      if(hoverTimer) clearTimeout(hoverTimer)
+    })
   })
 </script>
 
