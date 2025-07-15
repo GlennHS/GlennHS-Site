@@ -52,10 +52,10 @@
       <div class="absolute top-0 left-0 w-full h-full bg-slate-800 bg-opacity-[15%] flex flex-col items-baseline justify-center background-filter">
         <div ref="heroContent" class="hero-content w-full px-20 py-10 flex flex-col justify-center items-baseline gap-y-6 max-w-3xl bg-slate-600 bg-opacity-40 md:backdrop-blur-sm rounded-md">
           <h1 class="text-4xl font-bold">Passionate. Curious. Dedicated.</h1>
-          <p class="text-base lg:text-lg">Passionate about web development with expertise in Vue and Nuxt, and experience with Laravel, WordPress and PHP. I have a track record of quickly learning new technologies and applying them to projects. Dedicated to constantly improving my skills, both professionally and personally.</p>
+          <p class="text-base lg:text-lg">Experienced and highly capable front-end developer with a strong background in React, Next.js, TypeScript, and Vue, delivering scalable and performant solutions across web and mobile platforms. Adept at problem-solving, rapidly adapting to new technologies, and delivering high-quality, maintainable code. Passionate about people and processes, I believe that tech should be accessible to all and one of my greatest joys is helping others see how amazing tech can be!</p>
           <div class="flex flex-col w-full md:w-auto md:flex-row gap-y-4 md:gap-y-0 md:gap-x-20">
-            <a class="cta" href="/portfolio">View my work</a>
-            <a class="cta" href="#main-content">More about me</a>
+            <NuxtLink class="cta" to="/portfolio">View my work</NuxtLink>
+            <NuxtLink class="cta" to="/contact">Get in touch</NuxtLink>
           </div>
         </div>
       </div>
