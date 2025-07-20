@@ -166,7 +166,6 @@
       <div class="section-content">
         <h2>[Education Client]'s WordPress Content Hub.</h2>
         <div class="flex flex-col 2xl:flex-row items-center justify-center 2xl:gap-12">
-          <!-- <img src='/images/soon.png' class="w-96"/> -->
           <div>
             <p>[Education Blog Client] came to us with a unique challenge: they needed a WordPress template file and a bespoke plugin to aggregate, filter, search and display blog posts from their partner sites. The plugin was designed to pull posts from various content management systems used by the client's partner sites, including WordPress, SetSquare, SquareSpace, and Volcanic. I created a custom template file that seamlessly integrated with the plugin, resulting in a visually appealing and user-friendly grid format for displaying the posts.</p>
             <div v-if="!isMobile || shownSections.includes(2)">
@@ -196,7 +195,6 @@
             </div>
             <div v-else class="cursor-pointer italic" @click="shownSections.push(3)">Read More &gt;&gt;</div>
           </div>
-          <!-- <img src='/images/soon.png' class="w-96"/> -->
         </div>
       </div>
     </section>
