@@ -70,9 +70,9 @@
         <div>
           <section class="intersect-container">
             <h3 class="preline">Currently at...</h3>
-            <h2>Viable Data.</h2>
+            <h2>Solidatus.</h2>
             <p>
-              I currently work as a Front End React Developer at Viable Data. I'm learning React, Testing Framework and a bunch of other cool things! I'm learning so much just being there and I'm surrounded by an incredibly supportive, empathetic and kind team that help me grow as a dev. I work on all sorts of FE stuff including bug fixes, UI/UX features, maintenance spikes, PR/Code reviews and testing (including a bit of TDD). It's a real mixed bag. My work can be found on my GitHub it's pretty much all public. I am not brown-nosing when I say I love my job and I love my colleagues even more.
+              I currently work as a Full Stack Developer at Solidatus... more to come as I spend more time there!
             </p>
           </section>
         </div>
@@ -81,11 +81,11 @@
             <h3 class="preline">Currently working on...</h3>
             <h2>This Site.</h2>
             <p>
-              This site has been a passion project of mine for a little over a month now. Many evenings and weekends have been dedicated to pushing myself to learn more, to become a better developer and to learn Nuxt/Vue/Nuxt-Content in far greater detail than I have before. I've learned so much from making this site, both some valuable lessons and that I should be proud of how much I've achieved in a relatively short space of time. I hope to use this learning and discovery as a springboard into making both small, helpful apps and also bigger side projects! I'm hoping to completely redevelop Center, my first Vue app I properly worked on. You can tell it was one of my first projects!
+              This site has been a passion project of mine for a little over two years now. Many evenings and weekends have been dedicated to pushing myself to learn more, to become a better developer and to learn Nuxt/Vue/Nuxt-Content in far greater detail than I have before. I've learned so much from making this site, both some valuable lessons and that I should be proud of how much I've achieved in a relatively short space of time. I hope to use this learning and discovery as a springboard into making both small, helpful apps and also bigger side projects! I'm hoping to completely redevelop Center, my first Vue app I properly worked on. You can tell it was one of my first projects!
             </p>
           </section>
         </div>
-        <div>
+        <!-- <div>
           <section class="intersect-container">
             <h3 class="preline">My Dream Role...</h3>
             <h2><span class="line-through">Full Stack Nuxt Developer.</span></h2>
@@ -94,7 +94,7 @@
               I used to think Nuxt was the coolest thing since I discovered you can make new desktops in Windows with Win+Ctrl+D but now I'm not so sure. Next isn't nearly as hard as I thought it was going to be and the ecosystem is far larger and has far better support. I think the only thing I can say with certainty any more is that I want to be in a position I can share my knowledge with others and help them grow but also keep learning myself. I think my environment is a bigger determiner of job satisfaction that my actual job. Is that weird? Is that too honest? Who knows! But it's how I feel.
             </p>
           </section>
-        </div>
+        </div> -->
       </div>
 
       <div id="recent-blog-posts" class="w-full">

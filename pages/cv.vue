@@ -346,7 +346,7 @@
   
   #static-sol-banner {
     background-color: #f4f4f4;
-    background-image: url('/images/solidatus-Banner.png');
+    background-image: url('/images/solidatus-banner.png');
     height: 300px;
     background-size: contain;
     background-repeat: no-repeat;
