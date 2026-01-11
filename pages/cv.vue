@@ -37,7 +37,7 @@
       <div id="content" class="flex flex-col items-center md:items-end h-min">
         <h2 class="text-lg md:text-xl xl:text-2xl font-bold text-right">Glenn Hamilton-Smith BSc</h2>
         <h3 class="text-base md:text-lg xl:text-xl text-right">
-          <strong>Front-End React Developer</strong>
+          <strong>Full Stack Developer</strong>
           at
           <a target="_blank" href="https://www.solidatus.com" class="sky">Solidatus</a>
         </h3>
@@ -58,9 +58,9 @@
         <div class="flex flex-col w-full mt-4">
           <h4 class="text-base md:text-lg xl:text-xl py-4 font-bold">Company Description</h4>
           <p class="text-justify">
-            At Viable Data we create web-based software for clients using modern technologies to deliver value and cater for business needs. We use Agile/Scrum to incrementally deliver value to our customers and have glowing feedback from our many satisfied clients nationally.
+            At Solidatus I... I've actually not been here long so I'll update here as I go!
           </p>
-          <h4 class="text-base md:text-lg xl:text-xl py-4 font-bold">Role Description</h4>
+          <!-- <h4 class="text-base md:text-lg xl:text-xl py-4 font-bold">Role Description</h4>
           <ul class="list-disc list-inside">
             <li>Use Agile/Scrum to work incrementally and continuously deliver value through features, fixes and maintenance</li>
             <li>Work using a Kanban board and scrum ceremonies to determine which tickets are highest value and work on them</li>
@@ -68,7 +68,7 @@
             <li>Work with people who have a variety of different skills as part of a larger team whilst maintaining the benefits of small-team scrum in my team of FE developers</li>
             <li>Get to see the entire development process including BE, FE, UX/UI design, Testing, User Feedback and Project Management via daily ceremonies</li>
             <li>I'll no doubt add more as I spend longer in my role!</li>
-          </ul>
+          </ul> -->
         </div>
       </div>
     </section>
@@ -80,7 +80,7 @@
         <div class="flex flex-col w-full mt-4">
           <h4 class="text-base md:text-lg xl:text-xl py-4 font-bold">Company Description</h4>
           <p class="text-justify">
-            At Viable Data we create web-based software for clients using modern technologies to deliver value and cater for business needs. We use Agile/Scrum to incrementally deliver value to our customers and have glowing feedback from our many satisfied clients nationally.
+            Viable Data created web-based software for clients using modern technologies to deliver value and cater for business needs. They used Agile/Scrum to incrementally deliver value to our customers and had excellent feedback from many satisfied clients nationally, mostly working with the UK government and surrounding sectors.
           </p>
           <h4 class="text-base md:text-lg xl:text-xl py-4 font-bold">Role Description</h4>
           <ul class="list-disc list-inside">
@@ -89,7 +89,6 @@
             <li>Work in a supportive, empathetic and cross-functional environment where learning is encouraged and self-growth is valued</li>
             <li>Work with people who have a variety of different skills as part of a larger team whilst maintaining the benefits of small-team scrum in my team of FE developers</li>
             <li>Get to see the entire development process including BE, FE, UX/UI design, Testing, User Feedback and Project Management via daily ceremonies</li>
-            <li>I'll no doubt add more as I spend longer in my role!</li>
           </ul>
         </div>
       </div>
