@@ -3,7 +3,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       blogCollection: 'live',
-      availableForHire: true,
+      availableForHire: false,
       isMaintenance: false
     }
   },

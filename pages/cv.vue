@@ -39,7 +39,7 @@
         <h3 class="text-base md:text-lg xl:text-xl text-right">
           <strong>Front-End React Developer</strong>
           at
-          <a target="_blank" href="https://www.viabledata.co.uk" class="sky">Viable Data</a>
+          <a target="_blank" href="https://www.solidatus.com" class="sky">Solidatus</a>
         </h3>
         <span class="italic text-lg"><em class="font-bold">Email:</em> glenniumhs@gmail.com</span>
         <span class="italic text-lg"><em class="font-bold">Mobile:</em> +44 7572 354 460</span>
@@ -51,10 +51,32 @@
     </section>
 
     <section class="flex flex-col p-0 pb-12">
-      <div id="static-vd-banner" class="w-full"></div>
+      <div id="static-sol-banner" class="w-full"></div>
       <div class="flex flex-col items-center py-8 px-4 md:px-6 lg:px-12 xl:px-40">
         <h2 class="text-lg md:text-xl xl:text-4xl font-bold pt-4 mb-0">Employment</h2>
-        <h3 class="text-base md:text-lg xl:text-2xl font-semibold"><a class="sky" href="https://www.viabledata.co.uk">Viable Data</a> ~ Nov 2023 to Present</h3>
+        <h3 class="text-base md:text-lg xl:text-2xl font-semibold"><a class="sky" href="https://www.solidatus.com">Solidatus</a> ~ January 2026 - Present</h3>
+        <div class="flex flex-col w-full mt-4">
+          <h4 class="text-base md:text-lg xl:text-xl py-4 font-bold">Company Description</h4>
+          <p class="text-justify">
+            At Viable Data we create web-based software for clients using modern technologies to deliver value and cater for business needs. We use Agile/Scrum to incrementally deliver value to our customers and have glowing feedback from our many satisfied clients nationally.
+          </p>
+          <h4 class="text-base md:text-lg xl:text-xl py-4 font-bold">Role Description</h4>
+          <ul class="list-disc list-inside">
+            <li>Use Agile/Scrum to work incrementally and continuously deliver value through features, fixes and maintenance</li>
+            <li>Work using a Kanban board and scrum ceremonies to determine which tickets are highest value and work on them</li>
+            <li>Work in a supportive, empathetic and cross-functional environment where learning is encouraged and self-growth is valued</li>
+            <li>Work with people who have a variety of different skills as part of a larger team whilst maintaining the benefits of small-team scrum in my team of FE developers</li>
+            <li>Get to see the entire development process including BE, FE, UX/UI design, Testing, User Feedback and Project Management via daily ceremonies</li>
+            <li>I'll no doubt add more as I spend longer in my role!</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="flex flex-col p-0 pb-12">
+      <div id="static-vd-banner" class="w-full"></div>
+      <div class="flex flex-col items-center py-8 px-4 md:px-6 lg:px-12 xl:px-40">
+        <h3 class="text-base md:text-lg xl:text-2xl font-semibold"><a class="sky" href="https://www.viabledata.co.uk">Viable Data</a> ~ Nov 2023 to Aug 2025</h3>
         <div class="flex flex-col w-full mt-4">
           <h4 class="text-base md:text-lg xl:text-xl py-4 font-bold">Company Description</h4>
           <p class="text-justify">
@@ -315,9 +337,19 @@
   }
   
   #static-vd-banner {
-    background-image: url('/images/VD-Banner.png');
+    background-color: #3f51b5;
+    background-image: url('/images/viable-logo.png');
     height: 300px;
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  #static-sol-banner {
+    background-color: #f4f4f4;
+    background-image: url('/images/solidatus-Banner.png');
+    height: 300px;
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
   }
