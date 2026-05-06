@@ -37,9 +37,9 @@
       <div id="content" class="flex flex-col items-center md:items-end h-min">
         <h2 class="text-lg md:text-xl xl:text-2xl font-bold text-right">Glenn Hamilton-Smith BSc</h2>
         <h3 class="text-base md:text-lg xl:text-xl text-right">
-          <strong>Full Stack Developer</strong>
-          at
-          <a target="_blank" href="https://www.solidatus.com" class="sky">Solidatus</a>
+          <strong>Freelance Developer</strong>
+          <!-- at
+          <a target="_blank" href="https://www.companysite.com" class="sky">Company Name</a> -->
         </h3>
         <span class="italic text-lg"><em class="font-bold">Email:</em> glenniumhs@gmail.com</span>
         <span class="italic text-lg"><em class="font-bold">Mobile:</em> +44 7572 354 460</span>
@@ -48,29 +48,6 @@
       </div>
       <p id="statement" class="text-justify last-right mt-4">Passionate and dedicated team player with proficiency in frontend frameworks such as Vue/Nuxt and React/Next, as well as PHP and Laravel development. Experienced in WordPress and Git, and skilled in various Front End Web Development technologies. A fast learner with a deep passion for self-improvement and continuous learning in all things web development. Graduated with honours in Computer Science from the University of Portsmouth, and was awarded Resident Assistant of the Year 2017-18 as well as serving as Chair of the Staff Student Council Committee. With a focus on collaboration and innovation, I bring a strong work ethic and a drive to help others succeed.</p>
       <img src="/images/me-square/5.png" alt="Side-on portrait photo of my face, mouth slightly open smiling wearing glasses with brown hair in a light blue polo shirt" class="aspect-square w-64 md:w-96" />
-    </section>
-
-    <section class="flex flex-col p-0 pb-12">
-      <div id="static-sol-banner" class="w-full"></div>
-      <div class="flex flex-col items-center py-8 px-4 md:px-6 lg:px-12 xl:px-40">
-        <h2 class="text-lg md:text-xl xl:text-4xl font-bold pt-4 mb-0">Employment</h2>
-        <h3 class="text-base md:text-lg xl:text-2xl font-semibold"><a class="sky" href="https://www.solidatus.com">Solidatus</a> ~ January 2026 - Present</h3>
-        <div class="flex flex-col w-full mt-4">
-          <h4 class="text-base md:text-lg xl:text-xl py-4 font-bold">Company Description</h4>
-          <p class="text-justify">
-            At Solidatus I... I've actually not been here long so I'll update here as I go!
-          </p>
-          <!-- <h4 class="text-base md:text-lg xl:text-xl py-4 font-bold">Role Description</h4>
-          <ul class="list-disc list-inside">
-            <li>Use Agile/Scrum to work incrementally and continuously deliver value through features, fixes and maintenance</li>
-            <li>Work using a Kanban board and scrum ceremonies to determine which tickets are highest value and work on them</li>
-            <li>Work in a supportive, empathetic and cross-functional environment where learning is encouraged and self-growth is valued</li>
-            <li>Work with people who have a variety of different skills as part of a larger team whilst maintaining the benefits of small-team scrum in my team of FE developers</li>
-            <li>Get to see the entire development process including BE, FE, UX/UI design, Testing, User Feedback and Project Management via daily ceremonies</li>
-            <li>I'll no doubt add more as I spend longer in my role!</li>
-          </ul> -->
-        </div>
-      </div>
     </section>
 
     <section class="flex flex-col p-0 pb-12">
@@ -338,15 +315,6 @@
   #static-vd-banner {
     background-color: #3f51b5;
     background-image: url('/images/viable-logo.png');
-    height: 300px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-  
-  #static-sol-banner {
-    background-color: #f4f4f4;
-    background-image: url('/images/solidatus-banner.png');
     height: 300px;
     background-size: contain;
     background-repeat: no-repeat;
