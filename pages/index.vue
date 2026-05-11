@@ -70,9 +70,9 @@
         <div>
           <section class="intersect-container">
             <h3 class="preline">Currently at...</h3>
-            <h2>Nowhere!</h2>
+            <h2>You'll see!</h2>
             <p>
-              I currently work as a Freelance Developer! I'm looking for employment, both contract or permanent. Feel free to message me via email/LinkedIn!
+              Things are happening, a job offer's been made (sort of). We'll see what happens &lpar;:
             </p>
           </section>
         </div>

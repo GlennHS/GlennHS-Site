@@ -1,6 +1,6 @@
 <script setup>
   const config = useRuntimeConfig()
-  const forHire = config.public.availableForHire || false
+  const forHire = config.public.availableForHire || process.env.NUXT_PUBLIC_AVAILABLE_FOR_HIRE === "true" || false
   const navHeader = useTemplateRef("navHeader")
   const navSpacer = useTemplateRef("navSpacer")
 

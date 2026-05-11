@@ -1,7 +1,3 @@
-<script setup>
-  
-</script>
-
 <template>
   <div class="w-full bg-red-600 text-white text-center italic text-bold text-lg py-1 z-50">
     <span>Available for hire! Shoot me a message on
@@ -10,7 +6,3 @@
     </span>
   </div>
 </template>
-
-<style scoped>
-  
-</style>
